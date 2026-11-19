@@ -58,7 +58,11 @@ const msg = d=>(d.getElementById('spMsg')||{}).textContent||'';
   /* --- yapılandırma yokken --- */
   let X = open(false); await wait(400);
   X.d.getElementById('profilBtn').click(); await wait(60);
-  ok('kapalıyken: "yakında" + form yok', /yakında/.test(X.d.getElementById('spBody').textContent) && !X.d.getElementById('spMail') && /Yakında/.test(X.d.querySelector('#profilBtn small').textContent));
+  ok('kapalıyken: bilgi notu + form yok', /Hesaplar açılınca/.test(X.d.getElementById('spBody').textContent) && !X.d.getElementById('spMail') && /Yakında/.test(X.d.querySelector('#profilBtn small').textContent));
+  ok('kapalıyken de künye görünür (yerel istatistik)', !!X.d.querySelector('#spKunye .kn-tag') && /Adın burada/.test(X.d.getElementById('spKunye').textContent));
+  X.d.querySelector('.kn-skin [data-skin=matara]').click(); await wait(20);
+  ok('matara görünümüne geçer + hatırlanır', !!X.d.querySelector('.kn-flask') && X.w.localStorage.getItem('patika:kunye')==='matara');
+  X.d.querySelector('.kn-skin [data-skin=cam]').click(); await wait(20);
   ok('kapalıyken sunucuya istek yok', srv.log.length===0);
   X.w.close();
 
@@ -84,6 +88,8 @@ const msg = d=>(d.getElementById('spMsg')||{}).textContent||'';
   ok('menü: "Takma adını seç"', /Takma adını seç/.test(d.querySelector('#profilBtn small').textContent));
 
   /* --- profil --- */
+  d.getElementById('spAd').value = 'Canlı Önizleme'; d.getElementById('spAd').dispatchEvent(new w.Event('input'));
+  ok('künye yazarken canlı güncellenir', /Canlı Önizleme/.test(d.querySelector('#spKunye .kn-name').textContent));
   d.getElementById('spAd').value = 'a'; submit(d,w,'spProfilForm'); await wait(20);
   ok('kısa takma ad reddedilir', /2–24/.test(msg(d)));
   d.getElementById('spAd').value = '<b>x</b>'; submit(d,w,'spProfilForm'); await wait(20);
@@ -95,7 +101,7 @@ const msg = d=>(d.getElementById('spMsg')||{}).textContent||'';
   ok('profil açıldı', await until(()=>/Hoş geldin/.test(msg(d))));
   const pr = srv.profiles[ses.user.id];
   ok('sunucuya giden profil: ad temiz, konum şehir+gün', pr.takma_ad==='Gezgin Murat' && pr.sehir_id==='istanbul' && pr.ulke==='tr' && pr.gun===1 && !('coord' in pr) && !('lat' in pr));
-  ok('profil kartı + menü adı', /Gezgin Murat/.test(d.querySelector('.sp-card').textContent) && d.querySelector('#profilBtn small').textContent==='Gezgin Murat');
+  ok('künye + menü adı', /Gezgin Murat/.test(d.querySelector('#spKunye .kn-name').textContent) && d.querySelector('#profilBtn small').textContent==='Gezgin Murat');
 
   /* elle durum → şehir bağı kalkar */
   d.getElementById('spDurum').value = 'Bugün sadece kahve'; d.getElementById('spDurum').dispatchEvent(new w.Event('input'));
@@ -116,14 +122,16 @@ const msg = d=>(d.getElementById('spMsg')||{}).textContent||'';
 
   /* --- yenileme: oturum ve profil geri gelir --- */
   const B = open(true, saved); await wait(400);
+  ok('yenileme: menüde takma ad (panel açılmadan)', await until(()=>B.d.querySelector('#profilBtn small').textContent==='Gezgin Murat'), B.d.querySelector('#profilBtn small').textContent);
   B.d.getElementById('profilBtn').click();
-  ok('yenileme: profil sunucudan yüklendi', await until(()=>B.d.querySelector('.sp-card') && /Gezgin Murat/.test(B.d.querySelector('.sp-card').textContent)));
+  ok('yenileme: profil sunucudan yüklendi', await until(()=>B.d.getElementById('spCikis') && /Gezgin Murat/.test(B.d.querySelector('#spKunye .kn-name').textContent)));
 
   /* XSS: sunucudan gelen veri kaçışlanır */
   srv.profiles[JSON.parse(saved['patika:oturum']).user.id].durum = '<img src=x onerror="window.__x=1">';
   B.w.eval('sosyal.profilYuklendi=false'); B.d.querySelector('[data-close=profilModal]').click(); B.d.getElementById('profilBtn').click();
-  await until(()=>B.d.querySelector('.sp-card') && /<img/.test(B.d.querySelector('.sp-card').textContent));
-  ok('XSS: profil verisi zararsız', !B.d.querySelector('.sp-card img') && !B.w.__x);
+  await until(()=>B.d.querySelector('#spKunye .kn-durum') && /<img/.test(B.d.querySelector('#spKunye .kn-durum').textContent));
+  ok('XSS: profil verisi zararsız', !B.d.querySelector('#spKunye img') && !B.w.__x);
+  ok('künye: seri no kullanıcıya özel ve sabit', /^PT·\d{4}·\d{4}$/.test(B.d.querySelector('.kn-no').textContent) && B.w.kunyeSeri('u1')===B.w.kunyeSeri('u1') && B.w.kunyeSeri('u1')!==B.w.kunyeSeri('u2'));
 
   /* --- çıkış --- */
   B.d.getElementById('spCikis').click();
@@ -134,7 +142,7 @@ const msg = d=>(d.getElementById('spMsg')||{}).textContent||'';
   delete srv.otp['murat@ornek.com'];
   B.d.getElementById('spMail').value = 'murat@ornek.com'; submit(B.d,B.w,'spMailForm'); await until(()=>B.d.getElementById('spKod'));
   B.d.getElementById('spKod').value = '123456'; submit(B.d,B.w,'spKodForm');
-  ok('tekrar giriş: mevcut profil geldi', await until(()=>B.d.querySelector('.sp-card')));
+  ok('tekrar giriş: mevcut profil geldi', await until(()=>B.d.getElementById('spCikis') && /Gezgin Murat/.test(B.d.querySelector('#spKunye .kn-name').textContent)));
   B.d.getElementById('spSil').click(); await wait(20);
   ok('silme onay ister', !!B.d.getElementById('spSilEvet') && Object.keys(srv.users).length===1);
   B.d.getElementById('spSilHayir').click(); await wait(20);

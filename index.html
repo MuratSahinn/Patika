@@ -2533,6 +2533,100 @@ body[data-theme="dark"] .cr-row.is-y .cr-p{ color:#7CC28A; }
 .sp-mail{ font-size:0.78rem; color:var(--text-soft); margin-right:auto; overflow:hidden; text-overflow:ellipsis; max-width:100%; }
 .sp-confirm{ margin-top:12px; padding:12px 14px; border-radius:14px; border:1px solid var(--tr-rose); background:var(--tr-tint-soft); }
 .sp-confirm p{ margin:0 0 6px; font-size:0.86rem; }
+
+/* ---- Gezgin Künyesi: cam künye + çelik matara ---- */
+.kn-wrap{ margin:0 0 16px; }
+.kn-skin{ display:flex; gap:4px; padding:4px; border-radius:999px; background:var(--tr-tint-soft); border:1px solid var(--line); width:max-content; margin:0 auto 12px; }
+.kn-skin button{ border:none; background:transparent; color:var(--text-soft); border-radius:999px; padding:6px 14px; cursor:pointer;
+  font-family:var(--label-font); font-size:0.66rem; font-weight:700; letter-spacing:.04em; }
+.kn-skin button[aria-pressed="true"]{ background:var(--surface); color:var(--tr-red); box-shadow:0 2px 8px rgba(10,3,6,.10); }
+
+/* sahne: künyenin arkasındaki manzara */
+.kn-scene{ position:relative; border-radius:22px; overflow:hidden; padding:26px 18px 24px; isolation:isolate;
+  background:linear-gradient(170deg, var(--kn-a) 0%, var(--kn-b) 55%, var(--kn-c) 100%); }
+.kn-scene[data-cc="tr"]{ --kn-a:#3a0a14; --kn-b:#a3162d; --kn-c:#f2a04a; }
+.kn-scene[data-cc="it"]{ --kn-a:#14281c; --kn-b:#3e6b45; --kn-c:#e6a764; }
+.kn-scene[data-cc="gr"]{ --kn-a:#0b1d3a; --kn-b:#1f5fa8; --kn-c:#f3d9a0; }
+.kn-sun{ position:absolute; width:120px; height:120px; border-radius:50%; right:14%; bottom:30%;
+  background:radial-gradient(circle, rgba(255,236,190,.95) 0%, rgba(255,200,120,.55) 45%, rgba(255,200,120,0) 70%); z-index:-1; }
+.kn-hills{ position:absolute; left:0; right:0; bottom:0; width:100%; height:46%; z-index:-1; }
+
+/* cam künye (asker künyesi biçimi) */
+.kn-tag{ position:relative; margin:0 auto; max-width:360px; aspect-ratio: 1.62 / 1; border-radius:26px 26px 26px 26px / 30px 30px 30px 30px;
+  padding:20px 22px 18px 58px; color:#fff; overflow:hidden;
+  background:linear-gradient(135deg, rgba(255,255,255,.30), rgba(255,255,255,.08) 55%, rgba(255,255,255,.16));
+  -webkit-backdrop-filter:blur(16px) saturate(150%); backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7), inset 0 -1px 0 rgba(255,255,255,.15), 0 18px 40px rgba(0,0,0,.28);
+  transform: perspective(900px) rotateX(var(--ry,0deg)) rotateY(var(--rx,0deg)); transition: transform .25s ease; }
+.kn-tag::before{ /* zincir deliği */
+  content:''; position:absolute; left:20px; top:50%; width:18px; height:18px; margin-top:-9px; border-radius:50%;
+  background:rgba(0,0,0,.28); box-shadow: inset 0 2px 3px rgba(0,0,0,.45), 0 1px 0 rgba(255,255,255,.55); }
+.kn-tag::after{ /* holografik parıltı */
+  content:''; position:absolute; inset:-40%; pointer-events:none; mix-blend-mode:soft-light; opacity:.75;
+  background: radial-gradient(circle at var(--mx,30%) var(--my,20%), rgba(255,255,255,.55), rgba(255,255,255,0) 35%),
+    linear-gradient(115deg, rgba(255,120,160,0) 35%, rgba(255,170,120,.35) 45%, rgba(140,220,255,.35) 52%, rgba(190,140,255,.3) 58%, rgba(255,255,255,0) 66%);
+  transform: translateX(var(--sx,0%)); transition: transform .4s ease; }
+.kn-chain{ position:absolute; left:-30px; top:50%; width:52px; height:2px; margin-top:-1px;
+  background-image:radial-gradient(circle, rgba(255,255,255,.9) 1.6px, transparent 2px); background-size:7px 4px; background-repeat:repeat-x; opacity:.85; }
+.kn-etch{ color:rgba(255,255,255,.94); text-shadow: 0 1px 0 rgba(0,0,0,.28), 0 -1px 0 rgba(255,255,255,.35); }
+.kn-top{ display:flex; justify-content:space-between; align-items:baseline; gap:8px; }
+.kn-brand{ font-family:var(--label-font); font-size:0.58rem; font-weight:800; letter-spacing:.28em; opacity:.9; }
+.kn-no{ font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size:0.62rem; letter-spacing:.14em; opacity:.85; }
+.kn-name{ font-family:'Playfair Display', Georgia, serif; font-weight:700; font-size:1.55rem; line-height:1.1; margin:12px 0 2px;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.kn-name.ph{ opacity:.6; font-style:italic; }
+.kn-rank{ font-family:var(--label-font); font-size:0.6rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; opacity:.92; }
+.kn-durum{ font-size:0.84rem; margin-top:8px; display:flex; align-items:center; gap:6px; opacity:.95;
+  overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.kn-durum i{ width:7px; height:7px; border-radius:50%; background:#7dffb0; box-shadow:0 0 8px #7dffb0; flex:none; animation:knPulse 2.4s infinite; }
+@keyframes knPulse{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
+.kn-stats{ position:absolute; left:58px; right:84px; bottom:16px; display:flex; gap:16px; }
+.kn-stats div{ display:flex; flex-direction:column; }
+.kn-stats b{ font-family:'Playfair Display', Georgia, serif; font-size:1.1rem; line-height:1; }
+.kn-stats span{ font-family:var(--label-font); font-size:0.52rem; letter-spacing:.14em; text-transform:uppercase; opacity:.85; margin-top:3px; }
+.kn-seal{ position:absolute; right:18px; bottom:14px; width:54px; height:54px; border-radius:50%; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; border:1.5px solid rgba(255,255,255,.75); outline:1px dashed rgba(255,255,255,.45); outline-offset:3px;
+  transform:rotate(-12deg); background:rgba(255,255,255,.08); }
+.kn-seal b{ font-family:'Playfair Display', Georgia, serif; font-size:1.15rem; line-height:1; }
+.kn-seal span{ font-family:var(--label-font); font-size:0.46rem; letter-spacing:.16em; text-transform:uppercase; margin-top:2px; }
+
+/* çelik matara */
+.kn-flask-scene{ display:flex; align-items:center; justify-content:center; gap:22px; padding:22px 16px 18px; border-radius:22px;
+  background: radial-gradient(120% 90% at 50% 0%, var(--tr-tint-soft), transparent 70%), var(--surface); border:1px solid var(--line); }
+.kn-flask{ position:relative; width:118px; flex:none; filter: drop-shadow(0 16px 18px rgba(0,0,0,.28)); }
+.kn-cap{ height:34px; margin:0 14px; border-radius:10px 10px 4px 4px;
+  background: linear-gradient(90deg, #1d1d1f 0%, #4a4a4f 30%, #2a2a2d 55%, #111 100%); }
+.kn-cap::after{ content:''; display:block; height:5px; margin:6px 6px 0; border-radius:3px; background:repeating-linear-gradient(90deg, rgba(255,255,255,.18) 0 2px, transparent 2px 5px); }
+.kn-neck{ height:10px; margin:0 8px; background: linear-gradient(90deg, #8b8f95, #e9ecef 35%, #a7abb1 60%, #6f7379); }
+.kn-body{ position:relative; height:276px; border-radius:16px 16px 22px 22px; overflow:hidden;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.07) 0 1px, rgba(0,0,0,.05) 1px 2px),
+    linear-gradient(90deg, #6d7279 0%, #c9cdd2 18%, #f4f6f8 32%, #b4b9bf 50%, #8e939a 70%, #d5d9dd 84%, #62676e 100%); }
+.kn-engrave{ position:absolute; left:0; right:0; top:18px; text-align:center; padding:0 10px; color:rgba(40,44,50,.55);
+  text-shadow: 0 1px 0 rgba(255,255,255,.65), 0 -1px 0 rgba(0,0,0,.18); }
+.kn-engrave .kn-name{ font-size:1.05rem; margin:4px 0 0; white-space:normal; overflow-wrap:anywhere; }
+.kn-engrave .kn-brand{ font-size:0.5rem; }
+.kn-engrave .kn-no{ font-size:0.5rem; display:block; margin-top:4px; }
+.kn-sticker{ position:absolute; width:46px; height:46px; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  color:#fff; font-family:var(--label-font); font-weight:800; text-align:center; line-height:1; border:3px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,.25); transform:rotate(var(--r,0deg)); }
+.kn-sticker small{ font-size:0.42rem; letter-spacing:.08em; opacity:.9; }
+.kn-sticker em{ font-style:normal; font-size:0.5rem; margin-top:2px; max-width:38px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.kn-sticker.tr{ background:#c8102e; } .kn-sticker.it{ background:#2e7d4f; } .kn-sticker.gr{ background:#1f5fa8; }
+.kn-sticker.gold{ background:linear-gradient(135deg,#f6d77a,#c9952b); color:#3a2a05; }
+.kn-sticker.rank{ border-radius:10px; width:auto; height:auto; padding:5px 8px; white-space:nowrap; background:#1b1b1d; font-size:0.46rem; letter-spacing:.06em; }
+.kn-side{ display:flex; flex-direction:column; gap:12px; min-width:0; }
+.kn-side .kn-rank{ color:var(--tr-red); letter-spacing:.14em; }
+.kn-side .kn-big{ font-family:'Playfair Display', Georgia, serif; font-size:1.35rem; font-weight:700; color:var(--ink); line-height:1.1; overflow-wrap:anywhere; }
+.kn-side .kn-big.ph{ color:var(--text-soft); font-style:italic; font-weight:400; }
+.kn-side .kn-dur{ font-size:0.84rem; color:var(--text-soft); display:flex; gap:6px; align-items:center; }
+.kn-side .kn-dur i{ width:7px; height:7px; border-radius:50%; background:#2fb36b; flex:none; animation:knPulse 2.4s infinite; }
+.kn-side dl{ display:grid; grid-template-columns:auto auto; gap:4px 14px; margin:0; }
+.kn-side dt{ font-family:var(--label-font); font-size:0.56rem; letter-spacing:.12em; text-transform:uppercase; color:var(--text-soft); align-self:center; }
+.kn-side dd{ margin:0; font-family:'Playfair Display', Georgia, serif; font-weight:700; color:var(--ink); }
+.kn-hint{ text-align:center; font-size:0.74rem; color:var(--text-soft); margin-top:8px; }
+@media (prefers-reduced-motion: reduce){ .kn-tag, .kn-tag::after{ transition:none; } .kn-durum i, .kn-side .kn-dur i{ animation:none; } }
 </style>
 </head>
 <body>
@@ -2698,7 +2792,8 @@ body[data-theme="dark"] .cr-row.is-y .cr-p{ color:#7CC28A; }
   <div class="modal sp-modal" role="dialog" aria-labelledby="spTitle">
     <button class="modal-close" data-close="profilModal" aria-label="Kapat"><svg class="ic " aria-hidden="true"><use href="#i-close"/></svg></button>
     <h3 class="m-title" id="spTitle">Gezgin Profilim</h3>
-    <p class="m-sub">Takma adın ve durumunla diğer gezginlere görün.</p>
+    <p class="m-sub">Yolda biriktirdiklerin künyene kazınır.</p>
+    <div id="spKunye"></div>
     <div id="spBody"></div>
   </div>
 </div>
@@ -10917,8 +11012,9 @@ function sosyalGeriSayim(){
 function sosyalAvatar(ad){ return `<div class="sp-av">${escH((ad||'?').charAt(0).toLocaleUpperCase('tr'))}</div>`; }
 async function sosyalCiz(){
   const body = spEl('spBody');
+  kunyeCiz();
   if(!sosyalAcik()){
-    body.innerHTML = `<div class="ai-off sp-off"><strong>Gezgin profilleri yakında.</strong> Hesaplar açılınca bir takma adla rotanı ve durumunu diğer gezginlerle paylaşabileceksin.</div>`;
+    body.innerHTML = `<div class="ai-off sp-off"><strong>Künyen şimdiden dolmaya başladı.</strong> Durakların, yolun ve şehirlerin burada birikiyor. Hesaplar açılınca takma adını kazıyıp diğer gezginlere görüneceksin.</div>`;
     return;
   }
   if(!sosyal.oturum){
@@ -10969,7 +11065,7 @@ async function sosyalCiz(){
   const p = sosyal.profil, oneri = sosyalDurumOnerisi();
   const yeni = !p;
   body.innerHTML = `
-    ${p ? `<div class="sp-card">${sosyalAvatar(p.takma_ad)}<div class="sp-who"><b>${escH(p.takma_ad)}</b><span>${escH(p.durum || 'Durum yok')}</span></div></div>` : `<p class="sp-lead">Son adım: diğer gezginlerin göreceği bir takma ad seç.</p>`}
+    ${p ? '' : `<p class="sp-lead">Son adım: künyene kazınacak takma adını seç.</p>`}
     <form id="spProfilForm" class="sp-grid" autocomplete="off">
       <label>Takma ad<input id="spAd" maxlength="24" value="${escH(p ? p.takma_ad : '')}" placeholder="örn. Kapadokya Kuşu"></label>
       <label>Durum<span class="sp-durum"><input id="spDurum" maxlength="80" value="${escH(p ? (p.durum||'') : oneri.durum)}"><button type="button" class="sp-link" id="spRota" title="Durumu şu anki rotandan al">Rotamdan al</button></span></label>
@@ -10984,8 +11080,10 @@ async function sosyalCiz(){
     </div>
     <div id="spSilOnay"></div>`;
   let konum = p ? { ulke:p.ulke, sehir_id:p.sehir_id, gun:p.gun } : { ulke:oneri.ulke, sehir_id:oneri.sehir_id, gun:oneri.gun };
-  spEl('spRota').addEventListener('click', ()=>{ const o = sosyalDurumOnerisi(); spEl('spDurum').value = o.durum; konum = { ulke:o.ulke, sehir_id:o.sehir_id, gun:o.gun }; });
-  spEl('spDurum').addEventListener('input', ()=>{ /* elle yazılan durum şehre bağlı değil */ konum = { ulke:null, sehir_id:null, gun:null }; });
+  const onizle = ()=>kunyeCiz({ ad: spEl('spAd').value.trim().replace(/\s+/g,' '), durum: spEl('spDurum').value.trim() });
+  spEl('spRota').addEventListener('click', ()=>{ const o = sosyalDurumOnerisi(); spEl('spDurum').value = o.durum; konum = { ulke:o.ulke, sehir_id:o.sehir_id, gun:o.gun }; onizle(); });
+  spEl('spDurum').addEventListener('input', ()=>{ /* elle yazılan durum şehre bağlı değil */ konum = { ulke:null, sehir_id:null, gun:null }; onizle(); });
+  spEl('spAd').addEventListener('input', onizle);
   spEl('spProfilForm').addEventListener('submit', async ev=>{
     ev.preventDefault();
     const ad = spEl('spAd').value.trim().replace(/\s+/g,' '), durum = spEl('spDurum').value.trim().slice(0,80);
@@ -11027,7 +11125,103 @@ async function sosyalAc(){
 }
 sosyal.oturum = sosyalAcik() ? sosyalOturumOku() : null;
 sosyalMenuGuncelle();
+/* açılışta oturum varsa profili sessizce yükle (menüde takma ad görünsün) */
+if(sosyal.oturum) SOSYAL.profilGetir().then(sosyalMenuGuncelle).catch(()=>{});
 spEl('profilBtn').addEventListener('click', sosyalAc);
+
+
+/* ---------- Gezgin Künyesi (cam künye / çelik matara) ---------- */
+var kunyeSkin = 'cam';
+try{ if(localStorage.getItem('patika:kunye')==='matara') kunyeSkin = 'matara'; }catch(e){}
+function kunyeSeri(id){
+  let h = 2166136261; const s = String(id||'misafir');
+  for(let i=0;i<s.length;i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return 'PT·' + new Date().getFullYear() + '·' + String((h>>>0)%10000).padStart(4,'0');
+}
+function kunyeVeri(over){
+  const st = computeStats();
+  const p = sosyal.profil, o = sosyalDurumOnerisi();
+  const ad = over && over.ad!=null ? over.ad : (p ? p.takma_ad : '');
+  const durum = over && over.durum!=null ? over.durum : (p ? (p.durum||'') : o.durum);
+  const cc = (p && p.ulke) || o.ulke || (document.getElementById('appScreen').classList.contains('visible') ? activeCountry : 'tr') || 'tr';
+  return { ad, durum, cc: ['tr','it','gr'].includes(cc) ? cc : 'tr',
+    unvan: gezginUnvani(st.stops), durak: st.stops, km: st.meters/1000, sehir: st.citiesTouched, tam: st.citiesDone, ay: st.moons,
+    sehirler: st.topCities.slice(0, 6), seri: kunyeSeri(sosyal.oturum && sosyal.oturum.user.id) };
+}
+function kunyeKm(km){ return km>=10 ? Math.round(km)+'' : km.toFixed(1).replace('.', ','); }
+function kunyeCamHTML(v){
+  const muhur = `<div class="kn-seal kn-etch" title="Tamamlanan şehir"><b>${v.tam}</b><span>tamam</span></div>`;
+  return `<div class="kn-scene" data-cc="${v.cc}">
+    <div class="kn-sun"></div>
+    <svg class="kn-hills" viewBox="0 0 400 180" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 120 L60 80 L110 110 L170 55 L230 105 L290 70 L350 100 L400 75 L400 180 L0 180Z" fill="rgba(0,0,0,.22)"/>
+      <path d="M0 150 L80 115 L150 140 L220 108 L300 138 L360 118 L400 130 L400 180 L0 180Z" fill="rgba(0,0,0,.32)"/>
+    </svg>
+    <div class="kn-tag" id="knTag">
+      <span class="kn-chain"></span>
+      <div class="kn-top kn-etch"><span class="kn-brand">PATİKA · GEZGİN</span><span class="kn-no">${escH(v.seri)}</span></div>
+      <div class="kn-name kn-etch ${v.ad?'':'ph'}">${escH(v.ad || 'Adın burada')}</div>
+      <div class="kn-rank kn-etch">${escH(v.unvan)}</div>
+      ${v.durum ? `<div class="kn-durum kn-etch"><i></i>${escH(v.durum)}</div>` : ''}
+      ${muhur}
+      <div class="kn-stats kn-etch">
+        <div><b>${v.durak}</b><span>durak</span></div>
+        <div><b>${kunyeKm(v.km)}</b><span>km</span></div>
+        <div><b>${v.sehir}</b><span>şehir</span></div>
+      </div>
+    </div>
+  </div>`;
+}
+function kunyeMataraHTML(v){
+  /* kazıma üstte (0–95 px), çıkartmalar altta; ünvan etiketi en altta */
+  const pos = [[6,104,-12],[62,100,9],[30,146,6],[2,192,14],[60,196,-6],[66,148,-9]];
+  const liste = v.sehirler.slice(0, v.ay>0 ? 5 : 6);
+  let stk = liste.map((c,i)=>{ const [x,y,r]=pos[i]; const ad=c.city.replace(/\s*\(.*\)\s*$/,'');
+    return `<span class="kn-sticker ${c.cc}" style="left:${x}px;top:${y}px;--r:${r}deg"><small>${c.cc.toUpperCase()}</small><em>${escH(ad)}</em></span>`; }).join('');
+  if(v.ay>0) stk += `<span class="kn-sticker gold" style="left:${pos[5][0]}px;top:${pos[5][1]}px;--r:12deg"><small>SIRADIŞI</small><em>${v.ay}</em></span>`;
+  stk += `<span class="kn-sticker rank" style="left:50%;top:244px;--r:-4deg;translate:-50% 0">${escH(v.unvan.toLocaleUpperCase('tr'))}</span>`;
+  return `<div class="kn-flask-scene">
+    <div class="kn-flask" aria-hidden="true">
+      <div class="kn-cap"></div><div class="kn-neck"></div>
+      <div class="kn-body">
+        <div class="kn-engrave"><span class="kn-brand">PATİKA</span><div class="kn-name">${escH(v.ad || 'Adın burada')}</div><span class="kn-no">${escH(v.seri)}</span></div>
+        ${stk}
+      </div>
+    </div>
+    <div class="kn-side">
+      <span class="kn-rank">${escH(v.unvan)}</span>
+      <span class="kn-big ${v.ad?'':'ph'}">${escH(v.ad || 'Adın burada')}</span>
+      ${v.durum ? `<span class="kn-dur"><i></i>${escH(v.durum)}</span>` : ''}
+      <dl><dt>Durak</dt><dd>${v.durak}</dd><dt>Yol</dt><dd>${kunyeKm(v.km)} km</dd><dt>Şehir</dt><dd>${v.sehir}</dd><dt>Tamamı</dt><dd>${v.tam}</dd></dl>
+    </div>
+  </div>`;
+}
+function kunyeCiz(over){
+  const el = document.getElementById('spKunye'); if(!el) return;
+  const v = kunyeVeri(over);
+  el.innerHTML = `<div class="kn-wrap">
+    <div class="kn-skin" role="group" aria-label="Künye görünümü">
+      <button type="button" data-skin="cam" aria-pressed="${kunyeSkin==='cam'}">Cam künye</button>
+      <button type="button" data-skin="matara" aria-pressed="${kunyeSkin==='matara'}">Çelik matara</button>
+    </div>
+    ${kunyeSkin==='cam' ? kunyeCamHTML(v) : kunyeMataraHTML(v)}
+    ${kunyeSkin==='matara' && !v.sehirler.length ? '<p class="kn-hint">Gezdiğin her şehir mataraya bir çıkartma olarak yapışır.</p>' : ''}
+  </div>`;
+  el.querySelectorAll('.kn-skin button').forEach(b=>b.addEventListener('click', ()=>{
+    kunyeSkin = b.dataset.skin; try{ localStorage.setItem('patika:kunye', kunyeSkin); }catch(e){}
+    kunyeCiz(over);
+  }));
+  const tag = document.getElementById('knTag');
+  if(tag && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)){
+    tag.addEventListener('pointermove', e=>{
+      const r = tag.getBoundingClientRect(), x = (e.clientX-r.left)/r.width, y = (e.clientY-r.top)/r.height;
+      tag.style.setProperty('--mx', (x*100)+'%'); tag.style.setProperty('--my', (y*100)+'%');
+      tag.style.setProperty('--rx', ((x-.5)*10)+'deg'); tag.style.setProperty('--ry', ((.5-y)*8)+'deg');
+      tag.style.setProperty('--sx', ((x-.5)*30)+'%');
+    });
+    tag.addEventListener('pointerleave', ()=>{ ['--rx','--ry','--sx'].forEach(k=>tag.style.setProperty(k, k==='--sx'?'0%':'0deg')); });
+  }
+}
 
 
 /* modal kapatma */

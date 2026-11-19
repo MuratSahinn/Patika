@@ -3,6 +3,7 @@ import sys, asyncio, json
 from playwright.async_api import async_playwright
 import os; SP=os.environ.get('CIKTI','./cikti/')
 src,tag,dev,theme,state=sys.argv[1:6]
+skin=sys.argv[6] if len(sys.argv)>6 else 'cam'
 U='https://proje.supabase.co'
 async def main():
   async with async_playwright() as p:
@@ -24,6 +25,10 @@ async def main():
     if state!='off': await pg.add_init_script("localStorage.setItem('patika:sosyal', JSON.stringify({url:'%s',key:'k'}))" % U)
     await pg.goto("file://"+src); await pg.wait_for_timeout(1800)
     await pg.evaluate("""document.querySelector('.country-card[data-country="tr"]').click()"""); await pg.wait_for_timeout(900)
+    await pg.evaluate("""(()=>{ const pick={tr:['istanbul','kapadokya','mardin'], it:['roma','floransa'], gr:['atina']};
+      for(const [cc,ids] of Object.entries(pick)) ids.forEach(id=>{ const c=COUNTRY_CITIES[cc].find(x=>x.id===id); if(!c) return;
+        const o=doneCache[id]=doneCache[id]||{}; c.days.forEach((d,di)=>d.stops.forEach((s,i)=>{ if(di<2) o[d.day+'-'+i]=true; })); }); })()""")
+    await pg.evaluate("localStorage.setItem('patika:kunye', '%s'); kunyeSkin='%s'" % (skin, skin))
     if theme=='dark': await pg.evaluate("document.getElementById('menuBtn').click(); document.getElementById('themeToggle').click()"); await pg.wait_for_timeout(300)
     await pg.evaluate("document.getElementById('menuBtn').click()"); await pg.wait_for_timeout(250)
     if state=='mail' or state=='off':
@@ -34,7 +39,7 @@ async def main():
     if state in ('yeni','profil','sil'):
       await pg.fill('#spKod','123456'); await pg.click('#spKodForm .sp-btn'); await pg.wait_for_selector('#spAd')
     if state in ('profil','sil'):
-      await pg.fill('#spAd','Gezgin Murat'); await pg.click('#spProfilForm .sp-btn'); await pg.wait_for_selector('.sp-card'); await pg.wait_for_timeout(300)
+      await pg.fill('#spAd','Gezgin Murat'); await pg.click('#spProfilForm .sp-btn'); await pg.wait_for_selector('#spCikis'); await pg.wait_for_timeout(300)
     if state=='sil': await pg.click('#spSil'); await pg.wait_for_timeout(200)
     await pg.wait_for_timeout(300)
     await pg.screenshot(path=SP+tag+'.png')
