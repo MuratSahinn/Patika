@@ -1,0 +1,215 @@
+/* Cebin rahat — pilot şehirler. Alanlar:
+   checked: son kontrol (YYYY-MM-DD)
+   tiers[]: { k, v, inc }      tierNote: genel açıklama, tierNoteY: yerli/yerel görünümde ek not
+   spend[]: { c:ikon, n:ad, t:'r' resmi | 'e' tahmini, p:turist fiyatı, pl?:turist etiketi, y?:yerli/yerel fiyat, yl?:yerel etiketi, s?:not, src?:resmi kaynak }
+   tips[]: { h, t }  traps[]: metin  sources[]: [ad, url] */
+const KTB = 'https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html';
+module.exports = {
+  istanbul: { checked:'2026-11-19',
+    intro:"İstanbul'da paranın çoğu giriş biletlerine ve Sultanahmet'te yenen yemeğe gider. T.C. kimliğin burada en büyük avantajın: aynı saray, yabancı ziyaretçinin ödediğinin küçük bir kısmı.",
+    tierNote:'Kişi başı · günlük · konaklama hariç · kaynak yabancı ziyaretçi fiyatlarıyla veriyor',
+    tierNoteY:'T.C. vatandaşı olarak bilet payın çok daha düşük; günlük bütçe bu aralığın altında kalır.',
+    tiers:[
+      { k:'Hesaplı', v:'60–80 €', inc:'Esnaf lokantası, İstanbulkart, ücretsiz camiler ve çarşılar, günde bir müze.' },
+      { k:'Orta', v:'110–140 €', inc:'Oturarak yemekler, birkaç büyük müze, ara sıra taksi.' },
+      { k:'Rahat', v:'180–250 €', inc:'Manzaralı restoranlar, rehberli turlar, taksiyle dolaşma.' }
+    ],
+    spend:[
+      { c:'ticket', t:'r', n:'Topkapı Sarayı · kombine', p:'2.750 TL', y:'500 TL', s:'Saray + Harem + Aya İrini · Müzekart Harem ve Aya İrini’de geçmiyor', src:'https://www.karekod.org/blog/turistik-mekan-fiyatlari/' },
+      { c:'ticket', t:'r', n:'Dolmabahçe Sarayı · kombine', p:'2.000 TL', y:'250 TL', s:'Selamlık + Harem + Resim Müzesi · bir hafta geçerli · Müzekart Selamlık’ta geçmiyor', src:'https://www.karekod.org/blog/turistik-mekan-fiyatlari/' },
+      { c:'ticket', t:'r', n:'Ayasofya galeri katı', p:'25 €', y:'25 €', s:'İbadet alanı ücretsiz; galeri bileti herkese aynı' },
+      { c:'ticket', t:'r', n:'Galata Kulesi', p:'30 €', y:'Müzekart', s:'2027 tarifesinde yabancıya 35 €', src:KTB },
+      { c:'ticket', t:'r', n:'Yerebatan Sarnıcı', p:'~1.950 TL', y:'gişede sor', s:'Haziran 2026’dan beri Vakıflar işletiyor; yerli girişi Müzekart’a bağlanacak' },
+      { c:'car', t:'r', n:'İstanbulkart · tek biniş', p:'46,20 TL', s:'Kart 165 TL · vapur Eminönü–Kadıköy ~59 TL' },
+      { c:'car', t:'e', n:'Havalimanı → Sultanahmet', p:'40–45 €', pl:'taksiyle', y:'~275 TL', yl:'Havaist ile' },
+      { c:'fork', t:'e', n:'Akşam yemeği', p:'~50 €', pl:'Sultanahmet turist restoranı', y:'7–15 €', yl:'esnaf lokantası' },
+      { c:'fork', t:'e', n:'Simit · çay', p:'~0,5 € · 1–1,5 €' }
+    ],
+    tips:[
+      { h:'Bakanlık müzelerine Müzekart’la girilir', t:"Galata Kulesi ve Bakanlığa bağlı müzelerde T.C. vatandaşları için giriş Müzekart'la. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL; bir yıl geçerli, her yere yılda iki giriş." },
+      { h:'Ücretsiz girenler', t:"18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor. Topkapı'da 18–25 yaş T.C. öğrenciler de öğrenci kimliğiyle ücretsiz." },
+      { h:'En güzelleri bedava', t:'Sultanahmet Camii, Süleymaniye, Kapalıçarşı, Mısır Çarşısı, Gülhane Parkı ve Galata Köprüsü ücretsiz.' },
+      { h:'İki sokak içeri gir', t:'Ana turist güzergâhından 2–3 sokak içeride esnaf lokantaları aynı yemeği çok daha uygun veriyor. Suyu da anıt dibindeki büfeden değil, köşe bakkalından al.' }
+    ],
+    traps:[ 'Yerebatan ve saray biletlerini aracı sitelerden değil, gişeden ya da resmi kanaldan al.' ],
+    sources:[
+      ['Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)', KTB],
+      ['Turistik mekân fiyatları 2026 — Karekod','https://www.karekod.org/blog/turistik-mekan-fiyatlari/'],
+      ['Istanbul costs & prices 2026 — Hotel Perula','https://hotelperula.com/en/blog/istanbul-costs-prices-2026/'],
+      ['Yerebatan Sarnıcı yeniden açıldı — NTV','https://www.ntv.com.tr/turkiye/yerebatan-sarnici-yeniden-acildi-1727460'],
+      ['Müzekart ücretleri değişiyor — Alo Maliye','https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/'],
+      ['Müzekart ile 350’den fazla müze — Euronews','https://tr.euronews.com/2026/11/09/muzekart-ile-350den-fazla-muze-ve-oren-yeri-bir-yil-boyunca-300-tl']
+    ] },
+
+  kapadokya: { checked:'2026-11-19',
+    intro:"Kapadokya'da bütçeyi balon belirler: tek bir sabah, gezinin geri kalanı kadar tutabilir. İyi haber: vadilerin çoğu ücretsiz yürünüyor, balonları yerden izlemek de bedava.",
+    tierNote:'Kişi başı · günlük · 2026 başı fiyatlarıyla, enflasyon payı bırak',
+    tierNoteY:'T.C. vatandaşıysan ören yerleri Müzekart’la; bilet payı neredeyse sıfırlanır.',
+    tiers:[
+      { k:'Hesaplı', v:'~1.500 TL', inc:'Pansiyon, dolmuş, lokanta, ücretsiz vadi yürüyüşleri.' },
+      { k:'Orta', v:'~6.700 TL', inc:'Mağara otel, bir günlük tur ve bir balon uçuşu (3 günde yaklaşık 20.000 TL).' },
+      { k:'Rahat', v:'15.000–20.000+ TL', inc:'Lüks mağara otel, özel turlar, şarap tadımı.' }
+    ],
+    spend:[
+      { c:'boat', t:'e', n:'Balon (standart, kişi başı)', p:'100–260 €', s:'Kışın 100–160 €, sezonda (Nisan–Ekim) 100–260 €' },
+      { c:'ticket', t:'r', n:'Göreme Açık Hava Müzesi', p:'20 €', y:'Müzekart', s:'Karanlık Kilise ayrı bilet (Müzekart’la 100 TL) · 2027 tarifesinde 22 €', src:KTB },
+      { c:'ticket', t:'r', n:'Derinkuyu · Kaymaklı yeraltı şehri', p:'13 € / her biri', y:'Müzekart', s:'2027 tarifesinde 15 €', src:KTB },
+      { c:'ticket', t:'r', n:'Zelve–Paşabağlar', p:'12 €', y:'Müzekart', s:'Tek biletle iki ören yeri', src:KTB },
+      { c:'ticket', t:'r', n:'Uçhisar Kalesi', p:'9 €' },
+      { c:'car', t:'e', n:'Kırmızı / Yeşil tur (grup)', p:'2.000–3.000 TL', s:'Rehber, giriş ücretleri ve öğle yemeği dahil' },
+      { c:'bed', t:'e', n:'Mağara otel (orta)', p:'1.500–3.000 TL', s:'Pansiyon 500–1.000 TL · lüks 7.500–20.000 TL' },
+      { c:'car', t:'e', n:'Havalimanı → Göreme', p:'1.000–1.500 TL', pl:'taksi, araç başı', y:'~250 TL', yl:'servis, kişi başı' },
+      { c:'car', t:'e', n:'Dolmuş (Göreme–Avanos–Ürgüp)', p:'50–100 TL', s:'Seyrek çalışıyor' },
+      { c:'fork', t:'e', n:'Testi kebabı', p:'300–400 TL', s:'Esnaf lokantasında öğle 200–250 TL' }
+    ],
+    tips:[
+      { h:'Balonu yerden izle, bedava', t:"Göreme'nin seyir tepeleri, Aşk Vadisi ve Uçhisar çevresi gün doğumunda balonları izlemek için ücretsiz yerler." },
+      { h:'Kışın uç ama koşulu yazılı al', t:'Kış en ucuz dönem ama iptal daha sık. Rüzgâr 10 knotu geçerse yolcu balonu kalkmıyor; çoğu firma iptali ertesi sabaha kaydırıyor. Tam iade koşulunu rezervasyon belgesinde yazılı iste.' },
+      { h:'Vadiler ücretsiz', t:'Aşk Vadisi ve Güvercinlik Vadisi gibi vadiler ücretsiz yürünüyor. Turu sadece müzeler için değil, yürüyüş için de bırakabilirsin.' },
+      { h:'Müzekart burada her şeyi açar', t:'Göreme, Zelve–Paşabağlar, Derinkuyu ve Kaymaklı’da T.C. vatandaşları Müzekart’la giriyor. Tek kart, dört ören yeri.' }
+    ],
+    traps:[ 'Hava uygunken uçuşa gelmezsen ya da son dakika iptal edersen genellikle iade yapılmıyor.' ],
+    sources:[
+      ['Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)', KTB],
+      ['2027 müze tarifesi — Turizm Güncel','https://www.turizmguncel.com/haber/muze-ve-oren-yerlerine-giris-ucretlerine-zam-2027-tarifesi-belli-oldu'],
+      ['Cappadocia Prices 2026 — AskCappadocia','https://askcappadocia.com/cappadocia-prices'],
+      ['Kapadokya Balon Turu Fiyatları 2026 — Gezimaris','https://gezimaris.com/kapadokya-balon-turu-fiyatlari/'],
+      ['Cappadocia Travel Costs 2026 — ToursCE','https://toursce.com/blog/cappadocia-travel-costs-explained-realistic-budget-guide-2026/']
+    ] },
+
+  roma: { checked:'2026-11-19',
+    intro:"Roma pahalı görünür ama en güzel yanları bedava: çeşmeler, meydanlar, kiliseler. Para biletlere, oturarak içilen kahveye ve merkezdeki otellere gider.",
+    tierNote:'Kişi başı · günlük · konaklama dahil',
+    tierNoteY:'Yerel gibi gezersen (barda kahve, öğle menüsü, otobüs) aralığın alt ucuna yaklaşırsın.',
+    tiers:[
+      { k:'Hesaplı', v:'54–122 €', inc:'Hostel, dilim pizza ve sokak yemeği, yürüyerek ya da BIT biletiyle gezme.' },
+      { k:'Orta', v:'128–222 €', inc:'Ekonomik otel, trattoria akşamları, günde bir büyük müze.' },
+      { k:'Rahat', v:'273–455 €', inc:'Merkezde 3–4 yıldızlı otel, rehberli turlar, taksi.' }
+    ],
+    spend:[
+      { c:'ticket', t:'r', n:'Kolezyum + Forum + Palatino', p:'18 €', s:'24 saat geçerli · satış ziyaretten tam 30 gün önce açılır' },
+      { c:'ticket', t:'r', n:'Vatikan Müzeleri + Sistina', p:'25 €', pl:'online', y:'20 €', yl:'gişede, sıraya girerek', s:'Online bilete 5 € rezervasyon ücreti ekleniyor' },
+      { c:'ticket', t:'r', n:'Pantheon', p:'7 €', s:'1 Temmuz 2026’dan beri' },
+      { c:'ticket', t:'r', n:'Trevi Çeşmesi havuz kenarı', p:'2 €', s:'Şubat 2026’dan beri · sokaktan izlemek ücretsiz · sadece kart' },
+      { c:'car', t:'r', n:'BIT bileti (100 dk)', p:'1,50 €', s:'24 saat 8,50 € · 48 saat 15 € · 72 saat 22 €' },
+      { c:'car', t:'e', n:'Havalimanı → Termini', p:'14 €', pl:'Leonardo Express', y:'6–7 €', yl:'otobüsle' },
+      { c:'bed', t:'e', n:'3 yıldızlı otel (gecelik)', p:'80–280 €', s:'Düşük sezon 80–140 €, zirve 160–280 € · hostel yatağı 25–60 €' },
+      { c:'fork', t:'e', n:'Öğle yemeği', p:'15–25 €', pl:'trattoria', y:'12–18 €', yl:'hafta içi işçi menüsü' },
+      { c:'fork', t:'e', n:'Espresso', p:'masada daha pahalı', y:'~1,20 €', yl:'barda ayakta' }
+    ],
+    tips:[
+      { h:'Kahveyi barda ayakta iç', t:'Barda ayakta içilen espresso ortalama 1,20 €; masaya oturunca fiyat yükseliyor.' },
+      { h:'Su bedava: nasoni', t:"Roma'nın sokak çeşmelerinden (nasoni) içme suyu ücretsiz. Şişeni yanında taşı." },
+      { h:'Öğlen işçi menüsü', t:'Hafta içi öğlen "pranzo di lavoro" menüleri 12–18 €. Akşam yerine aperitivo (10–15 €) da doyurur.' },
+      { h:'Vatikan ayın son pazarı ücretsiz', t:'Her ayın son pazarı 09:00–14:00 arası ücretsiz, son giriş 12:30. Rezervasyon yok, kuyruk uzun: erken git.' },
+      { h:'Kart mı tek bilet mi?', t:"72 saatlik kart 22 €. Üç günde 15'ten az BIT kullanacaksan tek tek bilet almak daha ucuz; merkez zaten yürünür." },
+      { h:'Merkezin biraz dışında kal', t:'San Giovanni, Ostiense ve Pigneto merkeze göre %30–50 daha uygun ve metroyla yakın.' }
+    ],
+    traps:[ 'Konaklama vergisi otelde gecelik ayrıca alınır; rezervasyon fiyatına dahil olmayabilir.' ],
+    sources:[
+      ['Is Rome Expensive? 2026 — Radical Storage','https://radicalstorage.com/travel/is-rome-expensive/'],
+      ['Italy Travel Costs 2026 — First Step to Adventure','https://firststeptoadventure.com/italy-travel-costs-2026/'],
+      ['Vatican Museums Tickets 2026 — Art Visit Guide','https://www.artvisitguide.com/vatican-museums-tickets-guide/'],
+      ['Aumento biglietti ATAC — Telepass Moveo','https://moveo.telepass.com/aumento-biglietti-atac-roma-oggi-guida/']
+    ] },
+
+  floransa: { checked:'2026-11-19',
+    intro:"Floransa küçük; ulaşıma neredeyse hiç para gitmez. Bütçeyi müzeler ve Duomo çevresindeki masalar belirler. Nehrin karşısına geçmek tek başına bir tasarruf.",
+    tierNote:'Kişi başı · günlük · uçak hariç',
+    tierNoteY:'Oltrarno’da yiyip ayın ilk pazarını yakalarsan aralığın alt ucuna inersin.',
+    tiers:[
+      { k:'Hesaplı', v:'80–120 €', inc:'Hostel ya da pansiyon, dilim pizza, öğle menüsü, ayın ilk pazarı müzeler.' },
+      { k:'Orta', v:'160–250 €', inc:"3 yıldızlı otel, Oltrarno'da trattoria, iki büyük müze." },
+      { k:'Rahat', v:'400+ €', inc:'Lüks otel, Duomo manzaralı akşamlar, özel turlar.' }
+    ],
+    spend:[
+      { c:'ticket', t:'r', n:'Uffizi Galerisi', p:'25 €', y:'16 €', yl:'16:00’dan sonra', s:'Yüksek sezonda online 29 €' },
+      { c:'ticket', t:'r', n:'Accademia (Davut)', p:'20 €', s:'Online 24 €' },
+      { c:'ticket', t:'r', n:'Brunelleschi Pass (kubbe)', p:'30 €', s:'Kubbe sadece bu paketle · katedralin içi ücretsiz' },
+      { c:'ticket', t:'r', n:'Firenzecard', p:'85 €', s:'72 saat, 60’tan fazla yer' },
+      { c:'car', t:'r', n:'Otobüs / tramvay (70 dk)', p:'2 €', s:'1 Ağustos 2026’dan beri' },
+      { c:'car', t:'e', n:'Havalimanı → merkez', p:'25 €', pl:'sabit taksi', y:'2 €', yl:'T2 tramvayı, ~20 dk' },
+      { c:'bed', t:'e', n:'Pansiyon / B&B (gecelik)', p:'70–120 €', s:'Hostel yatağı 30–45 € · 3–4 yıldız 130–220 €' },
+      { c:'fork', t:'e', n:'Trattoria akşamı (şarapla)', p:'55–80 €', pl:'Duomo yanında', y:'28–40 €', yl:'Oltrarno, San Frediano' },
+      { c:'fork', t:'e', n:'Gelato', p:'2,5–4,5 €', pl:'meydanda', y:'1,5–2,5 €', yl:'mahallede' }
+    ],
+    tips:[
+      { h:'Ayın ilk pazarı Uffizi ve Accademia ücretsiz', t:'Rezervasyon yok, kuyruk var. Sabah erkenden sıraya gir.' },
+      { h:"Uffizi'yi öğleden sonra gez", t:"16:00'dan sonra bilet 16 €. Cuma akşamı Vasari Koridoru dahil bilet de var." },
+      { h:'Köprüyü geç, yarı fiyatına ye', t:"Aynı trattoria akşamı Oltrarno ve San Frediano'da 28–40 €, Duomo yanında 55–80 €. Öğleyi ana öğün yap, menü 10–18 €." },
+      { h:'Gün batımı bedava', t:"Piazzale Michelangelo'dan gün batımı, Piazza della Signoria ve Ponte Vecchio ücretsiz." },
+      { h:'Günübirlik tren ucuz', t:'Pisa bölgesel trenle yaklaşık 9 €, Lucca ve Siena yaklaşık 10 €; tur paketi 50–90 €.' }
+    ],
+    traps:[ 'Arabayla tarihi merkezdeki ZTL bölgesine girme: her kapı geçişine 83–332 € ceza.' ],
+    sources:[
+      ['Florence Trip Cost 2026 — The Better Vacation','https://thebettervacation.com/florence/florence-trip-cost/'],
+      ['Italy Travel Costs 2026 — First Step to Adventure','https://firststeptoadventure.com/italy-travel-costs-2026/']
+    ] },
+
+  santorini: { checked:'2026-11-19',
+    intro:"Santorini'de en pahalı şey manzara: kaldera kenarında oda da yemek de birkaç katı. Akıllıcası karşı kıyıda kalıp manzaraya otobüsle ya da yürüyerek gitmek.",
+    tierNote:'Kişi başı · günlük · konaklama dahil · feribot hariç',
+    tierNoteY:'Kamari ya da Perissa’da kalıp KTEL ile gezersen hesaplı aralıkta kalırsın.',
+    tiers:[
+      { k:'Hesaplı', v:'55–75 €', inc:'Hostel ya da paylaşımlı oda, taverna, KTEL otobüsü, ücretsiz yürüyüşler.' },
+      { k:'Orta', v:'85–120 €', inc:'Ekonomik otel, scooter, bir ücretli tur.' },
+      { k:'Rahat', v:'140–200 €', inc:'Manzaralı 3 yıldızlı otel, oturarak yemekler, kiralık araba.' }
+    ],
+    spend:[
+      { c:'bed', t:'e', n:'Konaklama (gecelik)', p:'280 €+', pl:'Oia, kaldera manzaralı', y:'55–100 €', yl:'Perissa, Kamari', s:'Fira/Imerovigli kaldera 200–450 €' },
+      { c:'car', t:'r', n:'KTEL otobüsü (Fira’dan)', p:'2,20–2,70 €', s:'Oia ve havalimanı 2,20 € · Perissa ve liman 2,70 € · Mayıs 2026 tarifesi' },
+      { c:'car', t:'e', n:'Havalimanı → Fira', p:'25–35 € + 4 €', pl:'taksi + havalimanı ek ücreti', y:'2,20 €', yl:'KTEL' },
+      { c:'car', t:'e', n:'Scooter · küçük araba (günlük)', p:'18–25 € · 35–55 €' },
+      { c:'boat', t:'e', n:'Kaldera katamaran turu', p:'100–120 €' },
+      { c:'boat', t:'e', n:'Atina’dan feribot', p:'~55 €', pl:'hızlı', y:'~38 €', yl:'konvansiyonel' },
+      { c:'ticket', t:'r', n:'Akrotiri ören yeri', p:'12 €', s:'Fira teleferiği ~10 € (tek yön)' },
+      { c:'fork', t:'e', n:'Akşam yemeği', p:'50–100 €', pl:'kaldera manzaralı', y:'10–18 €', yl:'taverna ana yemek', s:'Gyros pita 4–5,5 €' }
+    ],
+    tips:[
+      { h:'Karşı kıyıda kal, bir geceyi kalderaya ayır', t:"Kamari ya da Perissa'da kalıp tek bir geceyi kaldera manzarasına ayırmak bütçeyi rahatlatır." },
+      { h:'Yerelin yediği köyler', t:"Pyrgos, Megalochori, Kamari, Perissa ve Fira'nın arka sokaklarında fiyatlar belirgin şekilde düşük." },
+      { h:'Fira–Oia yürüyüşü ücretsiz', t:"Adanın en güzel manzarası bedava: Fira'dan Oia'ya kaldera kenarından yürü, dönüşü otobüsle yap." },
+      { h:'Otobüs için bozuk nakit', t:"KTEL biletleri online satılmıyor; kondüktörden ya da Fira istasyonundan alınıyor. Köyden köye Fira'da aktarma yapıp ikinci bilet ödenir." },
+      { h:'Mayıs ve Eylül sonu', t:"Aynı 5 gecelik orta bütçeli gezi Ağustos'ta ~1.800 €, Eylül sonunda ~1.150 €." }
+    ],
+    traps:[ 'Oia gün batımından sonra son otobüsü kaçırma: sonbahar tarifesinde Oia → Fira son otobüs 21:35. Kaçarsa pahalı taksi kalır.', 'Gecelik iklim harcı otelde ayrıca alınır; otel sınıfına ve sezona göre değişir.' ],
+    sources:[
+      ['Santorini on a Budget 2026 — Greek Island Info','https://greekislandinfo.com/posts/santorini-budget-guide/'],
+      ['Santorini Bus Guide 2026 — Perissa.net','https://perissa.net/blog/santorini-bus-guide'],
+      ['Is Santorini Expensive? — My Santorini Transfer','https://mysantorinitransfer.com/is-santorini-expensive/']
+    ] },
+
+  atina: { checked:'2026-11-19',
+    intro:"Atina'da sokak yemeği ve metro hâlâ ucuz: souvlaki birkaç euro, 90 dakikalık bilet 1,20 €. Pahalı olan tek tek alınan antik alan biletleri ve Plaka'daki masalar.",
+    tierNote:'Kişi başı · günlük · konaklama dahil',
+    tierNoteY:'Koukaki ve Pangrati’de yiyip metroyla gezersen hesaplı aralıkta kalırsın.',
+    tiers:[
+      { k:'Hesaplı', v:'45–55 €', inc:'Hostel, souvlaki ve günün menüsü, metro, ücretsiz tepeler.' },
+      { k:'Orta', v:'80–100 €', inc:'Pansiyon ya da stüdyo, taverna akşamları, birkaç antik alan.' },
+      { k:'Rahat', v:'120–160 €', inc:'Merkezde otel, Akropolis Müzesi ve tüm büyük alanlar, taksi.' }
+    ],
+    spend:[
+      { c:'ticket', t:'r', n:'Akropolis', p:'30 €', s:'İndirimli 15 € · yıl boyu tek fiyat, kış indirimi kalktı · kombine bilet artık yok' },
+      { c:'car', t:'r', n:'Metro · 90 dakika', p:'1,20 €', s:'24 saat 4,10 € · 5 gün 8,20 €' },
+      { c:'car', t:'r', n:'3 günlük turist bileti', p:'20 €', s:'72 saat tüm toplu taşıma + bir havalimanı gidiş-dönüş' },
+      { c:'car', t:'e', n:'Havalimanı → merkez', p:'40 €', pl:'sabit taksi (gece 55 €)', y:'9 €', yl:'metro (X95 otobüsü 5,50 €)' },
+      { c:'bed', t:'e', n:'Pansiyon / ekonomik otel', p:'40–70 €', s:'Hostel yatağı 15–25 € (yaz)' },
+      { c:'fork', t:'e', n:'Ana yemek', p:'15–20 €', pl:'Plaka', y:'8–12 €', yl:'Koukaki, Pangrati', s:'Günün menüsü 6–8 €' },
+      { c:'fork', t:'e', n:'Souvlaki · freddo espresso', p:'3–4 € · 2–3,5 €' },
+      { c:'walk', t:'e', n:'Likavitos Tepesi', p:'10 €', pl:'füniküler, gidiş-dönüş', y:'ücretsiz', yl:'patikadan yürüyerek' }
+    ],
+    tips:[
+      { h:'Havalimanından iniyorsan 3 günlük bilet', t:"20 €'luk turist bileti, 16 €'luk havalimanı gidiş-dönüşüne ek olarak üç gün şehir içi ulaşımı da kapsıyor." },
+      { h:'Kış pazarları ücretsiz', t:"Kasım–Mart arası her ayın 1. ve 3. pazarı devlet antik alanları ücretsiz. Ayrıca 6 Mart, 18 Nisan, 18 Mayıs, Eylül'ün son hafta sonu ve 28 Ekim." },
+      { h:'Plaka değil Koukaki, Pangrati', t:"Aynı ana yemek Plaka'da 15–20 €, Koukaki ya da Pangrati'de 8–12 €. Öğlen günün menüsü 6–8 €." },
+      { h:'Tepeler bedava', t:'Filopappu, Areopagus ve Ulusal Bahçe ücretsiz; Likavitos patikası da öyle.' },
+      { h:'18 yaş altı ücretsiz', t:'AB dışından gelen 18 yaş altı ziyaretçiler devlet alanlarına ücretsiz giriyor; kimlik ya da pasaport yanında olsun.' }
+    ],
+    traps:[ 'Taksinin sabit ücreti sadece merkez halkası için geçerli; Pire ve banliyöler taksimetreyle.' ],
+    sources:[
+      ['Acropolis Tickets 2026 — Athens Travel Guides','https://athenstravelguides.com/posts/acropolis-tickets-visiting-guide/'],
+      ['Athens in 3 Days 2026 — Journey Finder','https://www.journeyfinder.net/itineraries/athens-3-days'],
+      ['Athens on a Budget — Day Trips From Athens','https://daytripsfromathens.pages.dev/articles/athens-on-a-budget'],
+      ['Athens Metro 2026 — Real Greek Experiences','https://realgreekexperiences.com/locals-guide-to-taking-the-athens-metro']
+    ] }
+};

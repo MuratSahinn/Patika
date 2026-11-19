@@ -1,0 +1,3 @@
+{ "name": "patika-arac", "private": true,
+  "scripts": { "test": "node testler/all.js ../index.html && node testler/cr-test.js ../index.html && node testler/ptsweep.js ../index.html && node testler/reg6.js ../index.html" },
+  "dependencies": { "jsdom": "^24.0.0" } }
