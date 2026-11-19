@@ -2494,6 +2494,7 @@ body[data-theme="dark"] .cr-row.is-y .cr-p{ color:#7CC28A; }
   font-family:var(--label-font); font-weight:700; font-size:0.72rem; }
 .ai-form input:disabled, .ai-form button:disabled{ opacity:.5; cursor:default; }
 @media (max-width:760px){ .ai-modal{ height:88vh; max-height:88vh; } }
+.bd-share[hidden]{ display:none !important; }
 </style>
 </head>
 <body>
@@ -5013,6 +5014,20 @@ var qrcode = function() {
 
 </script>
 <script>
+/* ---- Depolama ----
+   Claude ortamında window.storage hazır gelir (paylaşımlı veri dahil).
+   Yayında (GitHub Pages) yoktur: kişisel veriler tarayıcıda (localStorage) kalıcı tutulur,
+   paylaşımlı veriler (gezgin notları, bütçeleri, oylar) sunucu gelene kadar kapalıdır. */
+var SHARED_ON = !!window.storage;
+if(!window.storage){
+  window.storage = {
+    __yerel: true,
+    async get(k, shared){ if(shared) throw new Error('paylaşım kapalı'); const v = localStorage.getItem(k); return v===null ? null : { key:k, value:v }; },
+    async set(k, v, shared){ if(shared) throw new Error('paylaşım kapalı'); localStorage.setItem(k, String(v)); return { key:k, value:String(v) }; },
+    async delete(k, shared){ if(shared) throw new Error('paylaşım kapalı'); localStorage.removeItem(k); return { key:k, deleted:true }; }
+  };
+}
+const SHARED_SOON = '<div class="c-empty c-soon">Gezgin paylaşımları yakında. Hesaplar açılınca diğer gezginlerle not ve bütçe paylaşabileceksin.</div>';
 /* ============================================================
    VERİ
    ============================================================ */
@@ -9071,6 +9086,7 @@ async function toggleVote(cid, id){
 async function renderCommunityNotes(city){
   const wrap = document.getElementById('communityNotes');
   if(!wrap) return;
+  if(!SHARED_ON){ wrap.innerHTML = `<h4>${ic('users','c-h-ic')}Gezgin Notları</h4>${SHARED_SOON}`; return; }
   const arr = await loadCommunityNotes(city.id);
   const votes = await loadVotes(city.id);
   if(activeCityId !== city.id) return; /* şehir değişmiş */
@@ -9116,6 +9132,7 @@ async function shareBudget(city, total, cur){
 async function renderCommunityBudget(city){
   const wrap = document.getElementById('cbList');
   if(!wrap) return;
+  if(!SHARED_ON){ wrap.innerHTML = SHARED_SOON; return; }
   const arr = await loadCommunityBudget(city.id);
   if(arr.length===0){ wrap.innerHTML = '<div class="c-empty">Henüz kimse bütçesini paylaşmadı. Hesaplı gezdiysen yol göster.</div>'; return; }
   /* aynı para birimindekileri ucuzdan pahalıya sırala; farklı birimler sona */
@@ -9349,6 +9366,7 @@ async function openBudget(city){
   };
   render();
   renderCommunityBudget(city);
+  document.getElementById('bdShareBtn').hidden = !SHARED_ON;
   document.getElementById('bdShareBtn').onclick = async ()=>{
     const total = st.items.reduce((a,i)=>a+i.a, 0);
     if(total <= 0) return;
@@ -9843,7 +9861,7 @@ function renderDayPanel(city){
           ${s.insider.more ? `<div class="line">${ic('compass','ln-ic')}<div><strong>Bilene notlar</strong>${s.insider.more}</div></div>` : ''}
           <div class="ins-foot">${ic('info')}Rota güncellemesi: Kasım 2026 · Açılış saatleri ve biletler değişebilir; gitmeden resmi kaynaktan kontrol et.</div>
         </div>
-        ${o.skipped ? '' : `<textarea class="note-area" data-notekey="${o.key}" placeholder="Bu durak için notun... (kafe adı, anı, hatırlatma)">${(notes[o.key]||'').replace(/</g,'&lt;').replace(/`/g,'&#96;')}</textarea><button class="note-share ${notes[o.key]?'visible':''}" data-notekey="${o.key}">Bu notu gezginlerle paylaş</button>`}
+        ${o.skipped ? '' : `<textarea class="note-area" data-notekey="${o.key}" placeholder="Bu durak için notun... (kafe adı, anı, hatırlatma)">${(notes[o.key]||'').replace(/</g,'&lt;').replace(/`/g,'&#96;')}</textarea>${SHARED_ON ? `<button class="note-share ${notes[o.key]?'visible':''}" data-notekey="${o.key}">Bu notu gezginlerle paylaş</button>` : ''}`}
         ${s.walk && !o.skipped ? (()=>{ const w = walkInfo(s.walk); return `<span class="walk-seg">${ic(w.icon)}${w.text}<span class="ws-next">sonraki durak</span></span>`; })() : ''}
       </div>
     </div>`;

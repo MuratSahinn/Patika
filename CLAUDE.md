@@ -11,10 +11,12 @@ Bu dosya yeni bir sohbetin kaldığı yerden devam edebilmesi için yazıldı. �
 
 ## Uygulama
 - Tek dosya: `index.html` (v2 premium). İki `<script>` bloğu: ilki gömülü qrcode kütüphanesi, ikincisi uygulama.
-- PWA: `sw.js` — **her yayında `CACHE` adını artır** (şu an `patika-v2-7`).
+- PWA: `sw.js` — **her yayında `CACHE` adını artır** (şu an `patika-v2-8`).
 - Yayın: GitHub Pages, `main` dalı kökü → https://muratsahinn.github.io/Patika/
 - Eski sürüm: `surumler/v1/`.
 - Depolama: `window.storage.get/set(k, v, shared)` (paylaşımlı anahtarlar: `cnotes:`, `cbudget:`, `cvotes:`), küçük tercihler için try/catch'li localStorage.
+  - **Dikkat:** `window.storage` yalnızca Claude ortamında var; yayında (GitHub Pages) yok. Uygulama betiğinin başındaki yedek, kişisel veriyi localStorage'a yazar. Paylaşımlı veri `SHARED_ON=false` iken kapalıdır: gezgin notları ve bütçeleri "yakında" (`SHARED_SOON`) gösterir, paylaş düğmeleri gizlenir. Sosyal akışın sunucusu (Supabase) gelince paylaşımlı katman ona bağlanacak.
+  - Yayın ortamı testi: `testler/kalici-test.js` (window.storage olmadan, yenileme sonrası veri kalıyor mu). Ekran: `ekran/shotyerel.py <html> <etiket> light|dark`.
 
 ### Ana veri yapıları (index.html içinde)
 - `COUNTRY_CITIES` {tr, it, gr} → şehirler: `{ id, city, note, meta, days:[{day,title,tip,stops:[{name,duration,walk,coord,special,...}]}] }`. 73 şehir (TR 39, İT 20, GR 14).
