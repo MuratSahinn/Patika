@@ -41,6 +41,7 @@ Bu dosya yeni bir sohbetin kaldığı yerden devam edebilmesi için yazıldı. �
 4. ⏭ Sosyal akış (Strava benzeri): rotadaki insanların paylaşımları, profil durum güncellemesi, paylaşımı teşvik
 5. ⏭ Yapay zekâ: çok şehirli planlama ve sohbetle rota düzenleme. Murat'ın taslak promptu: `docs/ai-prompt-v3.md`.
    Değerlendirme özeti: ilkeler iyi; ama olmayan arka uca (place_id, rota motoru, rezervasyon) atıf yapıyor, uzun ve tekrarlı, JSON şeması tanımsız, asıl iki işi (çok şehir planı, rota düzenleme) merkeze almıyor. Plan: Patika'ya uyarlanmış kısa prompt + gerçek araçlar (şehir getir, durak çıkar/ekle/sırala, gezi planına ekle, patika ve bütçe getir); değişiklikler "Uygula / Vazgeç" kartıyla onaylanır. API anahtarı HTML'e konmaz: Cloudflare Worker gibi bir ara katman. Gerekenler: Anthropic API hesabı + Cloudflare hesabı.
+   ✅ Uyarlanmış prompt + araç şeması: `docs/ai-prompt-patika.md` (v4). Sıradaki: araçları index.html'e bağlamak, Uygula/Vazgeç kartı, Worker. Açık karar: yeni yer ekleme v1'de yok (sadece çıkar/geri al/sırala).
 
 ## Bekleyen küçük fikirler
 Eski rota kartı stilinin yenilenmesi, hava durumu ikonu, günlükte fotoğraflar, topluluk notları için "şikâyet et" düğmesi (yayına açmadan önce önemli), daha fazla el çizimi siluet.
