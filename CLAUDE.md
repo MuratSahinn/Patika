@@ -11,7 +11,7 @@ Bu dosya yeni bir sohbetin kaldığı yerden devam edebilmesi için yazıldı. �
 
 ## Uygulama
 - Tek dosya: `index.html` (v2 premium). İki `<script>` bloğu: ilki gömülü qrcode kütüphanesi, ikincisi uygulama.
-- PWA: `sw.js` — **her yayında `CACHE` adını artır** (şu an `patika-v2-6`).
+- PWA: `sw.js` — **her yayında `CACHE` adını artır** (şu an `patika-v2-7`).
 - Yayın: GitHub Pages, `main` dalı kökü → https://muratsahinn.github.io/Patika/
 - Eski sürüm: `surumler/v1/`.
 - Depolama: `window.storage.get/set(k, v, shared)` (paylaşımlı anahtarlar: `cnotes:`, `cbudget:`, `cvotes:`), küçük tercihler için try/catch'li localStorage.
@@ -41,7 +41,11 @@ Bu dosya yeni bir sohbetin kaldığı yerden devam edebilmesi için yazıldı. �
 4. ⏭ Sosyal akış (Strava benzeri): rotadaki insanların paylaşımları, profil durum güncellemesi, paylaşımı teşvik
 5. ⏭ Yapay zekâ: çok şehirli planlama ve sohbetle rota düzenleme. Murat'ın taslak promptu: `docs/ai-prompt-v3.md`.
    Değerlendirme özeti: ilkeler iyi; ama olmayan arka uca (place_id, rota motoru, rezervasyon) atıf yapıyor, uzun ve tekrarlı, JSON şeması tanımsız, asıl iki işi (çok şehir planı, rota düzenleme) merkeze almıyor. Plan: Patika'ya uyarlanmış kısa prompt + gerçek araçlar (şehir getir, durak çıkar/ekle/sırala, gezi planına ekle, patika ve bütçe getir); değişiklikler "Uygula / Vazgeç" kartıyla onaylanır. API anahtarı HTML'e konmaz: Cloudflare Worker gibi bir ara katman. Gerekenler: Anthropic API hesabı + Cloudflare hesabı.
-   ✅ Uyarlanmış prompt + araç şeması: `docs/ai-prompt-patika.md` (v4). Sıradaki: araçları index.html'e bağlamak, Uygula/Vazgeç kartı, Worker. Açık karar: yeni yer ekleme v1'de yok (sadece çıkar/geri al/sırala).
+   ✅ Uyarlanmış prompt + araç şeması: `docs/ai-prompt-patika.md` (v4). Yeni yer ekleme v1'de yok (sadece çıkar/geri al/sırala).
+   ✅ Uygulama tarafı (index.html): menüde "Patika Asistan" → `#aiModal`. `AI_CFG.endpoint` boşsa "yakında" durumu. Okuma araçları `AI_TOOLS`, değişiklik doğrulama `aiSimulate` (toplu, sanal kopya), uygulama `aiCommit` + "Geri al" (`aiRestore`, model bir sonraki mesajda notla haberdar edilir). Sohbet geçmişi sadece oturumda (`aiState`). Model metni `escH` + sınırlı biçim (`aiFormat`).
+   ✅ Worker: `worker/` (prompt+araçlar+model Worker'da sabit; `node arac/ai/build-worker.js` docs'tan gömer). Kurulum: `worker/README.md`.
+   ⏭ Sıradaki: Murat Anthropic + Cloudflare hesabı açıp `wrangler deploy` yapar → Worker adresi `AI_CFG.endpoint`'e yazılır → gerçek modelle uçtan uca deneme. Yayından önce deneme: localStorage `patika:ai:endpoint`.
+   Test: `testler/ai-test.js` (npm test içinde). Ekran: `python3 ekran/shotai.py <html> <etiket> mob|desk light|dark off|card|applied` (sahte model yanıtıyla).
 
 ## Bekleyen küçük fikirler
 Eski rota kartı stilinin yenilenmesi, hava durumu ikonu, günlükte fotoğraflar, topluluk notları için "şikâyet et" düğmesi (yayına açmadan önce önemli), daha fazla el çizimi siluet.

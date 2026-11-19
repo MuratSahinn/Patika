@@ -1,0 +1,18 @@
+name = "patika-ai"
+main = "patika-ai.js"
+compatibility_date = "2026-11-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://muratsahinn.github.io"
+MODEL = "claude-sonnet-5-5"
+
+# IP başına dakikada 20 istek (period yalnızca 10 ya da 60 olabilir)
+[[ratelimits]]
+name = "RL"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 20
+  period = 60
+
+# Anahtar burada DEĞİL: `npx wrangler secret put ANTHROPIC_API_KEY`
