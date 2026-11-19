@@ -2,6 +2,1829 @@
  "version": 1,
  "generated": "2026-11-19",
  "cities": {
+  "mikonos": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · adalar için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Taverna, KTEL otobüsü ve köy pansiyonuyla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~80 €",
+     "inc": "Hostel ya da pansiyon, gyros ve taverna, KTEL otobüsü."
+    },
+    {
+     "k": "Orta",
+     "v": "~250 €",
+     "inc": "Orta sınıf otel, oturarak yemekler, bir tekne turu."
+    },
+    {
+     "k": "Rahat",
+     "v": "~420 €+",
+     "inc": "Manzaralı otel, özel tekne ve transferler."
+    }
+   ],
+   "intro": "Mikonos Yunan adalarının en pahalılarından. Delos ise adanın en değerli ve görece ucuz günü.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Delos (ören yeri + müze)",
+     "p": "20 €",
+     "s": "İndirimli 10 € · Aralık–Mart kapalı · tekne ayrıca ödenir"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Delos için su ve şapka",
+     "t": "Adada gölge az; su, atıştırmalık ve şapka yanında olsun. Önce müzeyi gez, sonra tekneye doğru yürü."
+    },
+    {
+     "h": "Kışın ücretsiz pazarlar",
+     "t": "Kasım–Mart arası her ayın 1. ve 3. pazarı devlet antik alanları ücretsiz; ayrıca 6 Mart, 18 Nisan, 18 Mayıs, Eylül’ün son hafta sonu ve 28 Ekim."
+    },
+    {
+     "h": "Bileti resmi siteden al",
+     "t": "Antik alan biletleri gişede ve resmi Hellenic Heritage sitesinde (hhticket.gr) aynı fiyat; aracı siteler genelde daha pahalı. AB dışından 18 yaş altı ücretsiz."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Visiting Delos — Dave’s Travel Pages",
+     "https://www.davestravelpages.com/visiting-delos-island-greece-mykonos-to-delos-day-trip/"
+    ],
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ],
+    [
+     "Greece’s price hike at tourist sites — DPA / Yahoo News",
+     "https://www.yahoo.com/news/greeces-price-hike-tourist-sites-134122672.html"
+    ],
+    [
+     "Acropolis tickets & free days 2026 — Athens Travel Guides",
+     "https://athenstravelguides.com/posts/acropolis-tickets-visiting-guide/"
+    ]
+   ]
+  },
+  "girit": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · adalar için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Taverna, KTEL otobüsü ve köy pansiyonuyla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~80 €",
+     "inc": "Hostel ya da pansiyon, gyros ve taverna, KTEL otobüsü."
+    },
+    {
+     "k": "Orta",
+     "v": "~250 €",
+     "inc": "Orta sınıf otel, oturarak yemekler, bir tekne turu."
+    },
+    {
+     "k": "Rahat",
+     "v": "~420 €+",
+     "inc": "Manzaralı otel, özel tekne ve transferler."
+    }
+   ],
+   "intro": "Girit'te Hanya'nın eski şehri ücretsiz gezilir; Samaria Kanyonu küçük bir bilet ama ulaşım ve dönüş teknesi ayrıca ödenir.",
+   "spend": [
+    {
+     "c": "walk",
+     "t": "r",
+     "n": "Samaria Kanyonu",
+     "p": "10 €",
+     "s": "5 €’dan 10 €’ya çıktı"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Hanya Arkeoloji Müzesi",
+     "p": "15 €"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Imbros alternatifi",
+     "t": "Samaria kalabalık ve uzunsa Imbros Kanyonu 2–3 saatte aynı dramı yaşatıyor."
+    },
+    {
+     "h": "Kışın ücretsiz pazarlar",
+     "t": "Kasım–Mart arası her ayın 1. ve 3. pazarı devlet antik alanları ücretsiz; ayrıca 6 Mart, 18 Nisan, 18 Mayıs, Eylül’ün son hafta sonu ve 28 Ekim."
+    },
+    {
+     "h": "Bileti resmi siteden al",
+     "t": "Antik alan biletleri gişede ve resmi Hellenic Heritage sitesinde (hhticket.gr) aynı fiyat; aracı siteler genelde daha pahalı. AB dışından 18 yaş altı ücretsiz."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Entrance fee hikes in Crete — Crete Insider",
+     "https://creteinsider.com/entrance-fees-archaeological-and-natural-sites/"
+    ],
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ],
+    [
+     "Greece’s price hike at tourist sites — DPA / Yahoo News",
+     "https://www.yahoo.com/news/greeces-price-hike-tourist-sites-134122672.html"
+    ],
+    [
+     "Acropolis tickets & free days 2026 — Athens Travel Guides",
+     "https://athenstravelguides.com/posts/acropolis-tickets-visiting-guide/"
+    ]
+   ]
+  },
+  "rodos": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · adalar için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Taverna, KTEL otobüsü ve köy pansiyonuyla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~80 €",
+     "inc": "Hostel ya da pansiyon, gyros ve taverna, KTEL otobüsü."
+    },
+    {
+     "k": "Orta",
+     "v": "~250 €",
+     "inc": "Orta sınıf otel, oturarak yemekler, bir tekne turu."
+    },
+    {
+     "k": "Rahat",
+     "v": "~420 €+",
+     "inc": "Manzaralı otel, özel tekne ve transferler."
+    }
+   ],
+   "intro": "Rodos'un eski şehri surların içinde ücretsiz dolaşılır; Büyük Üstat Sarayı ve müze küçük biletler.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Büyük Üstat Sarayı",
+     "p": "8 €",
+     "s": "Öğrenci ve AB’li 65+ için 4 €"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Arkeoloji Müzesi",
+     "p": "8 €"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Şövalyeler Sokağı sabah 9’dan önce",
+     "t": "Kruvaziyer grupları 09:00–10:30 arası geliyor; sokak sabah erken bomboş."
+    },
+    {
+     "h": "Su çeşmeden",
+     "t": "Hipokrat Meydanı ve hendek yürüyüşü girişindeki çeşmelerden şişeni doldur."
+    },
+    {
+     "h": "Kışın ücretsiz pazarlar",
+     "t": "Kasım–Mart arası her ayın 1. ve 3. pazarı devlet antik alanları ücretsiz; ayrıca 6 Mart, 18 Nisan, 18 Mayıs, Eylül’ün son hafta sonu ve 28 Ekim."
+    },
+    {
+     "h": "Bileti resmi siteden al",
+     "t": "Antik alan biletleri gişede ve resmi Hellenic Heritage sitesinde (hhticket.gr) aynı fiyat; aracı siteler genelde daha pahalı. AB dışından 18 yaş altı ücretsiz."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Rhodes Old Town Guide 2026 — Euro City Guide",
+     "https://eurocityguide.com/greece/rhodes-old-town-guide"
+    ],
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ],
+    [
+     "Greece’s price hike at tourist sites — DPA / Yahoo News",
+     "https://www.yahoo.com/news/greeces-price-hike-tourist-sites-134122672.html"
+    ],
+    [
+     "Acropolis tickets & free days 2026 — Athens Travel Guides",
+     "https://athenstravelguides.com/posts/acropolis-tickets-visiting-guide/"
+    ]
+   ]
+  },
+  "selanik": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · ana kara için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Souvlaki, günün menüsü ve otobüsle alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~55 €",
+     "inc": "Hostel ya da pansiyon, souvlaki, otobüs."
+    },
+    {
+     "k": "Orta",
+     "v": "~130 €",
+     "inc": "Orta sınıf otel, taverna akşamları, birkaç antik alan."
+    },
+    {
+     "k": "Rahat",
+     "v": "~210 €+",
+     "inc": "İyi otel, rehberli turlar, taksi."
+    }
+   ],
+   "intro": "Selanik'te Bizans kiliseleri, surlar ve sahil yürüyüşü büyük ölçüde ücretsiz; para pazarlarda ve meyhanelerde harcanır.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Ano Poli’de gün batımı",
+     "t": "Yukarı şehrin surlarından gün batımı ücretsiz."
+    },
+    {
+     "h": "Kışın ücretsiz pazarlar",
+     "t": "Kasım–Mart arası her ayın 1. ve 3. pazarı devlet antik alanları ücretsiz; ayrıca 6 Mart, 18 Nisan, 18 Mayıs, Eylül’ün son hafta sonu ve 28 Ekim."
+    },
+    {
+     "h": "Bileti resmi siteden al",
+     "t": "Antik alan biletleri gişede ve resmi Hellenic Heritage sitesinde (hhticket.gr) aynı fiyat; aracı siteler genelde daha pahalı. AB dışından 18 yaş altı ücretsiz."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ],
+    [
+     "Greece’s price hike at tourist sites — DPA / Yahoo News",
+     "https://www.yahoo.com/news/greeces-price-hike-tourist-sites-134122672.html"
+    ],
+    [
+     "Acropolis tickets & free days 2026 — Athens Travel Guides",
+     "https://athenstravelguides.com/posts/acropolis-tickets-visiting-guide/"
+    ]
+   ]
+  },
+  "meteora": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · ana kara için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Souvlaki, günün menüsü ve otobüsle alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~55 €",
+     "inc": "Hostel ya da pansiyon, souvlaki, otobüs."
+    },
+    {
+     "k": "Orta",
+     "v": "~130 €",
+     "inc": "Orta sınıf otel, taverna akşamları, birkaç antik alan."
+    },
+    {
+     "k": "Rahat",
+     "v": "~210 €+",
+     "inc": "İyi otel, rehberli turlar, taksi."
+    }
+   ],
+   "intro": "Meteora'da her manastıra ayrı ve küçük bir ücret ödenir. Asıl masraf ulaşım ve Kalambaka'da konaklama.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Manastır girişi (her biri)",
+     "p": "~3 €",
+     "s": "Her manastır ayrı ödenir · kapalı günleri farklı"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Bozuk nakit ve kıyafet",
+     "t": "Ücretler manastır manastır nakit ödeniyor. Omuzlar kapalı olmalı; kadınlar için girişte ücretsiz etek veriliyor."
+    },
+    {
+     "h": "Gün batımı yoldan bedava",
+     "t": "Manastırlar arasındaki yol üstündeki seyir noktaları gün batımında ücretsiz."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Meteora monasteries 2026 — Loudavým krokem",
+     "https://loudavymkrokem.cz/en/meteora-greece-monasteries-guide/"
+    ],
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ]
+   ]
+  },
+  "nafplio": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · ana kara için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Souvlaki, günün menüsü ve otobüsle alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~55 €",
+     "inc": "Hostel ya da pansiyon, souvlaki, otobüs."
+    },
+    {
+     "k": "Orta",
+     "v": "~130 €",
+     "inc": "Orta sınıf otel, taverna akşamları, birkaç antik alan."
+    },
+    {
+     "k": "Rahat",
+     "v": "~210 €+",
+     "inc": "İyi otel, rehberli turlar, taksi."
+    }
+   ],
+   "intro": "Nafplio'nun eski şehri ve sahil yürüyüşü ücretsiz; Palamidi kalesine çıkmak ise artık daha pahalı.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Palamidi Kalesi",
+     "p": "20 €",
+     "s": "İndirimli 10 € · eskiden 8 €’ydu"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Arvanitia yürüyüşü bedava",
+     "t": "Arvanitia sahil yolu ücretsiz; Bourtzi’yi karadan izlemek de öyle."
+    },
+    {
+     "h": "Kışın ücretsiz pazarlar",
+     "t": "Kasım–Mart arası her ayın 1. ve 3. pazarı devlet antik alanları ücretsiz; ayrıca 6 Mart, 18 Nisan, 18 Mayıs, Eylül’ün son hafta sonu ve 28 Ekim."
+    },
+    {
+     "h": "Bileti resmi siteden al",
+     "t": "Antik alan biletleri gişede ve resmi Hellenic Heritage sitesinde (hhticket.gr) aynı fiyat; aracı siteler genelde daha pahalı. AB dışından 18 yaş altı ücretsiz."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Palamidi fortress — Roam At Dawn",
+     "https://www.roamatdawn.com/blog/how-many-steps-to-palamidi-fortress"
+    ],
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ],
+    [
+     "Greece’s price hike at tourist sites — DPA / Yahoo News",
+     "https://www.yahoo.com/news/greeces-price-hike-tourist-sites-134122672.html"
+    ],
+    [
+     "Acropolis tickets & free days 2026 — Athens Travel Guides",
+     "https://athenstravelguides.com/posts/acropolis-tickets-visiting-guide/"
+    ]
+   ]
+  },
+  "korfu": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · adalar için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Taverna, KTEL otobüsü ve köy pansiyonuyla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~80 €",
+     "inc": "Hostel ya da pansiyon, gyros ve taverna, KTEL otobüsü."
+    },
+    {
+     "k": "Orta",
+     "v": "~250 €",
+     "inc": "Orta sınıf otel, oturarak yemekler, bir tekne turu."
+    },
+    {
+     "k": "Rahat",
+     "v": "~420 €+",
+     "inc": "Manzaralı otel, özel tekne ve transferler."
+    }
+   ],
+   "intro": "Korfu'nun eski şehri ve Liston ücretsiz dolaşılır; Eski Kale küçük bir bilet.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Eski Kale (Palaio Frourio)",
+     "p": "~6 €"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Kışın erken kapanıyor",
+     "t": "Eski Kale Kasım–Mart arası 15:00’te kapanıyor; öğleden önce git."
+    },
+    {
+     "h": "Kışın ücretsiz pazarlar",
+     "t": "Kasım–Mart arası her ayın 1. ve 3. pazarı devlet antik alanları ücretsiz; ayrıca 6 Mart, 18 Nisan, 18 Mayıs, Eylül’ün son hafta sonu ve 28 Ekim."
+    },
+    {
+     "h": "Bileti resmi siteden al",
+     "t": "Antik alan biletleri gişede ve resmi Hellenic Heritage sitesinde (hhticket.gr) aynı fiyat; aracı siteler genelde daha pahalı. AB dışından 18 yaş altı ücretsiz."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Old Fortress Corfu 2026 — Tourism Attractions",
+     "https://tourismattractions.net/greece/old-fortress-corfu-tickets"
+    ],
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ],
+    [
+     "Greece’s price hike at tourist sites — DPA / Yahoo News",
+     "https://www.yahoo.com/news/greeces-price-hike-tourist-sites-134122672.html"
+    ],
+    [
+     "Acropolis tickets & free days 2026 — Athens Travel Guides",
+     "https://athenstravelguides.com/posts/acropolis-tickets-visiting-guide/"
+    ]
+   ]
+  },
+  "milos": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · adalar için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Taverna, KTEL otobüsü ve köy pansiyonuyla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~80 €",
+     "inc": "Hostel ya da pansiyon, gyros ve taverna, KTEL otobüsü."
+    },
+    {
+     "k": "Orta",
+     "v": "~250 €",
+     "inc": "Orta sınıf otel, oturarak yemekler, bir tekne turu."
+    },
+    {
+     "k": "Rahat",
+     "v": "~420 €+",
+     "inc": "Manzaralı otel, özel tekne ve transferler."
+    }
+   ],
+   "intro": "Milos'ta Sarakiniko ve Plaka gün batımı ücretsiz; bütçenin büyük kalemi Kleftiko tekne turu.",
+   "spend": [
+    {
+     "c": "boat",
+     "t": "e",
+     "n": "Kleftiko tekne turu (yarım gün)",
+     "p": "135 €",
+     "pl": "şnorkel ve transferli lüks tur",
+     "y": "50–100 €",
+     "yl": "standart sürat teknesi"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Rüzgâra göre rota",
+     "t": "Kuzey rüzgârı sertleşirse tekneler güney kıyıdan (Paleochori) kalkıyor; bir gün önce teyit et."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Kleftiko boat tour review 2026 — Greek Trip Planner",
+     "https://greektriplanner.me/blog/kleftiko-milos-boat-tour-review"
+    ],
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ]
+   ]
+  },
+  "naksos": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · adalar için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Taverna, KTEL otobüsü ve köy pansiyonuyla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~80 €",
+     "inc": "Hostel ya da pansiyon, gyros ve taverna, KTEL otobüsü."
+    },
+    {
+     "k": "Orta",
+     "v": "~250 €",
+     "inc": "Orta sınıf otel, oturarak yemekler, bir tekne turu."
+    },
+    {
+     "k": "Rahat",
+     "v": "~420 €+",
+     "inc": "Manzaralı otel, özel tekne ve transferler."
+    }
+   ],
+   "intro": "Naksos Kikladlar'ın sakin ve geniş adası: Portara, köyler ve Zas yürüyüşü ücretsiz.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Portara gün batımı",
+     "t": "Portara’dan gün batımı ücretsiz; kalabalık olmadan önce git."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ]
+   ]
+  },
+  "paros": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · adalar için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Taverna, KTEL otobüsü ve köy pansiyonuyla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~80 €",
+     "inc": "Hostel ya da pansiyon, gyros ve taverna, KTEL otobüsü."
+    },
+    {
+     "k": "Orta",
+     "v": "~250 €",
+     "inc": "Orta sınıf otel, oturarak yemekler, bir tekne turu."
+    },
+    {
+     "k": "Rahat",
+     "v": "~420 €+",
+     "inc": "Manzaralı otel, özel tekne ve transferler."
+    }
+   ],
+   "intro": "Paros'ta Bizans Yolu ve Naoussa limanı ücretsiz; Antiparos Mağarası küçük bir bilet.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Antiparos Mağarası",
+     "p": "6 €",
+     "s": "Folklor müzesi dahil · 6–12 yaş 3 € · 2026’da Ekim sonuna kadar her gün 10:00–16:00"
+    }
+   ],
+   "tips": [
+    {
+     "h": "411 basamak",
+     "t": "Mağaraya inişte yaklaşık 411 basamak var; rahat ayakkabı giy."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Antiparos Cave 2026 — antiparos.com",
+     "https://antiparos.com/explore/antiparos-cave/"
+    ],
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ]
+   ]
+  },
+  "delfi": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · ana kara için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Souvlaki, günün menüsü ve otobüsle alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~55 €",
+     "inc": "Hostel ya da pansiyon, souvlaki, otobüs."
+    },
+    {
+     "k": "Orta",
+     "v": "~130 €",
+     "inc": "Orta sınıf otel, taverna akşamları, birkaç antik alan."
+    },
+    {
+     "k": "Rahat",
+     "v": "~210 €+",
+     "inc": "İyi otel, rehberli turlar, taksi."
+    }
+   ],
+   "intro": "Delfi'de tek büyük bilet ören yeri; akşamı yakındaki dağ köyü Arachova'da geçirmek rotanın parçası.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Delfi Örenyeri",
+     "p": "20 €",
+     "s": "Nisan 2025’ten beri"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Şafakta gir",
+     "t": "Kutsal Yol’u tur otobüsleri gelmeden, açılışta yürü."
+    },
+    {
+     "h": "Kışın ücretsiz pazarlar",
+     "t": "Kasım–Mart arası her ayın 1. ve 3. pazarı devlet antik alanları ücretsiz; ayrıca 6 Mart, 18 Nisan, 18 Mayıs, Eylül’ün son hafta sonu ve 28 Ekim."
+    },
+    {
+     "h": "Bileti resmi siteden al",
+     "t": "Antik alan biletleri gişede ve resmi Hellenic Heritage sitesinde (hhticket.gr) aynı fiyat; aracı siteler genelde daha pahalı. AB dışından 18 yaş altı ücretsiz."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ],
+    [
+     "Greece’s price hike at tourist sites — DPA / Yahoo News",
+     "https://www.yahoo.com/news/greeces-price-hike-tourist-sites-134122672.html"
+    ],
+    [
+     "Acropolis tickets & free days 2026 — Athens Travel Guides",
+     "https://athenstravelguides.com/posts/acropolis-tickets-visiting-guide/"
+    ]
+   ]
+  },
+  "zakintos": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · adalar için kaynak aralığının alt ucu, ortası ve üst ucu (2 kişi paylaşımlı)",
+   "tierNoteY": "Taverna, KTEL otobüsü ve köy pansiyonuyla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~80 €",
+     "inc": "Hostel ya da pansiyon, gyros ve taverna, KTEL otobüsü."
+    },
+    {
+     "k": "Orta",
+     "v": "~250 €",
+     "inc": "Orta sınıf otel, oturarak yemekler, bir tekne turu."
+    },
+    {
+     "k": "Rahat",
+     "v": "~420 €+",
+     "inc": "Manzaralı otel, özel tekne ve transferler."
+    }
+   ],
+   "intro": "Zakintos'ta Navagio'yu görmenin ucuz ve pahalı yolu çok farklı: tekneyi limandan kendin bulursan fiyat yarıya iner.",
+   "spend": [
+    {
+     "c": "boat",
+     "t": "e",
+     "n": "Navagio (Gemi Enkazı) teknesi",
+     "p": "55–75 €",
+     "pl": "transferli rehberli tur",
+     "y": "15–35 €",
+     "yl": "Porto Vromi’den sadece tekne"
+    },
+    {
+     "c": "boat",
+     "t": "e",
+     "n": "Caretta caretta turu (Laganas)",
+     "p": "25–50 €",
+     "s": "3 saat · Mayıs–Ekim yuvalama sezonu"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Seyir terası bedava",
+     "t": "Anafonitria üstündeki Navagio seyir terası ücretsiz ve açık."
+    }
+   ],
+   "traps": [
+    "Navagio plajına tekneyle çıkış kapalı (kaynak en az 31 Ekim 2026’ya kadar diyor); “plajda vakit” vaat eden ilanlara güvenme, güncel durumu sor."
+   ],
+   "sources": [
+    [
+     "Tours in Zakynthos — Greek Trip Planner",
+     "https://greektriplanner.me/blog/tours-in-zakynthos"
+    ],
+    [
+     "Is Greece Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/greece-trip-cost/"
+    ]
+   ]
+  },
+  "venedik": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · ara sezon · kaynak USD veriyor",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "130–235 $",
+     "inc": "Ekonomik otel ya da Mestre, cicchetti, yürüyerek gezme."
+    },
+    {
+     "k": "Orta",
+     "v": "250–500 $",
+     "inc": "Merkezde otel, vaporetto kartı, birkaç müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "675–1.750+ $",
+     "inc": "Kanal manzaralı otel, özel turlar, restoranlar."
+    }
+   ],
+   "intro": "Venedik'te en büyük iki kalem konaklama ve vaporetto. Yürüyerek gezmek ve traghetto ile kanalı 2 €'ya geçmek bütçeyi rahatlatır.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Dükler Sarayı (San Marco müzeleri)",
+     "p": "35 €",
+     "pl": "gişede",
+     "y": "30 €",
+     "yl": "1 ay önceden online",
+     "s": "1 Ocak 2026’dan beri"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "San Marco Bazilikası",
+     "p": "~12 €",
+     "s": "Çan kulesi ~18 €"
+    },
+    {
+     "c": "boat",
+     "t": "r",
+     "n": "Vaporetto tek biniş (75 dk)",
+     "p": "9,50 €",
+     "s": "24 saat 25 € · 48 saat 35 € · 72 saat 45 €"
+    },
+    {
+     "c": "boat",
+     "t": "r",
+     "n": "Büyük Kanal’ı geçmek",
+     "p": "9,50 €",
+     "pl": "vaporetto",
+     "y": "2 €",
+     "yl": "traghetto gondolu"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Murano Cam · Burano Dantel müzeleri",
+     "p": "20 €",
+     "s": "Ocak 2026’da 12 €’dan çıktı"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Cicchetti ile ye",
+     "t": "San Marco çevresinde fiyatlar en hızlı yükseliyor; bacari denilen barlarda cicchetti ile yemek bütçeyi kurtarır."
+    },
+    {
+     "h": "Kartı hesapla",
+     "t": "Günde 3’ten fazla vaporetto binişin yoksa tek bilet daha mantıklı; merkez zaten yürünür."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [
+    "Erişim ücreti (günübirlikçi) 2026 deneme dönemi 27 Temmuz’da bitti; 2027 tarihleri açıklanmadı, gitmeden kontrol et."
+   ],
+   "sources": [
+    [
+     "Venice museum tickets rise — Finestre sull’Arte",
+     "https://www.finestresullarte.info/en/museums/venice-museum-tickets-rise-doge-s-palace-becomes-a-35-euro-bloodletting"
+    ],
+    [
+     "Venice travel budget 2026 — Jetsetter Alerts",
+     "https://www.jetsetteralerts.com/venice-italy-travel-budget-guide/"
+    ],
+    [
+     "Italy travel costs 2026 — First Step to Adventure",
+     "https://firststeptoadventure.com/italy-travel-costs-2026/"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "milano": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Milano'da Son Akşam Yemeği'nin bileti ucuz ama bulması zor; Duomo çatısı ise şehrin en çok ödenen manzarası.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Son Akşam Yemeği (Cenacolo)",
+     "p": "15 €",
+     "s": "15 dakikalık giriş · rehberli 25 € · satışlar 3 ayda bir açılıyor"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Duomo çatı terası",
+     "p": "22 €",
+     "pl": "merdivenle",
+     "y": "26 €",
+     "yl": "asansörle"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Castello Sforzesco müzeleri",
+     "p": "5 €"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Cenacolo biletini alarmla yakala",
+     "t": "Biletler İtalya saatiyle 12:00’de satışa çıkıyor ve dakikalar içinde bitiyor; hesabını bir gün önce aç."
+    },
+    {
+     "h": "Ayın ilk pazarı devlet müzeleri ücretsiz",
+     "t": "Devlete bağlı (MiC) müze ve ören yerleri her ayın ilk pazarı herkese ücretsiz; 18 yaş altı her milletten ziyaretçi de her gün ücretsiz giriyor."
+    },
+    {
+     "h": "AB indirimi bize geçmiyor",
+     "t": "Devlet müzelerindeki 2 €’luk 18–25 yaş indirimi sadece AB vatandaşlarına; T.C. pasaportuyla tam bilet ödenir."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Last Supper Milan Tickets 2026 — Art Visit Guide",
+     "https://www.artvisitguide.com/last-supper-milan-tickets-guide/"
+    ],
+    [
+     "Milan Duomo Tickets 2026 — Art Visit Guide",
+     "https://www.artvisitguide.com/milan-duomo-tickets-guide/"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ],
+    [
+     "Cost of museum tickets in Italy 2026 — Italy Planner",
+     "https://italyplanner.com/cost-of-museum-tickets-italy-2026.html"
+    ]
+   ]
+  },
+  "como": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu; bu bölge ortalamadan pahalı",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Como Gölü İtalya'nın pahalı köşelerinden. Greenway yürüyüşü ücretsiz; para vapur, villa ve konaklamaya gider.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Greenway bedava",
+     "t": "Colonno’dan Griante’ye 10 köyü bağlayan Greenway yürüyüşü ücretsiz; dönüşü C110 otobüsü ya da vapurla yap."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Greenway del Lago di Como — in-Lombardia",
+     "https://www.in-lombardia.it/en/tours/greenway-lago-di-como"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "napoli": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu; güney ve Sicilya genelde daha uygun",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Napoli'de tarihi merkezin sokakları ücretsiz; büyük biletler Pompei ve Sansevero.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Pompei Arkeoloji Parkı",
+     "p": "20 €",
+     "s": "Pompei+ 25 € (banliyö villaları dahil) · 3 günlük 30 € · 12 Ocak 2026’dan beri"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Cappella Sansevero (Örtülü İsa)",
+     "p": "12 €",
+     "s": "Özel müze, sadece rezervasyonla · 18–26 yaş 8 €"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Campania Artecard Napoli (3 gün)",
+     "p": "27 €"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Pompei ayın ilk pazarı ücretsiz",
+     "t": "Pompei her ayın ilk pazarı herkese ücretsiz; 18 yaş altı her gün ücretsiz."
+    },
+    {
+     "h": "Sansevero’ya ilk seansta",
+     "t": "Şapel küçük ve kalabalık; günün ilk saatini al."
+    },
+    {
+     "h": "Ayın ilk pazarı devlet müzeleri ücretsiz",
+     "t": "Devlete bağlı (MiC) müze ve ören yerleri her ayın ilk pazarı herkese ücretsiz; 18 yaş altı her milletten ziyaretçi de her gün ücretsiz giriyor."
+    },
+    {
+     "h": "AB indirimi bize geçmiyor",
+     "t": "Devlet müzelerindeki 2 €’luk 18–25 yaş indirimi sadece AB vatandaşlarına; T.C. pasaportuyla tam bilet ödenir."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "New admission fees from 12 January 2026 — Pompeii Archaeological Park",
+     "https://pompeiisites.org/en/?p=65795"
+    ],
+    [
+     "Cappella Sansevero Tickets 2026 — Art Visit Guide",
+     "https://www.artvisitguide.com/cappella-sansevero-veiled-christ-tickets-guide/"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ],
+    [
+     "Cost of museum tickets in Italy 2026 — Italy Planner",
+     "https://italyplanner.com/cost-of-museum-tickets-italy-2026.html"
+    ]
+   ]
+  },
+  "amalfi": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu; bu bölge ortalamadan pahalı",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Amalfi kıyısı pahalı bir bölge; ama Tanrıların Yolu ve vadiler ücretsiz yürünür.",
+   "spend": [
+    {
+     "c": "walk",
+     "t": "r",
+     "n": "Valle delle Ferriere koruma alanı (FAI)",
+     "p": "5 €",
+     "s": "12 yaş altı ve 65 yaş üstü ücretsiz"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Patikalar bedava",
+     "t": "Tanrıların Yolu ve Valle delle Ferriere’nin patika kısmı ücretsiz; en pahalı kıyıda en ucuz deneyim yürüyüş."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Valle delle Ferriere — Viaggiapiccoli",
+     "https://www.viaggiapiccoli.com/?p=90322"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "capri": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu; bu bölge ortalamadan pahalı",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Capri pahalı bir ada; Mavi Mağara'ya giriş ücretleri ayrı ayrı ödenir ve tekne de ayrıca.",
+   "spend": [
+    {
+     "c": "boat",
+     "t": "e",
+     "n": "Mavi Mağara (giriş + kayık)",
+     "p": "18 €",
+     "s": "6 € giriş + 12 € kürekçi · Marina Grande’den motorlu tekne ayrıca"
+    }
+   ],
+   "tips": [
+    {
+     "h": "09:30’dan önce",
+     "t": "İlk tekneler 08:30–09:00 arası kalkıyor; erken gidince kayık sırası kısa. Bozuk para taşı."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [
+    "Mağara hava yüzünden kapanırsa motorlu teknenin ücreti iade edilmiyor; kalkmadan iskelede “aperta?” diye sor."
+   ],
+   "sources": [
+    [
+     "How to book the Blue Grotto — Italy Planner",
+     "https://italyplanner.com/how-to-book-blue-grotto-capri.html"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "pisa": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Pisa'da kuleye çıkmak tek büyük bilet; Duomo girişi herhangi bir biletle ücretsiz.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Eğik Kule’ye tırmanış",
+     "p": "~20 €",
+     "s": "Saatli bilet · 8 yaş altı çıkamıyor · aracı sitede 24 €"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Resmi siteden al",
+     "t": "Resmi site (opapisa.it) aracı sitelerden daha ucuz; satış 90 gün önceden açılıyor."
+    },
+    {
+     "h": "Günübirlik yeter",
+     "t": "Floransa’dan bölgesel trenle yaklaşık bir saat; Piazza dei Miracoli için 2–3 saat yeterli."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Leaning Tower of Pisa Tickets 2026 — Art Visit Guide",
+     "https://www.artvisitguide.com/leaning-tower-of-pisa-tickets-guide/"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "siena": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Siena'da Piazza del Campo ücretsiz; Belediye Sarayı müzesi ve Torre del Mangia ayrı biletli.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Museo Civico (Palazzo Pubblico)",
+     "p": "10 €",
+     "s": "Torre del Mangia ile kombine alınabiliyor · kule 503 basamak"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Kuleye erken",
+     "t": "Yüksek sezonda Torre del Mangia kuyruğu 30–60 dakika; sabah erken ya da öğleden sonra geç git."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Museo Civico Siena — Italy Planner",
+     "https://italyplanner.com/museo-civico-siena.html"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "verona": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Verona'da birkaç müze gezeceksen Verona Card hesaplı; Arena ve Juliet'in Evi karta dahil.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Verona Card",
+     "p": "33 €",
+     "pl": "24 saat",
+     "y": "38 €",
+     "yl": "48 saat",
+     "s": "1 Eylül 2026’dan beri · şehir otobüsleri dahil · Juliet’in Evi için saat rezervasyonu şart"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Kartı resmi kanaldan al",
+     "t": "Aracı sitelerden alınan kuponlar turizm ofisinde fiziki karta çevrilmeli; resmi uygulama ya da Piazza Bra ofisi daha pratik."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Is the Verona Card worth it — Italy Planner",
+     "https://italyplanner.com/verona-card-worth-it.html"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "bologna": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Bologna'da portikolar ve San Luca yürüyüşü ücretsiz; Anatomi Tiyatrosu küçük bir bilet. Para çoğunlukla sofraya gider.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Archiginnasio · Anatomi Tiyatrosu",
+     "p": "10 €",
+     "pl": "sesli rehberle",
+     "y": "12 €",
+     "yl": "rehberli tur",
+     "s": "Online rezervasyon zorunlu · 12 yaş altı ücretsiz"
+    }
+   ],
+   "tips": [
+    {
+     "h": "San Luca’ya portikoyla",
+     "t": "San Luca’ya giden yaklaşık 4 km’lik portikolu yol ücretsiz; şehrin en güzel yürüyüşü."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Palazzo dell’Archiginnasio — Bologna Welcome",
+     "https://www.bolognawelcome.com/en/experiences/331861/Palazzo-dell-Archiginnasio-and-Teatro-Anatomico"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "cinqueterre": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu; bu bölge ortalamadan pahalı",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Cinque Terre'de para patika ve tren kartlarına gider. Kartın fiyatı güne göre değişiyor: kalabalık günler en pahalısı.",
+   "spend": [
+    {
+     "c": "walk",
+     "t": "r",
+     "n": "Trekking Card (1 gün)",
+     "p": "15 €",
+     "pl": "yoğun günlerde",
+     "y": "10 €",
+     "yl": "normal günlerde",
+     "s": "2 gün 17 € (yoğun 26,70 €)"
+    },
+    {
+     "c": "car",
+     "t": "r",
+     "n": "Tren Kartı (1 gün, patikalar dahil)",
+     "p": "35 €",
+     "pl": "yüksek yoğunluk",
+     "y": "22 €",
+     "yl": "düşük yoğunluk",
+     "s": "14 Mart–1 Kasım 2026 · orta yoğunluk 29,50 €"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Takvime bak, yeşil güne denk getir",
+     "t": "Tren kartı fiyatı yoğunluk takvimine göre üç kademede; aynı kart sakin günde 13 € daha ucuz."
+    },
+    {
+     "h": "Konaklayana indirim",
+     "t": "Bölgede konaklayan yetişkinler için Trekking Card 5 €."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Cinque Terre Card 2026 — lecinqueterre.org",
+     "https://www.lecinqueterre.org/cinqueterrecard.php"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "palermo": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu; güney ve Sicilya genelde daha uygun",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Palermo'da pazarlar ve katedral bedava; büyük bilet Norman Sarayı ve Cappella Palatina.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Norman Sarayı + Cappella Palatina",
+     "p": "19 €",
+     "s": "65 yaş üstü 15,50 € · 14–17 yaş 11 €"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Katedral çatısı",
+     "p": "7 €",
+     "s": "Katedralin kendisi ücretsiz"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Monreale manastır avlusu",
+     "p": "8 €",
+     "s": "Monreale Katedrali ücretsiz · avlu ayın ilk pazarı ücretsiz"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Sokak yemeğinde kuyruk iyi işaret",
+     "t": "Ballarò pazarı 07:30–20:00 açık; yerlilerin sıraya girdiği tezgâhı seç."
+    },
+    {
+     "h": "Ayın ilk pazarı devlet müzeleri ücretsiz",
+     "t": "Devlete bağlı (MiC) müze ve ören yerleri her ayın ilk pazarı herkese ücretsiz; 18 yaş altı her milletten ziyaretçi de her gün ücretsiz giriyor."
+    },
+    {
+     "h": "AB indirimi bize geçmiyor",
+     "t": "Devlet müzelerindeki 2 €’luk 18–25 yaş indirimi sadece AB vatandaşlarına; T.C. pasaportuyla tam bilet ödenir."
+    }
+   ],
+   "traps": [
+    "Norman Sarayı haber vermeden kapanabiliyor; Cappella Palatina’da restorasyon var, gitmeden kontrol et."
+   ],
+   "sources": [
+    [
+     "Things to do in Palermo — Blue Keys",
+     "https://bluekeys.it/blog/things-to-do-in-palermo"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ],
+    [
+     "Cost of museum tickets in Italy 2026 — Italy Planner",
+     "https://italyplanner.com/cost-of-museum-tickets-italy-2026.html"
+    ]
+   ]
+  },
+  "taormina": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu; güney ve Sicilya genelde daha uygun",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Taormina pahalı bir kasaba; ama aynı kanyonu yarı fiyatına görmenin yolu da burada.",
+   "spend": [
+    {
+     "c": "walk",
+     "t": "r",
+     "n": "Alcantara Kanyonu",
+     "p": "7–13 €",
+     "pl": "özel park, asansörlü",
+     "y": "~1,50 €",
+     "yl": "belediye girişi, merdivenli",
+     "s": "İkisi de aynı kanyona çıkıyor"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Su ayakkabısını kirala",
+     "t": "Alcantara’da su yazın bile 8–10 °C; ayakkabıyı belediye girişindeki büfeden kirala."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Alcantara Gorge — The Crowded Planet",
+     "https://www.thecrowdedplanet.com/gole-alcantara-gorge-sicily/"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "matera": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu; güney ve Sicilya genelde daha uygun",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Matera'nın en güzel manzaraları ücretsiz; mağara evler ve kaya kiliseleri birkaç euroluk biletlerle gezilir.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Casa Grotta di Vico Solitario",
+     "p": "3–5 €"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Kaya kiliseleri kombine",
+     "p": "10–12 €",
+     "s": "Tek kilise ~3 €"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Palombaro Lungo sarnıcı",
+     "p": "5 €"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Bedava seyir noktaları",
+     "t": "Piazza San Pietro Caveoso, Katedral terası ve Piazza Pascoli şehrin en güzel ücretsiz manzaraları."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Matera old town guide 2026 — Euro City Guide",
+     "https://eurocityguide.com/italy/matera-old-town-guide"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "alberobello": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu; güney ve Sicilya genelde daha uygun",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Alberobello küçük bir kasaba; trullo sokaklarında dolaşmak ücretsiz. Para trulloda konaklamaya gider.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Aia Piccola sakin taraf",
+     "t": "Rione Monti kalabalık ve dükkânlarla dolu; Aia Piccola’da yerel yaşam daha sakin ve ücretsiz."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "dolomitler": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Dolomitler'de yürüyüş ücretsiz, oraya ulaşmak değil: teleferikler ve paralı yollar bütçenin büyük kalemi.",
+   "spend": [
+    {
+     "c": "car",
+     "t": "r",
+     "n": "Tre Cime paralı yol + otopark",
+     "p": "40 €",
+     "s": "Araç başı · motosiklet 26 € · karavan 60 € · online rezervasyon zorunlu"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Rezervasyonsuz giriş yok",
+     "t": "Tre Cime yolu için saat dilimi seçip önceden ödeme şart; plaka rezervasyonla eşleşmeli."
+    },
+    {
+     "h": "Seceda’ya Col Raiser’den",
+     "t": "Ortisei teleferiği yerine Santa Cristina’dan Col Raiser ile çıkıp 1–2 saat yürümek daha keyifli ve daha az kalabalık."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Tre Cime parking rules 2026 — In Moments",
+     "https://www.in-moments.com/dolomites/tre-cime-parking-rules"
+    ],
+    [
+     "The way to the Seceda — Val Gardena",
+     "https://www.valgardena.it/en/summer-holidays-dolomites/trekking/seceda/the-way-to-the-seceda/"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "torino": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Torino'da meydanlar ve arkadlar ücretsiz; büyük bilet Mısır Müzesi.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Museo Egizio",
+     "p": "18 €",
+     "s": "15–18 yaş ve öğrenci 3 € · 6–14 yaş 1 €"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Arkadlar ve kahve",
+     "t": "Piazza Castello ve arkadlar ücretsiz; bicerin’i tarihi kafelerde barda iç."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Museo Egizio di Torino — Avygeo",
+     "https://www.avygeo.com/it/guida/attivita/26776-museo-egizio-di-torino"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
+  "ravenna": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · İtalya geneli kaynak aralığının alt ucu, ortası ve üst ucu",
+   "tierNoteY": "Barda ayakta kahve, öğle menüsü ve toplu taşımayla alt uca yaklaşırsın.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "~70 €",
+     "inc": "Hostel yatağı, sokak yemeği ve öğle menüsü, toplu taşıma."
+    },
+    {
+     "k": "Orta",
+     "v": "~185 €",
+     "inc": "Orta sınıf otel ya da daire, oturarak yemekler, günde bir müze."
+    },
+    {
+     "k": "Rahat",
+     "v": "~305 €+",
+     "inc": "İyi otel, rehberli turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Ravenna'nın mozaikleri tek bir kombine biletle gezilir; şehir küçük ve yürünür.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Kombine bilet (San Vitale, Galla Placidia, Sant’Apollinare Nuovo, Neon Vaftizhanesi, Başpiskoposluk Müzesi)",
+     "p": "10,50 €",
+     "s": "Galla Placidia ve Neon Vaftizhanesi için saat rezervasyonu şart"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Sant’Apollinare in Classe",
+     "p": "5 €"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Tek bilet, beş anıt",
+     "t": "Beş anıtı ayrı ayrı değil kombine biletle gez; Galla Placidia için saati önceden ayır."
+    },
+    {
+     "h": "Kahve barda, su çeşmeden",
+     "t": "Barda ayakta içilen kahve masadakinden ucuz; ana meydandan birkaç sokak içeride menü fiyatları %10–15 düşüyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Ravenna’s 8 UNESCO mosaic sites — Nomads Travel Guide",
+     "https://www.nomads-travel-guide.com/self-guided-walking-tour-of-ravenna-eight-unesco-sites"
+    ],
+    [
+     "Is Italy Expensive? 2026 — The World Was Here First",
+     "https://www.theworldwasherefirst.com/italy-trip-cost/"
+    ]
+   ]
+  },
   "istanbul": {
    "checked": "2026-11-19",
    "intro": "İstanbul'da paranın çoğu giriş biletlerine ve Sultanahmet'te yenen yemeğe gider. T.C. kimliğin burada en büyük avantajın: aynı saray, yabancı ziyaretçinin ödediğinin küçük bir kısmı.",
@@ -823,6 +2646,2124 @@
     [
      "Athens Metro 2026 — Real Greek Experiences",
      "https://realgreekexperiences.com/locals-guide-to-taking-the-athens-metro"
+    ]
+   ]
+  },
+  "antalya": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Antalya'da şehir merkezi büyük ölçüde ücretsiz gezilir: Kaleiçi, Hadrian Kapısı ve Düden. Para antik kentlere ve yaz sezonunda otele gider.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Aspendos Tiyatrosu",
+     "p": "15 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Perge",
+     "p": "11 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Phaselis",
+     "p": "10 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Termessos",
+     "p": "3 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "bed",
+     "t": "e",
+     "n": "4 yıldızlı otel (gecelik)",
+     "p": "80–120 €",
+     "s": "Sezon dışı; yaz zirvesinde 200 €’ya kadar çıkıyor"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Kaleiçi ve Düden bedava",
+     "t": "Kaleiçi sokakları, Hadrian Kapısı, Karaalioğlu Parkı ve Düden Şelalesi için bilet gerekmiyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [
+    "Antalya Müzesi Bakanlık listesinde KAPALI görünüyor; gitmeden durumunu kontrol et."
+   ],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "bodrum": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Bodrum'da asıl masraf yazın konaklama ve beach club'lardır. Kalenin içindeki Sualtı Arkeoloji Müzesi tek büyük bilet; antik tiyatro ücretsiz.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Bodrum Sualtı Arkeoloji Müzesi (Kale)",
+     "p": "20 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Antik Tiyatro",
+     "p": "ücretsiz",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Gün batımını Gümüşlük’te bedavaya izle",
+     "t": "Gümüşlük sahili ve Myndos Kapısı için ücret yok; yemek fiyatları ise koy kenarında yükseliyor."
+    },
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "marmaris": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Marmaris'te bütçeyi tekne turları ve sahil sezonu belirler. Akyaka ve Azmak gibi doğal güzellikler için ise para gerekmez.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Azmak’ı yürüyerek gez",
+     "t": "Akyaka sahili ve Azmak Nehri kıyısı ücretsiz yürünüyor; tekne turu tercih meselesi."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "fethiye": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Fethiye'de en büyük kalem Babadağ'dan yamaç paraşütü. Kayaköy ve kaya mezarları ise birkaç euroya ya da Müzekart'la gezilir.",
+   "spend": [
+    {
+     "c": "walk",
+     "t": "e",
+     "n": "Babadağ tandem yamaç paraşütü",
+     "p": "140–250 $",
+     "s": "25–45 dakika uçuş · Nisan–Ekim en iyi dönem"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Kayaköy Ören Yeri",
+     "p": "3 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Tlos",
+     "p": "3 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Amintas’ta gün batımı bedava",
+     "t": "Amintas Kaya Mezarları çevresinden Fethiye körfezine gün batımı izlemek ücretsiz."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Ölüdeniz Paragliding 2026 — My Turkey Adventure",
+     "https://myturkeyadventure.com/s/oludeniz-paragliding-experience-2026"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "kusadasi": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Kuşadası gezisinin kalbi Efes ve en büyük bilet de orası. Yamaçevler ayrı ücretli; Şirince'de dolaşmak ise ücretsiz.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Efes Örenyeri",
+     "p": "40 €",
+     "y": "Müzekart",
+     "s": "Efes Deneyim Müzesi dahil · 2027 tarifesinde 45 €",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Efes Yamaçevler",
+     "p": "15 €",
+     "y": "200 TL",
+     "s": "Müzekart burada geçmiyor; T.C. vatandaşına Müzekart’la indirimli bilet",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Ege Müze Kartı (Museum Pass Aegean)",
+     "p": "95 €",
+     "s": "7 gün, Efes ve Pamukkale dahil 40’tan fazla yer · yabancılar için"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Kruvaziyer saatlerinden kaç",
+     "t": "Efes’e sabah 08:00’de ya da 15:30’dan sonra gir; gemi grupları 10:00–15:00 arası geliyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Ephesus 2026 — Loudavým krokem",
+     "https://loudavymkrokem.cz/en/ephesus-turkey-ancient-city/"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "edirne": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Edirne'de Selimiye ve büyük camiler ücretsiz; bütçenin keyifli kalemi tava ciğer masası.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Camiler ücretsiz",
+     "t": "Selimiye, Eski Cami ve Üç Şerefeli Cami’ye giriş ücretsiz; namaz vakitlerine denk gelmemeye dikkat et."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "izmir": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "İzmir'i gezmek neredeyse bedava: Kemeraltı, Kordon ve Asansör. Karşıya vapurla geçmek şehrin en ucuz turu.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Vapur en güzel tur",
+     "t": "Konak–Karşıyaka vapuru toplu taşıma bileti fiyatına körfez turu demek."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "ankara": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Ankara'da Anıtkabir ücretsiz; Anadolu Medeniyetleri Müzesi şehrin tek büyük bileti. Hamamönü ve kale çevresi yürüyerek gezilir.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Anadolu Medeniyetleri Müzesi",
+     "p": "12 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Anıtkabir ücretsiz",
+     "t": "Anıtkabir ve müzesi için bilet yok."
+    },
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [
+    "Anadolu Medeniyetleri Müzesi’nin salonları 14 Eylül 2026–2 Mart 2027 arası kapalı; gitmeden kontrol et."
+   ],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "mardin": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Mardin'de taş sokaklar, medreseler ve çarşı ücretsiz dolaşılır. Dara ören yeri de ücretsiz; tek bilet Mardin Müzesi.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Mardin Müzesi",
+     "p": "7 €",
+     "y": "Müzekart",
+     "s": "Pazartesi kapalı",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Dara Ören Yeri",
+     "p": "ücretsiz",
+     "s": "Pazartesi kapalı",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Pazartesi’yi Dara’ya ayırma",
+     "t": "Dara ve Mardin Müzesi pazartesi kapalı; programı buna göre kur."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "trabzon": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Trabzon'da bütçenin büyük kısmı ulaşıma gider: Sümela ve yaylalar şehir dışında. Ayasofya Camii ve Boztepe ücretsiz.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Sümela Manastırı",
+     "p": "20 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Boztepe bedava manzara",
+     "t": "Boztepe’den şehir ve deniz manzarası ücretsiz; çay bahçesinde otur."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "bursa": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Bursa'da Ulu Cami, Koza Han ve Yeşil Türbe ücretsiz gezilir. Para, Cumalıkızık kahvaltısına ve hamam ritüeline gider.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Camiler ve hanlar ücretsiz",
+     "t": "Ulu Cami, Koza Han ve Yeşil Türbe için bilet yok."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "konya": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Konya'nın en büyük durağı Mevlana Müzesi ücretsiz. Karatay Medresesi (Çini Eserleri Müzesi) küçük bir bilet.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Mevlana Müzesi",
+     "p": "ücretsiz",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Karatay Medresesi (Çini Eserleri Müzesi)",
+     "p": "3 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "sanliurfa": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Şanlıurfa'da Balıklıgöl ve çarşı ücretsiz; büyük bilet Göbeklitepe. Halfeti tekne turu ayrıca ödenir.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Göbeklitepe",
+     "p": "20 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Harran",
+     "p": "ücretsiz",
+     "s": "Bakanlık listesinde KAPALI notu var",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [
+    "Harran Bakanlık listesinde KAPALI görünüyor; gitmeden durumunu sor."
+   ],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "gaziantep": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Gaziantep'te para müzeden çok sofraya gider. Zeugma Mozaik Müzesi tek büyük bilet; çarşılar ve Kültür Yolu ücretsiz.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Zeugma Mozaik Müzesi",
+     "p": "12 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Çarşılar bedava, sofra değil",
+     "t": "Bakırcılar Çarşısı ve Kültür Yolu ücretsiz dolaşılır; bütçeyi kahvaltı ve kebap durakları için ayır."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "alanya": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Alanya'da kale ve Kızılkule şehrin kalbi. Sahil sezonunda konaklama pahalanır; kale bileti ise küçük.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Alanya Kalesi",
+     "p": "12 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "bed",
+     "t": "e",
+     "n": "4 yıldızlı otel (gecelik)",
+     "p": "80–120 €",
+     "s": "Sezon dışı; yaz zirvesinde 200 €’ya kadar çıkıyor"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "pamukkale": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Pamukkale'de tek bilet travertenleri ve Hierapolis'i birlikte açar. Antik havuz ayrı ücretli.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Hierapolis + Pamukkale travertenleri",
+     "p": "30 €",
+     "y": "Müzekart",
+     "s": "Tek biletle ikisi birden",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "e",
+     "n": "Kleopatra Antik Havuzu",
+     "p": "~15 $",
+     "s": "Su sürekli 36 °C · Müzekart geçmiyor, ayrı ödenir"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Gün batımına kal",
+     "t": "Hierapolis bileti travertenleri de kapsıyor; gün batımına kadar kalmak ekstra ücret istemiyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Cleopatra’s Pool 2026 — My Turkey Adventure",
+     "https://myturkeyadventure.com/blog/cleopatras-pool-pamukkale-worth-it-honest-review-2026"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "canakkale": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Çanakkale'de Gelibolu Tarihi Alanı ve Kordon ücretsiz. Truva tek büyük bilet ve müzesiyle birlikte gezilir.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Truva Ören Yeri + Truva Müzesi",
+     "p": "27 €",
+     "y": "Müzekart",
+     "s": "Tek biletle ikisi birden",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "safranbolu": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Safranbolu'nun en güzel yanı sokakları ve Hıdırlık Tepesi; ikisi de ücretsiz. Konaklarda küçük giriş ücretleri olabilir.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Kiremit denizi bedava",
+     "t": "Hıdırlık Tepesi’nden çarşı manzarası ücretsiz."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "rize": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Rize'de doğa ücretsiz: Fırtına Vadisi, taş köprüler ve çay bahçeleri. Bütçe ulaşım ve yayla konaklamasına gider.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Araçla ya da minibüsle",
+     "t": "Fırtına Vadisi ve köprüler ücretsiz; para çoğunlukla ulaşıma gidiyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "amasya": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Amasya küçük ve yürünür: Yalıboyu, Kral Kaya Mezarları manzarası ve gece aydınlatması. Bütçe dostu bir şehir.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Gece ışıkları bedava",
+     "t": "Yalıboyu evleri ve kaya mezarlarının gece aydınlatması nehir kıyısından ücretsiz izleniyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "mersin": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Mersin'de Cennet ve Cehennem obrukları en bilinen bilet. Kızkalesi'ne denizden geçmek ayrıca ödenir.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Cennet ve Cehennem Obrukları",
+     "p": "12 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "adana": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Adana'da Taşköprü, Büyük Saat ve çarşılar ücretsiz gezilir; bütçenin keyifli kalemi kebap sofrası.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Tarihi merkez ücretsiz",
+     "t": "Taşköprü, Büyük Saat, Ulu Cami ve Kazancılar Çarşısı için bilet yok."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "diyarbakir": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Diyarbakır'da surlar, Ulu Cami ve hanlar ücretsiz gezilir. Dengbêj Evi ve On Gözlü Köprü de öyle.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Sur içi ücretsiz",
+     "t": "Ulu Cami, Dört Ayaklı Minare ve Sülüklü Han’da bilet yok; surlar boyunca yürümek de ücretsiz."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "kayseri": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Kayseri'de kale, çarşı ve Kültepe ücretsiz. Para mantıya ve Erciyes'e gider.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Kültepe (Kaniş) Höyüğü",
+     "p": "ücretsiz",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "eskisehir": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Eskişehir'de Odunpazarı sokakları ve Porsuk kıyısı ücretsiz. OMM ve lületaşı atölyeleri ayrıca ödenir.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Odunpazarı bedava",
+     "t": "Odunpazarı evleri ve Porsuk kıyısı ücretsiz dolaşılır."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "bolu": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Bolu'da göller ve orman yolları bütçenin değil, zamanın meselesi. Masraf çoğunlukla konaklama ve ulaşım.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Hafta içi git",
+     "t": "Abant ve Yedigöller hafta sonları kalabalıklaşır; hafta içi çok daha sakin."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "sivas": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Sivas'ta Selçuklu medreseleri meydanın çevresinde, büyük kısmı ücretsiz gezilir. Divriği için ayrı bir gün ayır.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Divriği Ulu Camii ibadete açık",
+     "t": "Divriği Ulu Camii ve Darüşşifası cami olarak ziyaret edilir; ulaşım için ayrı gün planla."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "erzurum": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Erzurum'da Çifte Minareli, Yakutiye ve kale yürüyerek gezilir. Kışın bütçeyi Palandöken belirler.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Merkez yürünür",
+     "t": "Çifte Minareli Medrese, Yakutiye ve Taşhan birbirine yürüme mesafesinde."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "van": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Van'da kale ve Kahvaltı Sokağı şehrin içinde; Akdamar Adası için bilet ve tekne ayrıca ödenir.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Akdamar Anıt Müzesi",
+     "p": "12 €",
+     "y": "Müzekart",
+     "s": "Adaya tekne ayrıca ödenir (Gevaş ve Edremit iskeleleri)",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Van Kalesi",
+     "p": "3 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "samsun": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Samsun'da sahil, Amisos Tepesi ve Kızılırmak Deltası'nda kuş gözlemi bütçeyi zorlamaz.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Delta’da şafak",
+     "t": "Kızılırmak Deltası’nda kuş gözlemi için en iyi saat şafak; erken çık."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "datca": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Datça'da koylar ve Eski Datça sokakları ücretsiz. Knidos küçük bir bilet; asıl masraf yazın konaklama.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Knidos",
+     "p": "5 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "ayvalik": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Ayvalık'ta çarşı, Cunda ve Şeytan Sofrası ücretsiz. Bütçe sahil sezonunda konaklamaya ve dalış gibi deneyimlere gider.",
+   "spend": [],
+   "tips": [
+    {
+     "h": "Gün batımı Şeytan Sofrası’nda",
+     "t": "Şeytan Sofrası’ndan gün batımı ücretsiz; erken git, yer kalabalıklaşıyor."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "assos": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Assos'ta Behramkale köyü ücretsiz; Athena Tapınağı ve antik kent tek bilet.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Assos Örenyeri",
+     "p": "11 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "kars": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Kars'ta Ani tek büyük bilet. Kışın Çıldır'da atlı kızak ve yerel kaz yemeği bütçenin keyifli kalemleri.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Ani Örenyeri",
+     "p": "8 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Ücretsiz girenler",
+     "t": "18 yaş altı ve 65 yaş üstü T.C. vatandaşları müze ve ören yerlerine ücretsiz giriyor."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "adiyaman": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Adıyaman'da Nemrut zirvesi tek büyük bilet. Cendere Köprüsü ve Karakuş Tümülüsü yol üstünde.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Nemrut Dağı",
+     "p": "10 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Gün doğumu için sıcak giyin",
+     "t": "Zirvede şafak yazın bile soğuk olur; yanına mont al."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "hatay": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı, şehre göre oynar",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Hatay'da Arkeoloji Müzesi ve St. Pierre Bakanlık listesinde kapalı görünüyor; Uzun Çarşı ve künefe durağı ise açık.",
+   "spend": [
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Hatay Arkeoloji Müzesi",
+     "p": "11 €",
+     "y": "Müzekart",
+     "s": "Bakanlık listesinde KAPALI",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "St. Pierre Kilisesi",
+     "p": "8 €",
+     "y": "Müzekart",
+     "s": "Bakanlık listesinde KAPALI",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [
+    "Arkeoloji Müzesi ve St. Pierre Bakanlık listesinde KAPALI görünüyor; gitmeden kontrol et."
+   ],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
+    ]
+   ]
+  },
+  "kas": {
+   "checked": "2026-11-19",
+   "tierNote": "Kişi başı · günlük · uçak hariç · Türkiye geneli için kaynak aralığı; yaz sezonunda sahil kentleri üst uca yaklaşır",
+   "tierNoteY": "T.C. vatandaşı olarak ören yeri ve müzeleri Müzekart’la gezersen bilet payın neredeyse sıfırlanır.",
+   "tiers": [
+    {
+     "k": "Hesaplı",
+     "v": "25–45 €",
+     "inc": "Pansiyon ya da hostel, lokanta, toplu taşıma, ücretsiz yerler."
+    },
+    {
+     "k": "Orta",
+     "v": "55–90 €",
+     "inc": "Butik otel, oturarak yemekler, birkaç müze ve bir tur."
+    },
+    {
+     "k": "Rahat",
+     "v": "120–300+ €",
+     "inc": "İyi otel, özel transfer ve turlar, restoran akşamları."
+    }
+   ],
+   "intro": "Kaş'ta antik tiyatroda gün batımı ve Kaputaş ücretsiz. Bütçe Kekova tekne turuna ve deniz kayağına gider.",
+   "spend": [
+    {
+     "c": "boat",
+     "t": "e",
+     "n": "Kekova Batık Şehir tekne turu",
+     "p": "~99 $",
+     "s": "Yaklaşık 4,5 saat · öğle yemeği dahil"
+    },
+    {
+     "c": "ticket",
+     "t": "r",
+     "n": "Simena (Kaleköy) Örenyeri",
+     "p": "4 €",
+     "y": "Müzekart",
+     "src": "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    }
+   ],
+   "tips": [
+    {
+     "h": "Antik tiyatro ücretsiz",
+     "t": "Kaş merkezdeki antik tiyatrodan gün batımı izlemek ücretsiz."
+    },
+    {
+     "h": "Müzekart ilk günden kendini çıkarır",
+     "t": "Bakanlığa bağlı ören yeri ve müzelere T.C. vatandaşları Müzekart'la giriyor. 1 Aralık 2026'dan itibaren Müzekart+ 300 TL, bir yıl geçerli; her yere yılda iki giriş."
+    }
+   ],
+   "traps": [],
+   "sources": [
+    [
+     "Müze ve ören yeri ücretleri — Kültür ve Turizm Bakanlığı (DÖSİMM)",
+     "https://dosim.ktb.gov.tr/TR-218202/muze-ve-oren-yeri-ucretleri.html"
+    ],
+    [
+     "Kekova tekne turu — Headout",
+     "https://www.headout.com/tr/sightseeing-cruises/from-kas-kekova-sunken-city-5-bays-and-kalekoy-boat-cruise-with-lunch-e-50682/"
+    ],
+    [
+     "Is Türkiye Cheap? 2026 — Wego",
+     "https://blog.wego.com/is-turkey-cheap/"
+    ],
+    [
+     "Müzekart ücretleri değişiyor — Alo Maliye",
+     "https://www.alomaliye.com/2026/11/11/muzekart-ucretleri-degisiyor/"
     ]
    ]
   }
