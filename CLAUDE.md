@@ -11,7 +11,7 @@ Bu dosya yeni bir sohbetin kaldığı yerden devam edebilmesi için yazıldı. �
 
 ## Uygulama
 - Tek dosya: `index.html` (v2 premium). İki `<script>` bloğu: ilki gömülü qrcode kütüphanesi, ikincisi uygulama.
-- PWA: `sw.js` — **her yayında `CACHE` adını artır** (şu an `patika-v2-8`).
+- PWA: `sw.js` — **her yayında `CACHE` adını artır** (şu an `patika-v2-9`).
 - Yayın: GitHub Pages, `main` dalı kökü → https://muratsahinn.github.io/Patika/
 - Eski sürüm: `surumler/v1/`.
 - Depolama: `window.storage.get/set(k, v, shared)` (paylaşımlı anahtarlar: `cnotes:`, `cbudget:`, `cvotes:`), küçük tercihler için try/catch'li localStorage.
@@ -41,6 +41,10 @@ Bu dosya yeni bir sohbetin kaldığı yerden devam edebilmesi için yazıldı. �
 2. ✅ Cebin rahat bütçe (73 şehir) + yerli/turist + resmi/tahmini + aylık güncelleme
 3. ✅ Kart standardı (kusursuz gün / kendi rotan / yolda / plan)
 4. ⏭ Sosyal akış (Strava benzeri): rotadaki insanların paylaşımları, profil durum güncellemesi, paylaşımı teşvik
+   Sunucu: **Supabase** (auth + Postgres + RLS), kütüphanesiz doğrudan REST. Kurulum: `supabase/README.md`, şema: `supabase/schema.sql` (tekrar çalıştırılabilir).
+   Plan: (1) hesap + profil → (2) gün kartını akışa paylaşma → (3) akış: "Bu rotada" + "Takip ettiklerin", alkış → (4) güvenlik: şikâyet/gizle/engelle (yayından önce şart) → (5) fotoğraflar en son. Kesin konum asla paylaşılmaz (şehir + gün). Herkese açık paylaşım yalnızca kalıcı hesapla. Yayından önce: özel SMTP, Pro plan, KVKK metni.
+   ✅ (1) Hesap + profil: menüde "Gezgin Profilim" → `#profilModal`. `SOSYAL_CFG {url,key}` boşsa "yakında" (deneme için localStorage `patika:sosyal`). E-postaya 6 haneli kod (şifresiz), oturum `patika:oturum` (localStorage), 401'de token yenileme. `SOSYAL.kodGonder/kodDogrula/cikis/profilGetir/profilKaydet/hesapSil`, durum önerisi `sosyalDurumOnerisi()`. Test: `testler/sosyal-test.js` (sahte Supabase). Ekran: `ekran/shotprofil.py <html> <etiket> mob|desk light|dark off|mail|kod|yeni|profil|sil`.
+   ⏭ Murat Supabase projesi açıp URL + publishable key verir → `SOSYAL_CFG`'ye yazılır → gerçek deneme. Sonra (2). Gezgin notları/bütçeleri (eski `window.storage` paylaşımlı katman) de Supabase'e taşınacak; topluluk adı (`ensureUserName`) profil takma adına bağlanacak.
 5. ⏭ Yapay zekâ: çok şehirli planlama ve sohbetle rota düzenleme. Murat'ın taslak promptu: `docs/ai-prompt-v3.md`.
    Değerlendirme özeti: ilkeler iyi; ama olmayan arka uca (place_id, rota motoru, rezervasyon) atıf yapıyor, uzun ve tekrarlı, JSON şeması tanımsız, asıl iki işi (çok şehir planı, rota düzenleme) merkeze almıyor. Plan: Patika'ya uyarlanmış kısa prompt + gerçek araçlar (şehir getir, durak çıkar/ekle/sırala, gezi planına ekle, patika ve bütçe getir); değişiklikler "Uygula / Vazgeç" kartıyla onaylanır. API anahtarı HTML'e konmaz: Cloudflare Worker gibi bir ara katman. Gerekenler: Anthropic API hesabı + Cloudflare hesabı.
    ✅ Uyarlanmış prompt + araç şeması: `docs/ai-prompt-patika.md` (v4). Yeni yer ekleme v1'de yok (sadece çıkar/geri al/sırala).

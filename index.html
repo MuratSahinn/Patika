@@ -2495,6 +2495,44 @@ body[data-theme="dark"] .cr-row.is-y .cr-p{ color:#7CC28A; }
 .ai-form input:disabled, .ai-form button:disabled{ opacity:.5; cursor:default; }
 @media (max-width:760px){ .ai-modal{ height:88vh; max-height:88vh; } }
 .bd-share[hidden]{ display:none !important; }
+
+/* ---- Gezgin profili ---- */
+.sp-modal .m-sub{ margin:4px 0 14px; }
+.sp-lead{ font-size:0.92rem; line-height:1.6; color:var(--ink); margin:0 0 12px; }
+.sp-form{ display:flex; gap:8px; }
+.sp-form input, .sp-grid input{ flex:1; min-width:0; border:1px solid var(--line-strong); background:var(--surface); color:var(--ink);
+  border-radius:12px; padding:11px 13px; font-size:0.95rem; font-family:inherit; }
+.sp-form input:focus, .sp-grid input:focus{ outline:2px solid var(--tr-rose); outline-offset:1px; }
+.sp-kod{ letter-spacing:.4em; text-align:center; font-variant-numeric:tabular-nums; font-size:1.15rem !important; }
+.sp-btn{ border:none; background:var(--tr-red); color:#fff; border-radius:12px; padding:11px 18px; cursor:pointer;
+  font-family:var(--label-font); font-weight:700; font-size:0.74rem; letter-spacing:.02em; white-space:nowrap; }
+.sp-btn:disabled{ opacity:.55; cursor:default; }
+.sp-btn-danger{ background:var(--tr-red-deep); }
+.sp-link{ border:none; background:none; color:var(--tr-red); cursor:pointer; font-size:0.8rem; padding:6px 0; font-family:inherit; }
+.sp-link:disabled{ color:var(--text-soft); cursor:default; }
+.sp-danger{ color:var(--text-soft); }
+.sp-danger:hover{ color:var(--tr-red-deep); }
+.sp-row{ display:flex; align-items:center; gap:16px; margin-top:8px; }
+.sp-msg{ min-height:1.2em; font-size:0.84rem; color:var(--text-soft); margin-top:8px; }
+.sp-msg.sp-err{ color:var(--tr-red-deep); }
+.sp-msg.sp-ok{ color:var(--tr-red); font-weight:600; }
+.sp-fine{ font-size:0.78rem; color:var(--text-soft); line-height:1.55; margin:12px 0 0; }
+.sp-card{ display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:16px; background:var(--tr-tint-soft);
+  border:1px solid var(--line); margin-bottom:14px; }
+.sp-av{ width:44px; height:44px; border-radius:50%; background:var(--tr-red); color:#fff; display:flex; align-items:center; justify-content:center;
+  font-family:'Playfair Display', Georgia, serif; font-weight:700; font-size:1.2rem; flex:none; }
+.sp-who{ display:flex; flex-direction:column; min-width:0; }
+.sp-who b{ font-size:1rem; }
+.sp-who span{ font-size:0.84rem; color:var(--text-soft); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.sp-grid{ display:flex; flex-direction:column; gap:12px; }
+.sp-grid label{ display:flex; flex-direction:column; gap:6px; font-family:var(--label-font); font-size:0.66rem; font-weight:700;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--text-soft); }
+.sp-durum{ display:flex; align-items:center; gap:10px; }
+.sp-grid .sp-btn{ align-self:flex-start; }
+.sp-foot{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:16px; padding-top:12px; border-top:1px solid var(--line); }
+.sp-mail{ font-size:0.78rem; color:var(--text-soft); margin-right:auto; overflow:hidden; text-overflow:ellipsis; max-width:100%; }
+.sp-confirm{ margin-top:12px; padding:12px 14px; border-radius:14px; border:1px solid var(--tr-rose); background:var(--tr-tint-soft); }
+.sp-confirm p{ margin:0 0 6px; font-size:0.86rem; }
 </style>
 </head>
 <body>
@@ -2544,6 +2582,7 @@ body[data-theme="dark"] .cr-row.is-y .cr-p{ color:#7CC28A; }
         <div class="am-head">Senin Patikan</div>
         <button class="am-row" id="passportBtn" role="menuitem"><svg class="ic " aria-hidden="true"><use href="#i-passport"/></svg><span class="am-t">Pasaportum<small>Damgalar ve sıradışı rozetleri</small></span></button>
         <button class="am-row" id="tripBtn" role="menuitem"><svg class="ic " aria-hidden="true"><use href="#i-route"/></svg><span class="am-t">Gezi Planım<small>Şehirleri tek yolculukta zincirle</small></span></button>
+        <button class="am-row" id="profilBtn" role="menuitem"><svg class="ic " aria-hidden="true"><use href="#i-users"/></svg><span class="am-t">Gezgin Profilim<small>Yakında</small></span></button>
         <button class="am-row" id="aiBtn" role="menuitem"><svg class="ic " aria-hidden="true"><use href="#i-spark"/></svg><span class="am-t">Patika Asistan<small>Planla, rotanı sohbetle düzenle</small></span></button>
         <button class="am-row" id="statsBtn" role="menuitem"><svg class="ic " aria-hidden="true"><use href="#i-chart"/></svg><span class="am-t">Gezgin Karnem<small>Durak, süre, yol ve unvan</small></span></button>
         <button class="am-row" id="journalBtn" role="menuitem"><svg class="ic " aria-hidden="true"><use href="#i-book"/></svg><span class="am-t">Gezi Defterim<small>Dergi tadında, PDF olarak sakla</small></span></button>
@@ -2652,6 +2691,15 @@ body[data-theme="dark"] .cr-row.is-y .cr-p{ color:#7CC28A; }
     <div id="tripList"></div>
     <button class="trip-addcur" id="tripAddCur"></button>
     <div class="trip-sum" id="tripSum" style="display:none;"></div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="profilModal">
+  <div class="modal sp-modal" role="dialog" aria-labelledby="spTitle">
+    <button class="modal-close" data-close="profilModal" aria-label="Kapat"><svg class="ic " aria-hidden="true"><use href="#i-close"/></svg></button>
+    <h3 class="m-title" id="spTitle">Gezgin Profilim</h3>
+    <p class="m-sub">Takma adın ve durumunla diğer gezginlere görün.</p>
+    <div id="spBody"></div>
   </div>
 </div>
 
@@ -10746,6 +10794,240 @@ document.getElementById('aiReset').addEventListener('click', ()=>{
   aiLog().innerHTML = '';
   document.getElementById('aiEmpty').hidden = false;
 });
+
+
+/* ============================================================
+   SOSYAL · 1. adım: hesap ve profil (Supabase, doğrudan REST)
+   Kurulum: supabase/README.md · Şema: supabase/schema.sql
+   Giriş: e-postaya 6 haneli kod (şifre yok). Kesin konum asla gönderilmez;
+   durum yalnızca şehir + gün düzeyindedir.
+   ============================================================ */
+var SOSYAL_CFG = { url: '', key: '' };
+try{ const ov = JSON.parse(localStorage.getItem('patika:sosyal') || 'null'); if(ov && ov.url && ov.key) SOSYAL_CFG = ov; }catch(e){}
+function sosyalAcik(){ return !!(SOSYAL_CFG.url && SOSYAL_CFG.key); }
+
+var sosyal = { oturum: null, profil: null, profilYuklendi: false };
+const SOSYAL_OTURUM_K = 'patika:oturum';
+function sosyalOturumOku(){ try{ return JSON.parse(localStorage.getItem(SOSYAL_OTURUM_K) || 'null'); }catch(e){ return null; } }
+function sosyalOturumYaz(o){
+  sosyal.oturum = o;
+  try{ if(o) localStorage.setItem(SOSYAL_OTURUM_K, JSON.stringify(o)); else localStorage.removeItem(SOSYAL_OTURUM_K); }catch(e){}
+}
+function sosyalOturumKur(d){
+  if(!d || !d.access_token || !d.user) throw new Error('Oturum açılamadı.');
+  sosyalOturumYaz({ access_token:d.access_token, refresh_token:d.refresh_token,
+    expires_at: d.expires_at || (Math.floor(Date.now()/1000) + (d.expires_in||3600)),
+    user:{ id:d.user.id, email:d.user.email || '' } });
+}
+function sosyalHata(status, data){
+  const m = (data && (data.msg || data.message || data.error_description || data.error)) || '';
+  if(status===429 || /rate limit|once every/i.test(m)) return 'Çok sık denendi. Biraz bekleyip tekrar dene.';
+  if(/expired|invalid/i.test(m) && /token|otp/i.test(m)) return 'Kod hatalı ya da süresi geçmiş.';
+  if(data && data.code==='23505') return 'Bu takma ad alınmış, başka bir tane dene.';
+  if(data && data.code==='23514') return 'Bilgiler kurallara uymuyor (takma ad 2–24 karakter, durum en fazla 80).';
+  if(status===0) return 'Bağlantı yok. İnternetini kontrol et.';
+  return 'Bir sorun oldu, biraz sonra tekrar dene.';
+}
+async function sosyalYenile(){
+  const o = sosyal.oturum;
+  if(!o || !o.refresh_token) return false;
+  try{
+    const r = await fetch(SOSYAL_CFG.url+'/auth/v1/token?grant_type=refresh_token', { method:'POST',
+      headers:{ apikey:SOSYAL_CFG.key, 'content-type':'application/json' }, body:JSON.stringify({ refresh_token:o.refresh_token }) });
+    if(!r.ok){ if(r.status===400 || r.status===401) sosyalOturumYaz(null); return false; }
+    sosyalOturumKur(await r.json());
+    return true;
+  }catch(e){ return false; }
+}
+/* tek giriş noktası: süresi yakın token'ı yeniler, 401'de bir kez yenileyip tekrar dener */
+async function sosyalIstek(path, opt){
+  opt = opt || {};
+  if(opt.oturumlu && sosyal.oturum && sosyal.oturum.expires_at - 60 < Date.now()/1000) await sosyalYenile();
+  const yap = ()=>{
+    const h = { apikey:SOSYAL_CFG.key, 'content-type':'application/json' };
+    if(opt.oturumlu && sosyal.oturum) h.authorization = 'Bearer ' + sosyal.oturum.access_token;
+    if(opt.prefer) h.prefer = opt.prefer;
+    return fetch(SOSYAL_CFG.url + path, { method:opt.method||'GET', headers:h, body: opt.body!==undefined ? JSON.stringify(opt.body) : undefined });
+  };
+  let r;
+  try{ r = await yap(); }catch(e){ throw new Error(sosyalHata(0)); }
+  if(r.status===401 && opt.oturumlu && await sosyalYenile()){ try{ r = await yap(); }catch(e){ throw new Error(sosyalHata(0)); } }
+  let data = null; try{ data = await r.json(); }catch(e){}
+  if(!r.ok){ const err = new Error(sosyalHata(r.status, data)); err.status = r.status; throw err; }
+  return data;
+}
+const SOSYAL = {
+  kodGonder(email){ return sosyalIstek('/auth/v1/otp', { method:'POST', body:{ email, create_user:true } }); },
+  async kodDogrula(email, token){
+    const d = await sosyalIstek('/auth/v1/verify', { method:'POST', body:{ type:'email', email, token } });
+    sosyalOturumKur(d); sosyal.profil = null; sosyal.profilYuklendi = false;
+  },
+  async cikis(){
+    try{ await sosyalIstek('/auth/v1/logout', { method:'POST', oturumlu:true }); }catch(e){}
+    sosyalOturumYaz(null); sosyal.profil = null; sosyal.profilYuklendi = false;
+  },
+  async profilGetir(){
+    if(!sosyal.oturum) return null;
+    const rows = await sosyalIstek('/rest/v1/profiles?id=eq.'+encodeURIComponent(sosyal.oturum.user.id)+'&select=takma_ad,durum,ulke,sehir_id,gun,updated_at', { oturumlu:true });
+    sosyal.profil = (rows && rows[0]) || null; sosyal.profilYuklendi = true;
+    return sosyal.profil;
+  },
+  async profilKaydet(p){
+    const body = Object.assign({ id: sosyal.oturum.user.id }, p);
+    const rows = await sosyalIstek('/rest/v1/profiles?on_conflict=id', { method:'POST', oturumlu:true,
+      prefer:'resolution=merge-duplicates,return=representation', body });
+    sosyal.profil = (rows && rows[0]) || Object.assign({}, p); sosyal.profilYuklendi = true;
+    return sosyal.profil;
+  },
+  async hesapSil(){
+    await sosyalIstek('/rest/v1/rpc/hesabimi_sil', { method:'POST', oturumlu:true, body:{} });
+    sosyalOturumYaz(null); sosyal.profil = null; sosyal.profilYuklendi = false;
+  }
+};
+/* durum: yalnızca şehir + gün (kesin konum yok) */
+function sosyalDurumOnerisi(){
+  const appVis = document.getElementById('appScreen').classList.contains('visible');
+  const c = appVis ? (COUNTRY_CITIES[activeCountry]||[]).find(x=>x.id===activeCityId) : null;
+  if(!c || !c.days) return { durum:'Yeni rotamı seçiyorum', ulke:null, sehir_id:null, gun:null };
+  const d = c.days[activeDayIdx] || c.days[0];
+  const ad = c.city.replace(/\s*\(.*\)\s*$/,'');
+  return { durum: trEk(ad,'loc') + (c.days.length>1 ? ' · ' + d.day + '. gün' : ''), ulke:activeCountry, sehir_id:c.id, gun:d.day };
+}
+function sosyalTakmaAdHatasi(v){
+  if(v.length<2 || v.length>24) return 'Takma ad 2–24 karakter olmalı.';
+  if(!/^[\p{L}\p{N} ._-]+$/u.test(v)) return 'Sadece harf, rakam, boşluk ve . _ - kullanılabilir.';
+  return '';
+}
+
+/* ---------- arayüz ---------- */
+const spEl = id => document.getElementById(id);
+var sosyalUI = { adim:'email', email:'', bekle:0, timer:null, silOnay:false };
+function sosyalMesaj(t, tur){ const m = spEl('spMsg'); m.textContent = t || ''; m.className = 'sp-msg' + (tur ? ' sp-'+tur : ''); }
+function sosyalGeriSayim(){
+  clearInterval(sosyalUI.timer);
+  sosyalUI.bekle = 60;
+  const tick = ()=>{
+    const b = spEl('spResend'); if(!b) { clearInterval(sosyalUI.timer); return; }
+    b.disabled = sosyalUI.bekle>0;
+    b.textContent = sosyalUI.bekle>0 ? 'Yeni kod · '+sosyalUI.bekle+' sn' : 'Yeni kod gönder';
+    if(sosyalUI.bekle--<=0) clearInterval(sosyalUI.timer);
+  };
+  tick(); sosyalUI.timer = setInterval(tick, 1000);
+}
+function sosyalAvatar(ad){ return `<div class="sp-av">${escH((ad||'?').charAt(0).toLocaleUpperCase('tr'))}</div>`; }
+async function sosyalCiz(){
+  const body = spEl('spBody');
+  if(!sosyalAcik()){
+    body.innerHTML = `<div class="ai-off sp-off"><strong>Gezgin profilleri yakında.</strong> Hesaplar açılınca bir takma adla rotanı ve durumunu diğer gezginlerle paylaşabileceksin.</div>`;
+    return;
+  }
+  if(!sosyal.oturum){
+    if(sosyalUI.adim==='kod'){
+      body.innerHTML = `<p class="sp-lead"><b>${escH(sosyalUI.email)}</b> adresine 6 haneli bir kod gönderdik.</p>
+        <form id="spKodForm" class="sp-form" autocomplete="off">
+          <input id="spKod" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="••••••" aria-label="Doğrulama kodu" class="sp-kod">
+          <button type="submit" class="sp-btn">Giriş yap</button>
+        </form>
+        <div class="sp-row"><button type="button" class="sp-link" id="spResend" disabled></button><button type="button" class="sp-link" id="spBack">E-postayı değiştir</button></div>
+        <div class="sp-msg" id="spMsg" role="status"></div>`;
+      sosyalGeriSayim();
+      spEl('spKodForm').addEventListener('submit', async ev=>{
+        ev.preventDefault();
+        const kod = spEl('spKod').value.replace(/\D/g,'');
+        if(kod.length!==6){ sosyalMesaj('Kod 6 haneli olmalı.', 'err'); return; }
+        const b = ev.submitter || spEl('spKodForm').querySelector('button'); b.disabled = true; sosyalMesaj('Doğrulanıyor…');
+        try{ await SOSYAL.kodDogrula(sosyalUI.email, kod); sosyalUI.adim='email'; await sosyalProfilYukleVeCiz(); }
+        catch(e){ sosyalMesaj(e.message, 'err'); b.disabled = false; }
+      });
+      spEl('spResend').addEventListener('click', async ()=>{
+        spEl('spResend').disabled = true;
+        try{ await SOSYAL.kodGonder(sosyalUI.email); sosyalMesaj('Yeni kod gönderildi.', 'ok'); sosyalGeriSayim(); }
+        catch(e){ sosyalMesaj(e.message, 'err'); spEl('spResend').disabled = false; }
+      });
+      spEl('spBack').addEventListener('click', ()=>{ sosyalUI.adim='email'; sosyalCiz(); });
+      setTimeout(()=>spEl('spKod') && spEl('spKod').focus(), 50);
+      return;
+    }
+    body.innerHTML = `<p class="sp-lead">Bir takma adla gezgin profilini aç. Şifre yok: e-postana gelen kodla girersin.</p>
+      <form id="spMailForm" class="sp-form" autocomplete="on">
+        <input id="spMail" type="email" autocomplete="email" maxlength="120" placeholder="E-posta adresin" aria-label="E-posta" value="${escH(sosyalUI.email)}">
+        <button type="submit" class="sp-btn">Kod gönder</button>
+      </form>
+      <div class="sp-msg" id="spMsg" role="status"></div>
+      <p class="sp-fine">E-postan kimseye gösterilmez. Diğer gezginler sadece takma adını ve şehir düzeyindeki durumunu görür.</p>`;
+    spEl('spMailForm').addEventListener('submit', async ev=>{
+      ev.preventDefault();
+      const email = spEl('spMail').value.trim();
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ sosyalMesaj('Geçerli bir e-posta yaz.', 'err'); return; }
+      const b = spEl('spMailForm').querySelector('button'); b.disabled = true; sosyalMesaj('Gönderiliyor…');
+      try{ await SOSYAL.kodGonder(email); sosyalUI.email = email; sosyalUI.adim = 'kod'; sosyalCiz(); }
+      catch(e){ sosyalMesaj(e.message, 'err'); b.disabled = false; }
+    });
+    return;
+  }
+  /* oturum açık */
+  const p = sosyal.profil, oneri = sosyalDurumOnerisi();
+  const yeni = !p;
+  body.innerHTML = `
+    ${p ? `<div class="sp-card">${sosyalAvatar(p.takma_ad)}<div class="sp-who"><b>${escH(p.takma_ad)}</b><span>${escH(p.durum || 'Durum yok')}</span></div></div>` : `<p class="sp-lead">Son adım: diğer gezginlerin göreceği bir takma ad seç.</p>`}
+    <form id="spProfilForm" class="sp-grid" autocomplete="off">
+      <label>Takma ad<input id="spAd" maxlength="24" value="${escH(p ? p.takma_ad : '')}" placeholder="örn. Kapadokya Kuşu"></label>
+      <label>Durum<span class="sp-durum"><input id="spDurum" maxlength="80" value="${escH(p ? (p.durum||'') : oneri.durum)}"><button type="button" class="sp-link" id="spRota" title="Durumu şu anki rotandan al">Rotamdan al</button></span></label>
+      <button type="submit" class="sp-btn">${yeni ? 'Profilimi aç' : 'Kaydet'}</button>
+    </form>
+    <div class="sp-msg" id="spMsg" role="status"></div>
+    <p class="sp-fine">Durumun yalnızca şehir ve gün düzeyinde paylaşılır; kesin konumun asla gönderilmez.</p>
+    <div class="sp-foot">
+      <span class="sp-mail">${escH(sosyal.oturum.user.email)}</span>
+      <button type="button" class="sp-link" id="spCikis">Çıkış yap</button>
+      <button type="button" class="sp-link sp-danger" id="spSil">Hesabımı sil</button>
+    </div>
+    <div id="spSilOnay"></div>`;
+  let konum = p ? { ulke:p.ulke, sehir_id:p.sehir_id, gun:p.gun } : { ulke:oneri.ulke, sehir_id:oneri.sehir_id, gun:oneri.gun };
+  spEl('spRota').addEventListener('click', ()=>{ const o = sosyalDurumOnerisi(); spEl('spDurum').value = o.durum; konum = { ulke:o.ulke, sehir_id:o.sehir_id, gun:o.gun }; });
+  spEl('spDurum').addEventListener('input', ()=>{ /* elle yazılan durum şehre bağlı değil */ konum = { ulke:null, sehir_id:null, gun:null }; });
+  spEl('spProfilForm').addEventListener('submit', async ev=>{
+    ev.preventDefault();
+    const ad = spEl('spAd').value.trim().replace(/\s+/g,' '), durum = spEl('spDurum').value.trim().slice(0,80);
+    const h = sosyalTakmaAdHatasi(ad); if(h){ sosyalMesaj(h, 'err'); return; }
+    const b = spEl('spProfilForm').querySelector('.sp-btn'); b.disabled = true; sosyalMesaj('Kaydediliyor…');
+    try{
+      await SOSYAL.profilKaydet(Object.assign({ takma_ad:ad, durum: durum || null }, konum));
+      if(typeof buzz==='function') buzz(8);
+      await sosyalCiz(); sosyalMesaj(yeni ? 'Profilin açıldı. Hoş geldin!' : 'Kaydedildi.', 'ok');
+      sosyalMenuGuncelle();
+    }catch(e){ sosyalMesaj(e.message, 'err'); b.disabled = false; }
+  });
+  spEl('spCikis').addEventListener('click', async ()=>{ await SOSYAL.cikis(); sosyalMenuGuncelle(); sosyalCiz(); });
+  spEl('spSil').addEventListener('click', ()=>{
+    spEl('spSilOnay').innerHTML = `<div class="sp-confirm"><p>Hesabın ve profilin kalıcı olarak silinir. Bu geri alınamaz.</p>
+      <div class="sp-row"><button type="button" class="sp-btn sp-btn-danger" id="spSilEvet">Evet, sil</button><button type="button" class="sp-link" id="spSilHayir">Vazgeç</button></div></div>`;
+    spEl('spSilHayir').addEventListener('click', ()=>{ spEl('spSilOnay').innerHTML=''; });
+    spEl('spSilEvet').addEventListener('click', async ()=>{
+      spEl('spSilEvet').disabled = true;
+      try{ await SOSYAL.hesapSil(); sosyalMenuGuncelle(); await sosyalCiz(); sosyalMesaj('Hesabın silindi.', 'ok'); }
+      catch(e){ sosyalMesaj(e.message, 'err'); spEl('spSilEvet').disabled = false; }
+    });
+  });
+}
+async function sosyalProfilYukleVeCiz(){
+  try{ await SOSYAL.profilGetir(); }catch(e){ await sosyalCiz(); sosyalMesaj(e.message, 'err'); return; }
+  sosyalMenuGuncelle();
+  await sosyalCiz();
+}
+function sosyalMenuGuncelle(){
+  const s = document.querySelector('#profilBtn small');
+  if(!s) return;
+  s.textContent = !sosyalAcik() ? 'Yakında' : (sosyal.profil ? sosyal.profil.takma_ad : (sosyal.oturum ? 'Takma adını seç' : 'Takma adla katıl'));
+}
+async function sosyalAc(){
+  spEl('profilModal').classList.add('open');
+  if(sosyalAcik() && sosyal.oturum && !sosyal.profilYuklendi){ spEl('spBody').innerHTML = '<div class="sp-msg">Yükleniyor…</div>'; await sosyalProfilYukleVeCiz(); }
+  else await sosyalCiz();
+}
+sosyal.oturum = sosyalAcik() ? sosyalOturumOku() : null;
+sosyalMenuGuncelle();
+spEl('profilBtn').addEventListener('click', sosyalAc);
 
 
 /* modal kapatma */
