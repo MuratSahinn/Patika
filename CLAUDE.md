@@ -11,7 +11,7 @@ Bu dosya yeni bir sohbetin kaldığı yerden devam edebilmesi için yazıldı. �
 
 ## Uygulama
 - Tek dosya: `index.html` (v2 premium). İki `<script>` bloğu: ilki gömülü qrcode kütüphanesi, ikincisi uygulama.
-- PWA: `sw.js` — **her yayında `CACHE` adını artır** (şu an `patika-v2-12`).
+- PWA: `sw.js` — **her yayında `CACHE` adını artır** (şu an `patika-v2-13`).
 - Yayın: GitHub Pages, `main` dalı kökü → https://muratsahinn.github.io/Patika/
 - Eski sürüm: `surumler/v1/`.
 - Depolama: `window.storage.get/set(k, v, shared)` (paylaşımlı anahtarlar: `cnotes:`, `cbudget:`, `cvotes:`), küçük tercihler için try/catch'li localStorage.

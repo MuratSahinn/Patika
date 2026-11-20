@@ -11073,7 +11073,7 @@ async function sosyalCiz(){
       setTimeout(()=>spEl('spKod') && spEl('spKod').focus(), 50);
       return;
     }
-    body.innerHTML = `<p class="sp-lead">Bir takma adla gezgin profilini aç. Şifre yok: e-postana gelen kodla girersin.</p>
+    body.innerHTML = `<p class="sp-lead">Bir takma adla gezgin profilini aç. Şifre yok: e-postana gelen bağlantıyla ya da kodla girersin.</p>
       <form id="spMailForm" class="sp-form" autocomplete="on">
         <input id="spMail" type="email" autocomplete="email" maxlength="120" placeholder="E-posta adresin" aria-label="E-posta" value="${escH(sosyalUI.email)}">
         <button type="submit" class="sp-btn">Kod gönder</button>
