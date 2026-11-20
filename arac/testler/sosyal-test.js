@@ -67,9 +67,21 @@ const msg = d=>(d.getElementById('spMsg')||{}).textContent||'';
   ok('durak yokken video düğmesi kapalı + açıklama', X.d.getElementById('filmRec').disabled && /tamamladığında/.test(X.d.getElementById('filmMsg').textContent));
   X.d.querySelector('#filmPets [data-pet=kaplumbaga]').click(); await wait(20);
   ok('yol arkadaşı seçimi hatırlanır', X.w.localStorage.getItem('patika:film-hayvan')==='kaplumbaga' && X.d.querySelector('#filmPets [data-pet=kaplumbaga]').getAttribute('aria-pressed')==='true');
-  const V = X.w.filmVeriHazirla();
+  const V = X.w.filmVeriHazirla(); /* eski stil verisi (makro için korunuyor) */
   ok('film verisi: patika + durak noktaları', V.ornek.length>100 && V.duraklar.length>=3 && V.toplam>1000 && V.duraklar.every(d=>d.oran>0 && d.oran<1));
   ok('film verisi: aynı kullanıcı → aynı harita', JSON.stringify(X.w.filmVeriHazirla().duraklar.map(d=>[d.x,d.y]))===JSON.stringify(V.duraklar.map(d=>[d.x,d.y])));
+  /* harita uçuşu: gerçek koordinatlar + zaman çizelgesi */
+  ok('harita verisi gömülü (Natural Earth)', X.w.eval('FILM_HARITA.kara.length') > 50 && !!X.w.eval('FILM_HARITA.sinir.tr'));
+  X.w.eval(`(()=>{ const c=COUNTRY_CITIES.tr.find(x=>x.id==='istanbul'); const o=doneCache.istanbul=doneCache.istanbul||{}; c.days[0].stops.forEach((s,i)=>o['1-'+i]=true);
+    const r=COUNTRY_CITIES.it.find(x=>x.id==='roma'); const o2=doneCache.roma=doneCache.roma||{}; r.days[0].stops.forEach((s,i)=>o2['1-'+i]=true); })()`);
+  const H = X.w.fhVeri();
+  const ist = H.detay.find(s=>s.id==='istanbul');
+  ok('harita: gerçek durak koordinatları (İstanbul)', !!ist && ist.duraklar.every(d=>d.x>28.8 && d.x<29.2) && ist.duraklar[0].ad===X.w.eval('COUNTRY_CITIES').tr.find(c=>c.id==='istanbul').days[0].stops[0].name);
+  ok('harita: açılış → uçuş/şehir → dönüş → kapanış', H.seg[0].tip==='acilis' && H.seg.filter(s=>s.tip==='sehir').length===2 && H.seg[H.seg.length-1].tip==='kapanis' && H.sure>12 && H.sure<40);
+  const K1 = X.w.fhKamera(H, H.seg.find(s=>s.tip==='sehir').t0+1), K0 = X.w.fhKamera(H, 0.5);
+  ok('harita: şehirde kamera yakın ve eğik, açılışta uzak', K1.z > K0.z*50 && K1.p > K0.p);
+  const U = H.seg.find(s=>s.tip==='ucus' && !s.ilk), KU = X.w.fhKamera(H, (U.t0+U.t1)/2);
+  ok('harita: şehirler arası uçuşta kamera iki şehri gösterecek kadar uzaklaşır', KU.z < 200, KU.z|0);
   X.d.querySelector('[data-close=filmModal]').click(); await wait(20);
   ok('kapalıyken sunucuya istek yok', srv.log.length===0);
   X.w.close();
