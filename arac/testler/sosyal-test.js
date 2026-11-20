@@ -82,6 +82,18 @@ const msg = d=>(d.getElementById('spMsg')||{}).textContent||'';
   ok('harita: şehirde kamera yakın ve eğik, açılışta uzak', K1.z > K0.z*50 && K1.p > K0.p);
   const U = H.seg.find(s=>s.tip==='ucus' && !s.ilk), KU = X.w.fhKamera(H, (U.t0+U.t1)/2);
   ok('harita: şehirler arası uçuşta kamera iki şehri gösterecek kadar uzaklaşır', KU.z < 200, KU.z|0);
+  /* makro belgesel */
+  const MV = X.w.fmVeri();
+  ok('makro: her gezilen şehir için oyulmuş taş', MV.taslar.length===2 && MV.taslar.every(t=>t.c && t.c.n>0) && MV.taslar[0].c.ad==='İstanbul');
+  const sonQ = X.w.fmNokta(MV, X.w.fmKarincaUz(MV, MV.tYur1 - .01));
+  ok('makro: karınca son taşı geçene kadar yürür', sonQ.x > MV.taslar[MV.taslar.length-1].x + 200, Math.round(sonQ.x)+' > '+MV.taslar[MV.taslar.length-1].x);
+  ok('makro: açılış → yürüyüş → geri çekilme → kapanış', MV.tYur0===3 && MV.tYur1 > MV.tYur0 && MV.tCek1 > MV.tYur1 && MV.sure > MV.tCek1 && MV.sure < 40);
+  const Kc = X.w.fmKamera(MV, MV.tYur0 + 1), Kg = X.w.fmKamera(MV, MV.tCek1);
+  ok('makro: yakın plan → sonunda geniş plan', Kc.s > 1.3 && Kg.s < .5);
+  X.d.querySelector('#filmStil [data-stil=makro]').click(); await wait(30);
+  ok('stil seçimi: makroda yol arkadaşı seçimi gizli + hatırlanır', X.d.getElementById('filmPets').hidden && X.w.localStorage.getItem('patika:film-stil')==='makro');
+  X.d.querySelector('#filmStil [data-stil=harita]').click(); await wait(30);
+  ok('stil seçimi: haritada yol arkadaşı görünür', !X.d.getElementById('filmPets').hidden);
   X.d.querySelector('[data-close=filmModal]').click(); await wait(20);
   ok('kapalıyken sunucuya istek yok', srv.log.length===0);
   X.w.close();

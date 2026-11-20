@@ -2600,6 +2600,7 @@ body[data-theme="dark"] .cr-row.is-y .cr-p{ color:#7CC28A; }
 .film-pets button{ border:1px solid var(--line-strong); background:var(--surface); color:var(--ink); border-radius:999px; padding:7px 13px;
   cursor:pointer; font-size:0.8rem; font-family:inherit; }
 .film-stil button{ font-weight:700; }
+.film-pets[hidden]{ display:none !important; }
 .film-pets button[aria-pressed="true"]{ background:var(--tr-red); border-color:var(--tr-red); color:#fff; }
 .film-stage{ position:relative; margin:0 auto; width:min(100%, calc(56vh * 9 / 16)); aspect-ratio:9/16; border-radius:18px; overflow:hidden;
   box-shadow:0 14px 34px rgba(10,3,6,.22); background:#efe3cb; }
@@ -2790,6 +2791,7 @@ body[data-theme="dark"] .cr-row.is-y .cr-p{ color:#7CC28A; }
     <p class="m-sub">Patikan Instagram hikâyesine hazır kısa bir filme dönüşür.</p>
     <div class="film-pets film-stil" id="filmStil" role="group" aria-label="Film stili">
       <button type="button" data-stil="harita">Harita uçuşu</button>
+      <button type="button" data-stil="makro">Makro belgesel</button>
     </div>
     <div class="film-pets" id="filmPets" role="group" aria-label="Yol arkadaşı">
       <button type="button" data-pet="karinca">Karınca</button>
@@ -11665,6 +11667,391 @@ function fhKare(ctx, V, t, tur){
 }
 
 /* ============================================================
+   YOLCULUK FİLMİ · 2) MAKRO BELGESEL
+   Yakın plan toprak zemin; ayrıntılı karınca (gerçek anatomi: baş, göğüs, sapçık, karın;
+   dirsekli antenler, eklemli bacaklarla üçlü yürüyüş). Alan derinliği (keskin + bulanık katman),
+   benekli güneş ışığı, huzmeler, toz zerreleri, film greni. Her şehir için oyulmuş bir taş.
+   ============================================================ */
+const FM_W = 1080, FM_H = 1920, FM_SQ = 0.86; /* zemin eğimi (dikey sıkışma) */
+const FM_RENK = { tr:'#c8102e', it:'#2e7d4f', gr:'#1f5fa8' };
+const FM_ULKE = { tr:'Türkiye', it:'İtalya', gr:'Yunanistan' };
+function fmVeri(){
+  const v = kunyeVeri();
+  /* şehirler (en çok gezilenden), en çok 4 taş */
+  const sehirler = [];
+  ['tr','it','gr'].forEach(cc=>(COUNTRY_CITIES[cc]||[]).forEach(c=>{
+    if(!c.days) return; const done = doneCache[c.id] || {}; let n = 0; const gun = new Set();
+    c.days.forEach(d=>d.stops.forEach((s,i)=>{ if(done[`${d.day}-${i}`]){ n++; gun.add(d.day); } }));
+    if(n) sehirler.push({ cc, ad:c.city.replace(/\s*\(.*\)\s*$/,''), n, gun:gun.size });
+  }));
+  sehirler.sort((a,b)=>b.n-a.n);
+  const taslar = sehirler.slice(0,4);
+  let h = 0; for(const ch of v.seri) h = (h*31 + ch.charCodeAt(0))>>>0;
+  const rnd = filmRng(h || 11);
+  const n = Math.max(1, taslar.length);
+  const ADIM = 1000, X0 = 600, WD = X0 + 900 + n*ADIM + 900, WH = 2600, YM = 1300;
+  const faz = rnd()*6;
+  const yolY = x => YM + 150*Math.sin(x/520 + faz) + 60*Math.sin(x/190 + faz*2);
+  /* patika örnekleri (eşit adım) */
+  const ornek = []; for(let x=X0; x<=WD-700; x+=6) ornek.push([x, yolY(x)]);
+  const uz = [0]; for(let i=1;i<ornek.length;i++) uz.push(uz[i-1] + Math.hypot(ornek[i][0]-ornek[i-1][0], ornek[i][1]-ornek[i-1][1]));
+  const tasObj = (taslar.length ? taslar : [null]).map((c,i)=>{
+    const x = X0 + 900 + i*ADIM, yan = i%2 ? 1 : -1;
+    return { c, x, y: yolY(x) + yan*300, rx: 250 + rnd()*30, ry: 170 + rnd()*20, rot:(rnd()-.5)*.3, ton: 78 + Math.floor(rnd()*18), yan, s:rnd()*1000 };
+  });
+  /* zemin nesneleri: çakıl, yaprak, dal, tohum */
+  const nes = [];
+  const Y0 = -1800, YH = WH + 3600, alan = (WD+1200)*YH;
+  const PALET = [[118,104,92],[140,122,100],[96,86,78],[152,112,82],[172,152,126],[82,74,66],[128,96,70],[108,100,96]];
+  for(let i=0;i<alan/1e6*62;i++){ const x=-600+rnd()*(WD+1200), y=Y0+rnd()*YH; if(Math.abs(y-yolY(x))<80 && rnd()<.9) continue;
+    if(tasObj.some(t=>Math.hypot((x-t.x)/t.rx,(y-t.y)/t.ry)<1.25)) continue;
+    const r = 6 + Math.pow(rnd(),2.4)*58, pr = PALET[Math.floor(rnd()*PALET.length)], j = []; for(let k=0;k<9;k++) j.push(.82 + rnd()*.3);
+    nes.push({ t:'cakil', x, y, r, e:.55+rnd()*.4, a:rnd()*Math.PI, renk:pr, j, sic: rnd()<.14 }); }
+  for(let i=0;i<alan/1e6*4.5;i++){ const x=-600+rnd()*(WD+1200), y=Y0+rnd()*YH; if(Math.abs(y-yolY(x))<120) continue;
+    nes.push({ t:'yaprak', x, y, L: 120 + rnd()*170, a: rnd()*Math.PI*2, k: rnd(), kur: rnd()*.4 }); }
+  for(let i=0;i<alan/1e6*2.2;i++){ const x=-600+rnd()*(WD+1200), y=Y0+rnd()*YH; if(Math.abs(y-yolY(x))<110) continue;
+    nes.push({ t:'dal', x, y, L: 160 + rnd()*260, a: rnd()*Math.PI, k:rnd() }); }
+  nes.sort((a,b)=>a.y-b.y);
+  /* zaman çizelgesi */
+  const T = { acilis:3.0, sehir:3.6, cekil:2.8, kapanis:3.6 };
+  const tYur0 = T.acilis, tYur1 = T.acilis + n*T.sehir, tCek1 = tYur1 + T.cekil, sure = tCek1 + T.kapanis;
+  const toplam = uz[uz.length-1];
+  /* yürüyüş, son taşı 450 px geçene kadar sürer (gerçek patika uzunluğuyla) */
+  let hi = ornek.findIndex(p=>p[0] >= tasObj[tasObj.length-1].x + 450); if(hi < 0) hi = ornek.length-1;
+  const hedefUz = uz[hi];
+  return Object.assign(v, { taslar:tasObj, nes, ornek, uz, toplam, hedefUz, yolY, WD, WH, YM, X0, T, tYur0, tYur1, tCek1, sure, rnd, bos: v.durak===0, n });
+}
+function fmNokta(V, d){
+  d = Math.max(0, Math.min(V.toplam, d)); let lo = 0, hi = V.uz.length-1;
+  while(hi-lo>1){ const m=(lo+hi)>>1; if(V.uz[m] < d) lo = m; else hi = m; }
+  const a = V.ornek[lo], b = V.ornek[hi], f = (d - V.uz[lo])/((V.uz[hi]-V.uz[lo])||1);
+  return { x:a[0]+(b[0]-a[0])*f, y:a[1]+(b[1]-a[1])*f, aci:Math.atan2(b[1]-a[1], b[0]-a[0]) };
+}
+function fmKarincaUz(V, t){ /* yürünen yol (piksel) */
+  if(t <= V.tYur0) return 0;
+  const k = Math.min(1, (t - V.tYur0)/(V.tYur1 - V.tYur0));
+  /* taşların yanında hafif yavaşla: düzgün ama doğal */
+  const e = k + 0.025*Math.sin(k*V.n*Math.PI*2);
+  return Math.max(0, Math.min(1, e)) * V.hedefUz;
+}
+function fmKamera(V, t){
+  const yz = fmKarincaUz(V, t), q = fmNokta(V, yz);
+  if(t < V.tYur0){ const k = fhSmooth(t/V.tYur0); return { x:q.x + 30, y:q.y, s:fhLerp(2.7, 2.05, k) }; }
+  if(t < V.tYur1){
+    /* en yakın taşa hafif dön */
+    let cx = q.x + 110, cy = q.y;
+    V.taslar.forEach(ts=>{ const w = Math.exp(-Math.pow((q.x - ts.x)/330, 2)); cx = fhLerp(cx, (q.x+ts.x)/2 + 40, w*.75); cy = fhLerp(cy, (q.y+ts.y)/2, w*.8); });
+    let yak = 0; V.taslar.forEach(ts=>{ yak = Math.max(yak, Math.exp(-Math.pow((q.x - ts.x)/330, 2))); });
+    return { x:cx, y:cy, s:fhLerp(2.0, 1.45, yak) };
+  }
+  const son = fmKamera(V, V.tYur1 - 1e-3);
+  const orta = { x:(V.X0 + V.taslar[V.taslar.length-1].x)/2 + 120, y:V.YM };
+  const genis = Math.min(0.42, FM_W*0.92/((V.taslar[V.taslar.length-1].x + 500) - (V.X0 - 300)));
+  const k = fhInOut((t - V.tYur1)/(V.tCek1 - V.tYur1));
+  return { x:fhLerp(son.x, orta.x, k), y:fhLerp(son.y, orta.y, k), s:Math.exp(fhLerp(Math.log(son.s), Math.log(genis), k)) };
+}
+
+/* ---------- önceden üretilen dokular ---------- */
+let FM_KAYNAK = null;
+function fmKaynak(){
+  if(FM_KAYNAK) return FM_KAYNAK;
+  const yap = (w,h)=>{ const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+  const rnd = filmRng(7331);
+  /* toprak: renk lekeleri + taneler */
+  const N = 512, toprak = yap(N,N), tx = toprak.getContext('2d');
+  if(!tx) return null;
+  tx.fillStyle = '#6b4f36'; tx.fillRect(0,0,N,N);
+  for(let i=0;i<260;i++){ const x=rnd()*N, y=rnd()*N, r=20+rnd()*90, g=tx.createRadialGradient(x,y,0,x,y,r);
+    const c = rnd()<.5 ? '92,68,46' : '120,92,62'; g.addColorStop(0,`rgba(${c},.35)`); g.addColorStop(1,`rgba(${c},0)`);
+    for(const dx of [-N,0,N]) for(const dy of [-N,0,N]){ tx.fillStyle=g; tx.save(); tx.translate(dx,dy); tx.beginPath(); tx.arc(x,y,r,0,Math.PI*2); tx.fill(); tx.restore(); } }
+  for(let i=0;i<9000;i++){ const x=rnd()*N, y=rnd()*N, r=.6+Math.pow(rnd(),3)*3.2, l = rnd();
+    tx.fillStyle = l<.45 ? `rgba(40,28,18,${.25+rnd()*.4})` : l<.85 ? `rgba(160,128,92,${.2+rnd()*.35})` : `rgba(220,200,160,${.3+rnd()*.4})`;
+    tx.beginPath(); tx.arc(x,y,r,0,Math.PI*2); tx.fill(); }
+  /* çatlaklar */
+  tx.strokeStyle = 'rgba(30,20,12,.35)'; tx.lineWidth = 1.2;
+  for(let i=0;i<14;i++){ let x=rnd()*N, y=rnd()*N; tx.beginPath(); tx.moveTo(x,y); for(let k=0;k<8;k++){ x+= (rnd()-.5)*40; y+=(rnd()-.5)*40; tx.lineTo(x,y); } tx.stroke(); }
+  /* film greni */
+  const grenC = yap(256,256), gx = grenC.getContext('2d'), gi = gx.createImageData(256,256);
+  for(let i=0;i<gi.data.length;i+=4){ const v = 128 + (rnd()-.5)*90; gi.data[i]=gi.data[i+1]=gi.data[i+2]=v; gi.data[i+3]=22; }
+  gx.putImageData(gi,0,0);
+  /* ön plan ot yaprakları: gölge hilesiyle önceden bulanık */
+  const otlar = [];
+  for(let k=0;k<3;k++){
+    const c = yap(420, 1400), x = c.getContext('2d');
+    x.shadowColor = k===2 ? 'rgba(40,58,22,.95)' : 'rgba(28,40,16,.97)'; x.shadowBlur = 38 + k*10; x.shadowOffsetX = 5000;
+    x.fillStyle = '#000'; x.translate(-5000, 0);
+    for(let j=0;j<3;j++){ const bx = 120 + j*90 + rnd()*40, w = 26 + rnd()*22, bend = (rnd()-.5)*260;
+      x.beginPath(); x.moveTo(bx-w, 1400); x.quadraticCurveTo(bx-w*.6+bend*.4, 700, bx+bend, 60+rnd()*200); x.quadraticCurveTo(bx+w*.6+bend*.4, 700, bx+w, 1400); x.closePath(); x.fill(); }
+    otlar.push(c);
+  }
+  /* karınca gölgesi (yumuşak) */
+  const golge = yap(520, 260), gg = golge.getContext('2d');
+  gg.shadowColor = 'rgba(20,12,6,.6)'; gg.shadowBlur = 26; gg.shadowOffsetX = 5000; gg.fillStyle = '#000';
+  gg.translate(-5000, 0); gg.beginPath(); gg.ellipse(250,130,190,52,0,0,Math.PI*2); gg.fill();
+  return FM_KAYNAK = { toprak, gren:grenC, otlar, golge, A:yap(FM_W,FM_H), B:yap(FM_W/6|0, FM_H/6|0), M:yap(FM_W,FM_H) };
+}
+
+/* ---------- çizim yardımcıları ---------- */
+function fmCakil(ctx, o, s){
+  const r = o.r, lod = s < 0.55, [cr,cg,cb] = o.renk;
+  const yol = ()=>{ ctx.beginPath(); for(let k=0;k<=9;k++){ const a = k/9*Math.PI*2, jj = o.j[k%9]; const x = Math.cos(a)*r*jj, y = Math.sin(a)*r*o.e*jj; k?ctx.lineTo(x,y):ctx.moveTo(x,y); } ctx.closePath(); };
+  ctx.save(); ctx.translate(o.x, o.y); ctx.rotate(o.a);
+  ctx.save(); ctx.translate(r*.2, r*.26); ctx.fillStyle = 'rgba(24,14,6,.42)'; yol(); ctx.fill(); ctx.restore();
+  if(lod){ ctx.fillStyle = `rgb(${cr},${cg},${cb})`; yol(); ctx.fill(); ctx.restore(); return; }
+  const g = ctx.createRadialGradient(-r*.32, -r*o.e*.42, r*.05, 0, 0, r*1.08);
+  g.addColorStop(0, `rgb(${Math.min(255,cr+48)},${Math.min(255,cg+44)},${Math.min(255,cb+38)})`);
+  g.addColorStop(.5, `rgb(${cr},${cg},${cb})`); g.addColorStop(1, `rgb(${cr-38},${cg-38},${cb-36})`);
+  ctx.fillStyle = g; yol(); ctx.fill();
+  /* mineral benekleri */
+  if(r > 16){ const rr = filmRng((o.x*13+o.y)|0); for(let k=0;k<Math.min(18, r/2);k++){ const a=rr()*Math.PI*2, d=Math.sqrt(rr())*.8;
+    ctx.fillStyle = rr()<.5 ? 'rgba(30,26,22,.28)' : 'rgba(240,232,220,.2)'; ctx.beginPath(); ctx.arc(Math.cos(a)*d*r, Math.sin(a)*d*r*o.e, .8+rr()*1.8, 0, Math.PI*2); ctx.fill(); } }
+  if(o.sic && r>12){ ctx.fillStyle = 'rgba(255,250,240,.38)'; ctx.beginPath(); ctx.ellipse(-r*.36, -r*o.e*.4, r*.18, r*o.e*.08, -.5, 0, Math.PI*2); ctx.fill(); }
+  ctx.restore();
+}
+function fmYaprak(ctx, o, s){
+  const L = o.L, W = L*.32;
+  ctx.save(); ctx.translate(o.x, o.y); ctx.rotate(o.a);
+  ctx.fillStyle = 'rgba(25,15,8,.4)'; ctx.beginPath(); ctx.ellipse(10, 12, L*.52, W*.62, 0, 0, Math.PI*2); ctx.fill();
+  const g = ctx.createLinearGradient(0,-W,0,W);
+  const kahve = o.k < .6;
+  g.addColorStop(0, kahve ? '#a8743c' : '#9c8a3a'); g.addColorStop(.5, kahve ? '#c48d4b' : '#b8a24a'); g.addColorStop(1, kahve ? '#7a4e22' : '#6f6224');
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.moveTo(-L/2, 0); ctx.bezierCurveTo(-L/4, -W*1.1, L/4, -W*1.05, L/2, 0); ctx.bezierCurveTo(L/4, W*(1-o.kur), -L/4, W*1.1, -L/2, 0); ctx.fill();
+  if(s > .5){
+    ctx.strokeStyle = 'rgba(70,40,15,.55)'; ctx.lineWidth = 2.2; ctx.beginPath(); ctx.moveTo(-L/2-14, 0); ctx.lineTo(L/2, 0); ctx.stroke();
+    ctx.lineWidth = 1.1; for(let i=1;i<6;i++){ const x = -L/2 + i*L/6.2; ctx.beginPath(); ctx.moveTo(x, 0); ctx.quadraticCurveTo(x+L*.06, -W*.4, x+L*.12, -W*.75); ctx.moveTo(x, 0); ctx.quadraticCurveTo(x+L*.06, W*.4, x+L*.12, W*.7); ctx.stroke(); }
+    ctx.fillStyle = 'rgba(255,240,200,.18)'; ctx.beginPath(); ctx.ellipse(-L*.1, -W*.35, L*.28, W*.18, 0, 0, Math.PI*2); ctx.fill();
+  }
+  ctx.restore();
+}
+function fmDal(ctx, o){
+  ctx.save(); ctx.translate(o.x, o.y); ctx.rotate(o.a); ctx.lineCap = 'round';
+  ctx.strokeStyle = 'rgba(25,15,8,.4)'; ctx.lineWidth = 14; ctx.beginPath(); ctx.moveTo(-o.L/2+6, 8); ctx.quadraticCurveTo(0, o.k*20+8, o.L/2+6, 8); ctx.stroke();
+  const g = ctx.createLinearGradient(0,-6,0,6); g.addColorStop(0,'#9b7650'); g.addColorStop(1,'#4a3220');
+  ctx.strokeStyle = g; ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(-o.L/2, 0); ctx.quadraticCurveTo(0, o.k*20, o.L/2, 0); ctx.stroke();
+  ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(o.L*.1, o.k*10); ctx.lineTo(o.L*.25, -38); ctx.stroke();
+  ctx.restore();
+}
+function fmTas(ctx, ts, oyma, s){
+  ctx.save(); ctx.translate(ts.x, ts.y); ctx.rotate(ts.rot);
+  ctx.fillStyle = 'rgba(25,15,8,.5)'; ctx.beginPath(); ctx.ellipse(30, 38, ts.rx*1.04, ts.ry*1.04, 0, 0, Math.PI*2); ctx.fill();
+  const t = ts.ton, g = ctx.createRadialGradient(-ts.rx*.35, -ts.ry*.5, 10, 0, 0, ts.rx*1.1);
+  g.addColorStop(0, `rgb(${t+62},${t+58},${t+52})`); g.addColorStop(.55, `rgb(${t+18},${t+15},${t+12})`); g.addColorStop(1, `rgb(${t-34},${t-36},${t-38})`);
+  ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(0,0,ts.rx,ts.ry,0,0,Math.PI*2); ctx.fill();
+  /* taş dokusu: benekler */
+  const r = filmRng(ts.s|0);
+  for(let i=0;i<160;i++){ const a=r()*Math.PI*2, d=Math.sqrt(r()); const x=Math.cos(a)*d*ts.rx*.95, y=Math.sin(a)*d*ts.ry*.95;
+    ctx.fillStyle = r()<.5 ? 'rgba(40,38,34,.25)' : 'rgba(255,255,250,.18)'; ctx.beginPath(); ctx.arc(x,y,.8+r()*2.4,0,Math.PI*2); ctx.fill(); }
+  ctx.fillStyle = 'rgba(255,250,240,.08)'; ctx.beginPath(); ctx.ellipse(-ts.rx*.3, -ts.ry*.48, ts.rx*.45, ts.ry*.16, -.2, 0, Math.PI*2); ctx.fill();
+  /* oyma yazı: soldan sağa açılır */
+  if(oyma > 0 && ts.c){
+    ctx.save(); ctx.beginPath(); ctx.rect(-ts.rx, -ts.ry, ts.rx*2*oyma, ts.ry*2); ctx.clip();
+    const ad = ts.c.ad.toLocaleUpperCase('tr'); let fs = 64; ctx.font = `700 ${fs}px "Playfair Display", Georgia, serif`;
+    while(ctx.measureText(ad).width > ts.rx*1.55 && fs > 30){ fs -= 3; ctx.font = `700 ${fs}px "Playfair Display", Georgia, serif`; }
+    const oy = (txt, y, font, ls)=>{ /* oyulmuş: koyu iç + alt-sağda ışık kenarı */
+      filmYazi(ctx, txt, -1.5, y-2, font, 'rgba(10,8,6,.75)', 'center', ls);
+      filmYazi(ctx, txt, 1.2, y+1.6, font, 'rgba(255,250,240,.35)', 'center', ls);
+      filmYazi(ctx, txt, 0, y, font, 'rgba(200,190,175,.88)', 'center', ls); };
+    oy(ad, 8, ctx.font);
+    oy(`${(FM_ULKE[ts.c.cc]||'').toLocaleUpperCase('tr')}`, -52, '800 20px system-ui, sans-serif', 6);
+    oy(`${ts.c.n} DURAK${ts.c.gun>1 ? ' · ' + ts.c.gun + ' GÜN' : ''}`, 62, '700 24px system-ui, sans-serif', 4);
+    ctx.restore();
+    ctx.fillStyle = FM_RENK[ts.c.cc]; ctx.globalAlpha = .85*oyma; ctx.beginPath(); ctx.arc(0, -86, 7, 0, Math.PI*2); ctx.fill(); ctx.globalAlpha = 1;
+  }
+  ctx.restore();
+}
+/* ayrıntılı karınca (yukarıdan; +x yönüne bakar). faz: yürüyüş döngüsü */
+function fmKarinca(ctx, faz, yurur){
+  const s = yurur ? Math.sin(faz) : 0, c = yurur ? Math.cos(faz) : 0;
+  const govdeRenk = (x, rx, ry, rot)=>{
+    const g = ctx.createRadialGradient(x - rx*.35, -ry*.45, rx*.05, x, 0, rx*1.1);
+    g.addColorStop(0, '#8a4a2a'); g.addColorStop(.35, '#4a2012'); g.addColorStop(.8, '#1e0c06'); g.addColorStop(1, '#0c0503');
+    return g; };
+  /* bacaklar: kalça → uyluk → kaval → ayak; üçlü yürüyüş (ön-sol, orta-sağ, arka-sol birlikte) */
+  const bacak = (bx, yon, i)=>{
+    const grup = (i===1 ? 1 : 0) ^ (yon>0 ? 1 : 0);
+    const sal = (grup ? s : -s) * 0.42, kalk = Math.max(0, grup ? c : -c);
+    const taban = [-0.95, 0.15, 1.05][i] * -1; /* ön bacak öne, arka bacak arkaya */
+    const a1 = yon*(Math.PI/2) + yon*(taban*0.55) + yon*sal;
+    const L1 = [62, 58, 74][i], L2 = [70, 62, 86][i], L3 = [40, 36, 46][i];
+    const kx = bx + Math.cos(a1)*L1, ky = Math.sin(a1)*L1*1;
+    const a2 = a1 + yon*([-0.9, 0.0, 0.85][i]) * -1 + yon*sal*.4;
+    const tx = kx + Math.cos(a2)*L2, ty = ky + Math.sin(a2)*L2;
+    const a3 = a2 + yon*([-0.35, 0.25, 0.35][i]) * -1;
+    const fx = tx + Math.cos(a3)*L3*(1-kalk*.25), fy = ty + Math.sin(a3)*L3*(1-kalk*.25);
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.strokeStyle = '#1a0a05'; ctx.lineWidth = 9; ctx.beginPath(); ctx.moveTo(bx, 0); ctx.lineTo(kx, ky); ctx.stroke();
+    ctx.lineWidth = 6.5; ctx.beginPath(); ctx.moveTo(kx, ky); ctx.lineTo(tx, ty); ctx.stroke();
+    ctx.lineWidth = 3.4; ctx.beginPath(); ctx.moveTo(tx, ty); ctx.lineTo(fx, fy); ctx.stroke();
+    /* parlak kenar */
+    ctx.strokeStyle = 'rgba(200,120,80,.45)'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(bx+1, -1); ctx.lineTo(kx+1, ky-1); ctx.lineTo(tx+1, ty-1); ctx.stroke();
+    ctx.fillStyle = '#2a1208'; ctx.beginPath(); ctx.arc(kx, ky, 5, 0, Math.PI*2); ctx.arc(tx, ty, 4, 0, Math.PI*2); ctx.fill();
+    /* tırnaklar */
+    ctx.strokeStyle = '#120603'; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(fx, fy); ctx.lineTo(fx + Math.cos(a3+.5)*9, fy + Math.sin(a3+.5)*9); ctx.moveTo(fx, fy); ctx.lineTo(fx + Math.cos(a3-.5)*9, fy + Math.sin(a3-.5)*9); ctx.stroke();
+  };
+  [ -1, 1 ].forEach(yon=>[0,1,2].forEach(i=>bacak([30, 8, -14][i], yon, i)));
+  /* karın (gaster) */
+  ctx.fillStyle = govdeRenk(-108, 66, 50); ctx.beginPath(); ctx.ellipse(-108, 0, 66, 50, 0, 0, Math.PI*2); ctx.fill();
+  ctx.strokeStyle = 'rgba(0,0,0,.45)'; ctx.lineWidth = 2.2;
+  for(let k=0;k<3;k++){ ctx.beginPath(); ctx.ellipse(-82 - k*22, 0, 10, 46 - k*4, 0, -Math.PI/2, Math.PI/2); ctx.stroke(); }
+  ctx.fillStyle = 'rgba(255,220,190,.55)'; ctx.beginPath(); ctx.ellipse(-122, -24, 30, 8, -.25, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle = 'rgba(255,240,220,.85)'; ctx.beginPath(); ctx.ellipse(-110, -26, 11, 3.5, -.25, 0, Math.PI*2); ctx.fill();
+  /* kıllar */
+  ctx.strokeStyle = 'rgba(210,170,130,.5)'; ctx.lineWidth = 1;
+  for(let k=0;k<26;k++){ const a = k/26*Math.PI*2, x = -108 + Math.cos(a)*64, y = Math.sin(a)*48; ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x+Math.cos(a)*9, y+Math.sin(a)*9); ctx.stroke(); }
+  /* sapçık (petiol) */
+  ctx.fillStyle = govdeRenk(-40, 14, 12); ctx.beginPath(); ctx.ellipse(-40, 0, 14, 12, 0, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle = '#1e0c06'; ctx.fillRect(-54, -5, 30, 10);
+  /* göğüs (mesosoma) */
+  ctx.fillStyle = govdeRenk(4, 44, 22);
+  ctx.beginPath(); ctx.moveTo(-26, 0); ctx.bezierCurveTo(-24, -20, 4, -26, 22, -18); ctx.bezierCurveTo(42, -12, 48, -6, 48, 0); ctx.bezierCurveTo(48, 6, 42, 12, 22, 18); ctx.bezierCurveTo(4, 26, -24, 20, -26, 0); ctx.fill();
+  ctx.fillStyle = 'rgba(255,210,170,.45)'; ctx.beginPath(); ctx.ellipse(14, -10, 22, 5, -.1, 0, Math.PI*2); ctx.fill();
+  /* baş */
+  ctx.fillStyle = govdeRenk(78, 36, 33);
+  ctx.beginPath(); ctx.moveTo(48, 0); ctx.bezierCurveTo(50, -30, 92, -40, 108, -22); ctx.bezierCurveTo(118, -10, 118, 10, 108, 22); ctx.bezierCurveTo(92, 40, 50, 30, 48, 0); ctx.fill();
+  /* bileşik gözler */
+  [-1,1].forEach(k=>{ ctx.fillStyle = '#050302'; ctx.beginPath(); ctx.ellipse(86, k*25, 10, 7, k*.4, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,.75)'; ctx.beginPath(); ctx.ellipse(83, k*25 - 2.5, 3.6, 2, k*.4, 0, Math.PI*2); ctx.fill(); });
+  ctx.fillStyle = 'rgba(255,220,190,.5)'; ctx.beginPath(); ctx.ellipse(76, -12, 14, 4, -.15, 0, Math.PI*2); ctx.fill();
+  /* çeneler */
+  ctx.strokeStyle = '#140704'; ctx.lineWidth = 5; ctx.lineCap = 'round';
+  [-1,1].forEach(k=>{ ctx.beginPath(); ctx.moveTo(112, k*10); ctx.quadraticCurveTo(132, k*16, 128, k*2); ctx.stroke(); });
+  /* dirsekli antenler: sap + kamçı (boğumlu) */
+  const an = yurur ? Math.sin(faz*.7)*.18 : Math.sin(faz*.35)*.35;
+  [-1,1].forEach(k=>{
+    const ex = 150, ey = k*(48 + an*20*k);
+    ctx.strokeStyle = '#1a0a05'; ctx.lineWidth = 4.5; ctx.beginPath(); ctx.moveTo(104, k*12); ctx.lineTo(ex, ey); ctx.stroke();
+    const tx = 200 + an*10, ty = k*(38 - an*26*k);
+    ctx.lineWidth = 3.2; ctx.beginPath(); ctx.moveTo(ex, ey); ctx.quadraticCurveTo((ex+tx)/2 + 6, (ey+ty)/2 + k*6, tx, ty); ctx.stroke();
+    ctx.fillStyle = '#1a0a05'; for(let j=1;j<=8;j++){ const u=j/9; const x=(1-u)*(1-u)*ex+2*(1-u)*u*((ex+tx)/2+6)+u*u*tx, y=(1-u)*(1-u)*ey+2*(1-u)*u*((ey+ty)/2+k*6)+u*u*ty; ctx.beginPath(); ctx.arc(x,y,2.4+u*1.4,0,Math.PI*2); ctx.fill(); }
+  });
+}
+
+/* ---------- tek kare ---------- */
+function fmKare(ctx, V, t, tur){
+  const R = fmKaynak(); if(!R) return;
+  const K = fmKamera(V, t), s = K.s;
+  const A = R.A, a = A.getContext('2d');
+  a.save(); a.setTransform(1,0,0,1,0,0);
+  /* dünya → ekran */
+  const ox = FM_W/2, oy = FM_H*0.52;
+  a.translate(ox, oy); a.scale(s, s*FM_SQ); a.translate(-K.x, -K.y);
+  /* toprak */
+  const pat = a.createPattern(R.toprak, 'repeat');
+  a.fillStyle = pat || '#6b4f36';
+  const gx0 = K.x - ox/s - 50, gy0 = K.y - oy/(s*FM_SQ) - 50, gw = FM_W/s + 100, gh = FM_H/(s*FM_SQ) + 100;
+  a.fillRect(gx0, gy0, gw, gh);
+  const gor = o=>o.x > gx0-300 && o.x < gx0+gw+300 && o.y > gy0-300 && o.y < gy0+gh+300;
+  /* karıncanın izi: yürünen yol boyunca minik ayak izleri */
+  const yz = fmKarincaUz(V, t);
+  a.fillStyle = 'rgba(30,18,10,.55)';
+  for(let d=0; d<yz-120; d+=14){ const q = fmNokta(V, d), yan = (Math.floor(d/14)%2 ? 1 : -1)*16; const nx = -Math.sin(q.aci)*yan, ny = Math.cos(q.aci)*yan;
+    if(!gor(q)) continue; a.beginPath(); a.ellipse(q.x+nx, q.y+ny, 3.2/Math.max(.5,s)*.8+1.6, 2.2, q.aci, 0, Math.PI*2); a.fill(); }
+  if(t > V.tYur1){ const ka = fhSmooth((t-V.tYur1)/1.5);
+    a.strokeStyle = `rgba(255,190,110,${.25*ka})`; a.lineWidth = 26/s; a.lineCap='round'; a.beginPath(); for(let d=0; d<=yz; d+=30){ const q=fmNokta(V,d); d?a.lineTo(q.x,q.y):a.moveTo(q.x,q.y); } a.stroke();
+    a.strokeStyle = `rgba(255,236,200,${.9*ka})`; a.lineWidth = 7/s; a.setLineDash([2/s, 16/s]);
+    a.beginPath(); for(let d=0; d<=yz; d+=30){ const q=fmNokta(V,d); d?a.lineTo(q.x,q.y):a.moveTo(q.x,q.y); } a.stroke(); a.setLineDash([]); }
+  /* zemin nesneleri */
+  for(const o of V.nes){ if(!gor(o)) continue; if(o.t==='cakil') fmCakil(a, o, s); else if(o.t==='yaprak') fmYaprak(a, o, s); else fmDal(a, o); }
+  /* taşlar */
+  V.taslar.forEach(ts=>{ const q = fmNokta(V, yz); const oyma = fhSmooth((q.x - (ts.x - 560))/340); fmTas(a, ts, t > V.tYur1 ? 1 : oyma, s); });
+  /* karınca + gölge */
+  const q = fmNokta(V, yz), ileri = fmNokta(V, yz + 40), aci = Math.atan2(ileri.y-q.y, ileri.x-q.x);
+  const yurur = t > V.tYur0 && t < V.tYur1;
+  a.save(); a.translate(q.x + 30, q.y + 40); a.rotate(aci); a.scale(1.25, 1.25); a.globalAlpha = .9; a.drawImage(R.golge, -250, -130); a.restore();
+  a.save(); a.translate(q.x, q.y); a.rotate(aci); a.scale(.78, .78); fmKarinca(a, t*15, yurur); a.restore();
+  a.restore();
+  /* alan derinliği: bulanık kopya, keskin bandın dışına harmanlanır */
+  const B = R.B, b = B.getContext('2d');
+  b.imageSmoothingEnabled = true; b.drawImage(A, 0, 0, B.width, B.height);
+  const M = R.M, m = M.getContext('2d');
+  m.globalCompositeOperation = 'source-over'; m.clearRect(0,0,FM_W,FM_H); m.imageSmoothingQuality = 'high'; m.drawImage(B, 0, 0, FM_W, FM_H);
+  const odakY = oy + (q.y - K.y)*s*FM_SQ, dof = t < V.tYur1 ? 1 : 1 - fhSmooth((t - V.tYur1)/(V.tCek1 - V.tYur1))*.75;
+  const bant = 260 + (1-dof)*600;
+  const mk = m.createLinearGradient(0, 0, 0, FM_H);
+  const st = y=>Math.min(1, Math.max(0, y/FM_H));
+  mk.addColorStop(0, `rgba(0,0,0,${dof})`); mk.addColorStop(st(odakY - bant), 'rgba(0,0,0,0)'); mk.addColorStop(st(odakY + bant*.8), 'rgba(0,0,0,0)'); mk.addColorStop(1, `rgba(0,0,0,${dof})`);
+  m.globalCompositeOperation = 'destination-in'; m.fillStyle = mk; m.fillRect(0,0,FM_W,FM_H); m.globalCompositeOperation = 'source-over';
+  ctx.save(); ctx.drawImage(A, 0, 0); ctx.drawImage(M, 0, 0);
+  /* benekli güneş ışığı (yaprak arası) */
+  ctx.globalCompositeOperation = 'soft-light';
+  const lr = filmRng(555);
+  for(let i=0;i<14;i++){ const x = (lr()*1.6-.3)*FM_W + Math.sin(t*.4+i)*20 - (K.x*s*.15 % 300), y = lr()*FM_H, r = 140 + lr()*260;
+    const g = ctx.createRadialGradient(x,y,0,x,y,r); const acik = lr()<.55;
+    g.addColorStop(0, acik ? 'rgba(255,236,190,.75)' : 'rgba(10,6,2,.6)'); g.addColorStop(1, acik ? 'rgba(255,236,190,0)' : 'rgba(10,6,2,0)');
+    ctx.fillStyle = g; ctx.fillRect(x-r, y-r, r*2, r*2); }
+  /* güneş huzmeleri */
+  ctx.globalCompositeOperation = 'screen';
+  for(let i=0;i<4;i++){ const x0 = 80 + i*260 + Math.sin(t*.3+i)*30;
+    const g = ctx.createLinearGradient(x0, 0, x0+520, FM_H); g.addColorStop(0,'rgba(255,220,150,.09)'); g.addColorStop(.6,'rgba(255,220,150,.025)'); g.addColorStop(1,'rgba(255,220,150,0)');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.moveTo(x0, -10); ctx.lineTo(x0+90, -10); ctx.lineTo(x0+620, FM_H); ctx.lineTo(x0+440, FM_H); ctx.closePath(); ctx.fill(); }
+  /* toz zerreleri (bokeh) */
+  const tr = filmRng(909);
+  for(let i=0;i<34;i++){ const x = ((tr()*FM_W + t*(8+tr()*20) - K.x*s*.08) % (FM_W+80) + FM_W+80) % (FM_W+80) - 40, y = (tr()*FM_H - t*(6+tr()*14) + FM_H*4) % FM_H, r = 2 + tr()*tr()*14;
+    ctx.globalAlpha = .18 + tr()*.35; const g = ctx.createRadialGradient(x,y,0,x,y,r); g.addColorStop(0,'rgba(255,240,210,1)'); g.addColorStop(1,'rgba(255,240,210,0)');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill(); }
+  ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+  /* ön plan otları (bulanık, paralaks) */
+  const otKay = -(K.x*s*1.3);
+  [[0,-120,1.1,-6],[1,FM_W-300,1.2,5],[2,FM_W*.5,1.4,-2]].forEach(([i,bx,sk,eg],j)=>{
+    if(j===2 && t < V.tYur1) return;
+    const x = ((bx + otKay*(1+j*.2)) % (FM_W+700) + FM_W+700) % (FM_W+700) - 420;
+    ctx.save(); ctx.translate(x + 210, FM_H + 40); ctx.rotate((eg + Math.sin(t*.8+j)*1.5)*Math.PI/180); ctx.scale(sk, sk); ctx.globalAlpha = .92;
+    ctx.drawImage(R.otlar[i], -210, -1400); ctx.restore();
+  });
+  /* sıcak renk derecelendirme + vinyet */
+  ctx.globalCompositeOperation = 'soft-light'; ctx.fillStyle = 'rgba(255,170,80,.22)'; ctx.fillRect(0,0,FM_W,FM_H); ctx.globalCompositeOperation = 'source-over';
+  const vg = ctx.createRadialGradient(FM_W/2, FM_H*.52, FM_H*.25, FM_W/2, FM_H*.52, FM_H*.75); vg.addColorStop(0,'rgba(0,0,0,0)'); vg.addColorStop(1,'rgba(8,4,2,.72)');
+  ctx.fillStyle = vg; ctx.fillRect(0,0,FM_W,FM_H);
+  /* film greni */
+  const gp = ctx.createPattern(R.gren, 'repeat'); if(gp){ try{ gp.setTransform(new DOMMatrix().translate((t*997)%256, (t*613)%256)); }catch(e){} ctx.fillStyle = gp; ctx.fillRect(0,0,FM_W,FM_H); }
+  /* yazılar */
+  const baslik = fhSmooth((t-.4)/.9) * (1 - fhSmooth((t - (V.tYur0 - .3))/.6));
+  if(baslik > 0){
+    ctx.globalAlpha = baslik;
+    filmYazi(ctx, 'BİR PATİKA HİKÂYESİ', 540, 300, '800 26px system-ui, sans-serif', 'rgba(255,240,220,.85)', 'center', 9);
+    let ad = V.ad || 'Gezgin', fs = 116; ctx.font = `italic 700 ${fs}px "Playfair Display", Georgia, serif`;
+    while(ctx.measureText(ad).width > 940 && fs > 56){ fs -= 6; ctx.font = `italic 700 ${fs}px "Playfair Display", Georgia, serif`; }
+    ctx.shadowColor = 'rgba(0,0,0,.6)'; ctx.shadowBlur = 30; filmYazi(ctx, ad, 540, 420, ctx.font, '#fff7ea', 'center'); ctx.shadowBlur = 0;
+    filmYazi(ctx, 'küçük adımlar, uzun yollar', 540, 480, 'italic 400 34px "Playfair Display", Georgia, serif', 'rgba(255,240,220,.85)', 'center');
+    ctx.globalAlpha = 1;
+  }
+  /* belgesel alt yazısı: yaklaşılan şehir */
+  if(t > V.tYur0 && t < V.tYur1){
+    const ts = V.taslar.reduce((b, x)=>Math.abs(x.x - q.x) < Math.abs(b.x - q.x) ? x : b, V.taslar[0]);
+    const yak = Math.exp(-Math.pow((q.x - ts.x)/420, 2));
+    if(ts.c && yak > .05){ ctx.globalAlpha = yak;
+      ctx.fillStyle = FM_RENK[ts.c.cc]; ctx.fillRect(72, 1700, 6, 92);
+      filmYazi(ctx, ts.c.ad, 100, 1752, '700 60px "Playfair Display", Georgia, serif', '#fff7ea');
+      filmYazi(ctx, `${(FM_ULKE[ts.c.cc]||'').toLocaleUpperCase('tr')} · ${ts.c.n} DURAK`, 104, 1790, '800 22px system-ui, sans-serif', 'rgba(255,240,220,.75)', 'left', 5);
+      ctx.globalAlpha = 1; }
+  }
+  /* kapanış */
+  if(t > V.tCek1 - .4){
+    const k = t - (V.tCek1 - .4), a2 = fhSmooth(k/.7);
+    ctx.globalAlpha = a2;
+    const ust = ctx.createLinearGradient(0,0,0,640); ust.addColorStop(0,'rgba(10,5,2,.88)'); ust.addColorStop(1,'rgba(10,5,2,0)'); ctx.fillStyle = ust; ctx.fillRect(0,0,FM_W,640);
+    filmYazi(ctx, 'patika', 540, 220, 'italic 700 120px "Playfair Display", Georgia, serif', '#fff7ea', 'center');
+    filmYazi(ctx, 'YÜRÜDÜKÇE BİRİKİR', 540, 284, '800 24px system-ui, sans-serif', 'rgba(255,240,220,.75)', 'center', 9);
+    const alt = ctx.createLinearGradient(0,1180,0,FM_H); alt.addColorStop(0,'rgba(10,5,2,0)'); alt.addColorStop(.4,'rgba(10,5,2,.88)'); alt.addColorStop(1,'rgba(10,5,2,.96)');
+    ctx.fillStyle = alt; ctx.fillRect(0,1180,FM_W,FM_H-1180);
+    filmYazi(ctx, V.ad || 'Gezgin', 120, 1400, '700 58px "Playfair Display", Georgia, serif', '#fff7ea');
+    filmYazi(ctx, `${V.unvan.toLocaleUpperCase('tr')} · ${V.seri}`, 124, 1440, '700 22px system-ui, sans-serif', 'rgba(255,240,220,.6)', 'left', 4);
+    [[V.durak,'DURAK',x=>String(Math.round(x))],[V.km,'KİLOMETRE',x=>filmKm(x)],[V.sehir,'ŞEHİR',x=>String(Math.round(x))]].forEach(([val,et,f],i)=>{
+      const kk = fhInOut((k - .4 - i*.2)/1.1); ctx.globalAlpha = a2*Math.min(1,kk*2);
+      filmYazi(ctx, f(val*kk), 120 + i*300, 1580, '700 110px "Playfair Display", Georgia, serif', '#fff7ea');
+      filmYazi(ctx, et, 124 + i*300, 1628, '800 22px system-ui, sans-serif', '#e9a54f', 'left', 6); });
+    ctx.globalAlpha = a2;
+    filmYazi(ctx, 'muratsahinn.github.io/Patika', 540, 1830, '600 30px system-ui, sans-serif', 'rgba(255,240,220,.85)', 'center');
+    ctx.globalAlpha = 1;
+  }
+  if(V.bos && t > V.tYur0){ ctx.fillStyle = 'rgba(10,5,2,.55)'; ctx.fillRect(0, 820, FM_W, 260);
+    filmYazi(ctx, 'İlk durağını tamamla,', 540, 930, '700 54px "Playfair Display", Georgia, serif', '#fff7ea', 'center');
+    filmYazi(ctx, 'taşa adın kazınsın.', 540, 1000, '700 54px "Playfair Display", Georgia, serif', '#fff7ea', 'center'); }
+  ctx.restore();
+}
+
+/* ============================================================
    YOLCULUK FİLMİ — 9:16, 13 sn, Instagram hikâyesine hazır
    Sahneler: harita açılışı → küçük gezgin patikada yürür (damgalar, CANLI sayaçlar)
    → sayılar akar → cam künye + Patika kapanışı. Video: MediaRecorder (MP4 varsa MP4).
@@ -11676,9 +12063,10 @@ const FILM_W = 1080, FILM_H = 1920, FILM_T = 13;
 const FILM_SAHNE = { acilis:2.2, yuruyus:8.6, sayilar:11.4 };
 const FILM_HAYVAN = { karinca:'Karınca', ugur:'Uğur böceği', kaplumbaga:'Kaplumbağa' };
 var filmDurum = { hayvan:'karinca', stil:'harita', raf:0, basla:0, veri:null, sahne:null, kayit:null, url:null };
-function filmCiz(ctx, V, t, tur){ if(filmDurum.stil==='harita') fhKare(ctx, V, t, tur); else filmKare(ctx, V, t, tur); }
+function filmCiz(ctx, V, t, tur){ if(filmDurum.stil==='makro') fmKare(ctx, V, t, tur); else fhKare(ctx, V, t, tur); }
 function filmSure(){ return (filmDurum.veri && filmDurum.veri.sure) || FILM_T; }
-function filmVeri(){ return filmDurum.stil==='harita' ? fhVeri() : filmVeriHazirla(); }
+function filmVeri(){ return filmDurum.stil==='makro' ? fmVeri() : fhVeri(); }
+try{ const st = localStorage.getItem('patika:film-stil'); if(st==='harita' || st==='makro') filmDurum.stil = st; }catch(e){}
 try{ const h = localStorage.getItem('patika:film-hayvan'); if(FILM_HAYVAN[h]) filmDurum.hayvan = h; }catch(e){}
 
 /* tohumlu rastgele: aynı kullanıcı → aynı harita */
@@ -12136,7 +12524,7 @@ document.getElementById('filmStil').addEventListener('click', e=>{
   filmDurum.veri = filmVeri(); filmStilCiz(); filmTemizleCikti();
   document.getElementById('filmRec').disabled = filmDurum.veri.bos; filmMesaj(''); filmOynat();
 });
-function filmStilCiz(){ document.querySelectorAll('#filmStil button').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.stil===filmDurum.stil))); }
+function filmStilCiz(){ document.querySelectorAll('#filmStil button').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.stil===filmDurum.stil))); document.getElementById('filmPets').hidden = filmDurum.stil==='makro'; }
 document.getElementById('filmPlay').addEventListener('click', ()=>{ if(!filmDurum.kayit) filmOynat(); });
 document.getElementById('filmRec').addEventListener('click', filmKaydet);
 document.querySelectorAll('[data-close="filmModal"]').forEach(b=>b.addEventListener('click', ()=>{ if(!filmDurum.kayit) filmDurdur(); }));
