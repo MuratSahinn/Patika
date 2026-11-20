@@ -21,10 +21,11 @@ function fakeFetch(u, o){
   const who = ()=>{ const t=(H.authorization||'').replace('Bearer ',''); const r=srv.tokens[t]; return r && r.exp>Date.now() ? r.uid : null; };
   const issue = uid=>{ const at='at'+(++srv.n), rt='rt'+srv.n; srv.tokens[at]={uid, exp: srv.expireNext ? Date.now()-1 : Date.now()+3600e3}; srv.expireNext=false; srv.refresh[rt]=uid;
     return { access_token:at, refresh_token:rt, expires_in:3600, user:{ id:uid, email:srv.users[uid].email } }; };
-  if(path==='/auth/v1/otp'){ if(!/@/.test(body.email)) return res(400,{msg:'invalid email'}); if(srv.otp[body.email] && Date.now()-srv.otp[body.email].t<60e3) return res(429,{msg:'For security purposes, you can only request this once every 60 seconds'}); srv.otp[body.email]={code:'123456', t:Date.now()}; return res(200,{}); }
+  if(path.split('?')[0]==='/auth/v1/otp'){ srv.lastOtpUrl = path; if(!/@/.test(body.email)) return res(400,{msg:'invalid email'}); if(srv.otp[body.email] && Date.now()-srv.otp[body.email].t<60e3) return res(429,{msg:'For security purposes, you can only request this once every 60 seconds'}); srv.otp[body.email]={code:'123456', t:Date.now()}; return res(200,{}); }
   if(path==='/auth/v1/verify'){ const r=srv.otp[body.email]; if(!r || r.code!==body.token) return res(403,{msg:'Token has expired or is invalid', error_code:'otp_expired'});
     let uid = Object.keys(srv.users).find(k=>srv.users[k].email===body.email); if(!uid){ uid='u'+(++srv.n); srv.users[uid]={email:body.email}; } delete srv.otp[body.email]; return res(200, issue(uid)); }
   if(path.startsWith('/auth/v1/token?grant_type=refresh_token')){ const uid=srv.refresh[body.refresh_token]; if(!uid) return res(400,{msg:'Invalid Refresh Token'}); delete srv.refresh[body.refresh_token]; return res(200, issue(uid)); }
+  if(path==='/auth/v1/user'){ const uid=who(); if(!uid) return res(401,{msg:'invalid JWT'}); return res(200,{ id:uid, email:srv.users[uid].email }); }
   if(path==='/auth/v1/logout'){ const t=(H.authorization||'').replace('Bearer ',''); delete srv.tokens[t]; return res(204,null); }
   if(path.startsWith('/rest/v1/profiles')){
     if((o.method||'GET')==='GET'){ const id=decodeURIComponent((path.match(/id=eq\.([^&]+)/)||[])[1]||''); return res(200, srv.profiles[id] ? [srv.profiles[id]] : []); }
@@ -38,10 +39,10 @@ function fakeFetch(u, o){
   if(path==='/rest/v1/rpc/hesabimi_sil'){ const uid=who(); if(!uid) return res(401,{message:'JWT'}); delete srv.profiles[uid]; delete srv.users[uid]; return res(204,null); }
   return res(404,{});
 }
-function open(cfg, seed){
+function open(cfg, seed, hash){
   const errs=[];
-  const dom = new JSDOM(html, { url:'https://muratsahinn.github.io/Patika/', runScripts:'dangerously', pretendToBeVisual:true, beforeParse(w){
-    if(cfg) w.localStorage.setItem('patika:sosyal', JSON.stringify({ url:URL_, key:KEY }));
+  const dom = new JSDOM(html, { url:'https://muratsahinn.github.io/Patika/'+(hash||''), runScripts:'dangerously', pretendToBeVisual:true, beforeParse(w){
+    w.localStorage.setItem('patika:sosyal', cfg ? JSON.stringify({ url:URL_, key:KEY }) : 'kapali');
     if(seed) for(const [k,v] of Object.entries(seed)) w.localStorage.setItem(k,v);
     w.fetch = fakeFetch;
     w.speechSynthesis = { speaking:false, cancel(){}, speak(){}, getVoices(){ return []; } };
@@ -81,7 +82,7 @@ const msg = d=>(d.getElementById('spMsg')||{}).textContent||'';
   d.getElementById('spMail').value = 'gecersiz'; submit(d,w,'spMailForm'); await wait(30);
   ok('geçersiz e-posta reddedilir (istek yok)', /Geçerli bir e-posta/.test(msg(d)) && srv.log.length===0);
   d.getElementById('spMail').value = 'murat@ornek.com'; submit(d,w,'spMailForm');
-  ok('kod ekranı', await until(()=>d.getElementById('spKod')) && /murat@ornek\.com/.test(d.getElementById('spBody').textContent));
+  ok('kod ekranı (bağlantı ya da kod)', await until(()=>d.getElementById('spKod')) && /murat@ornek\.com/.test(d.getElementById('spBody').textContent) && /bağlantıya dokun/.test(d.getElementById('spBody').textContent));
   ok('yeni kod düğmesi 60 sn kilitli', d.getElementById('spResend').disabled && /60 sn/.test(d.getElementById('spResend').textContent));
   d.getElementById('spKod').value = '12345'; submit(d,w,'spKodForm'); await wait(20);
   ok('5 hane reddedilir', /6 haneli/.test(msg(d)));
@@ -158,6 +159,15 @@ const msg = d=>(d.getElementById('spMsg')||{}).textContent||'';
   ok('hesap silindi: sunucuda kullanıcı ve profil yok', await until(()=>Object.keys(srv.users).length===0) && !srv.profiles[JSON.parse(saved['patika:oturum']).user.id]);
   ok('silme sonrası: oturum yok, giriş ekranı', await until(()=>B.d.getElementById('spMail')) && !B.w.localStorage.getItem('patika:oturum') && /Takma adla katıl/.test(B.d.querySelector('#profilBtn small').textContent));
 
+  ok('kod isteğinde dönüş adresi gönderilir', /redirect_to=https%3A%2F%2Fmuratsahinn\.github\.io%2FPatika%2F/.test(srv.lastOtpUrl||''), srv.lastOtpUrl);
+  /* --- e-postadaki bağlantıyla giriş --- */
+  srv.users['u77'] = { email:'baglanti@ornek.com' }; srv.tokens['atL'] = { uid:'u77', exp:Date.now()+3600e3 }; srv.refresh['rtL']='u77';
+  const L = open(true, null, '#access_token=atL&expires_in=3600&refresh_token=rtL&token_type=bearer&type=magiclink'); await wait(500);
+  ok('bağlantıdan giriş: oturum + panel açık', await until(()=>L.d.getElementById('profilModal').classList.contains('open') && L.d.getElementById('spAd')) && JSON.parse(L.w.localStorage.getItem('patika:oturum')).user.email==='baglanti@ornek.com');
+  ok('bağlantıdan giriş: adres çubuğundaki token temizlendi', !L.w.location.hash && /takma adını seç/.test(L.d.getElementById('spMsg').textContent));
+  const E2 = open(true, null, '#error=access_denied&error_code=otp_expired&error_description=Email+link+is+invalid+or+has+expired'); await wait(500);
+  ok('süresi geçmiş bağlantı: anlaşılır hata, oturum yok', await until(()=>/süresi geçmiş/.test((E2.d.getElementById('spMsg')||{}).textContent||'')) && !E2.w.localStorage.getItem('patika:oturum'));
+  ok('bağlantı testlerinde JS hatası yok', L.errs.length===0 && E2.errs.length===0, L.errs.concat(E2.errs).join(' | '));
   /* --- geçersiz yenileme token'ı: oturum temizlenir --- */
   const C = open(true, { 'patika:oturum': JSON.stringify({ access_token:'yok', refresh_token:'yok', expires_at:1, user:{id:'u0',email:'x@y.z'} }) }); await wait(400);
   C.d.getElementById('profilBtn').click(); await wait(200);

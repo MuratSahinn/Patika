@@ -2,12 +2,16 @@
 
 Uygulama Supabase'e doğrudan bağlanır (ek kütüphane yok). Güvenlik veritabanındaki satır kuralları (RLS) ile sağlanır. Uygulamaya konan "publishable/anon" anahtarı gizli değildir; **service_role / secret anahtarı asla uygulamaya konmaz.**
 
+## Durum
+
+Proje kuruldu (ref `udosqdvndjmllxinxunx`, AB/İrlanda, Free). Şema çalıştırıldı, Site URL ayarlandı, uygulama bağlı. Kalan: özel SMTP (Brevo) + şablona `{{ .Token }}`.
+
 ## Bir kez yapılacaklar (Murat)
 
 1. https://supabase.com → hesap aç → **New project** (bölge: Avrupa, örn. Frankfurt).
 2. **SQL Editor** → `schema.sql` dosyasının tamamını yapıştır → **Run**.
 3. **Authentication → Sign In / Providers → Email:** açık olsun.
-4. **Authentication → Emails → Magic Link** şablonunu kodla değiştir, örneğin:
+4. **(Özel SMTP bağlandıktan sonra)** **Authentication → Emails → Magic Link** şablonunu kodla değiştir (SMTP yokken Supabase şablonu düzenletmez; uygulama o zaman e-postadaki bağlantıyla girişi kullanır), örneğin:
    ```html
    <h2>Patika giriş kodun</h2>
    <p>Bu kodu uygulamaya yaz: <strong>{{ .Token }}</strong></p>

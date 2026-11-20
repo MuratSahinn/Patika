@@ -10901,8 +10901,9 @@ document.getElementById('aiReset').addEventListener('click', ()=>{
    Giriş: e-postaya 6 haneli kod (şifre yok). Kesin konum asla gönderilmez;
    durum yalnızca şehir + gün düzeyindedir.
    ============================================================ */
-var SOSYAL_CFG = { url: '', key: '' };
-try{ const ov = JSON.parse(localStorage.getItem('patika:sosyal') || 'null'); if(ov && ov.url && ov.key) SOSYAL_CFG = ov; }catch(e){}
+/* Supabase projesi "patika" (AB/İrlanda). Publishable anahtar tarayıcıda güvenle kullanılır; güvenlik RLS'de. Gizli anahtar ASLA buraya konmaz. */
+var SOSYAL_CFG = { url: 'https://udosqdvndjmllxinxunx.supabase.co', key: 'sb_publishable_QMHs1-EHrU35nZei-waiRg_5W5Tht_j' };
+try{ const ham = localStorage.getItem('patika:sosyal'); if(ham==='kapali') SOSYAL_CFG = { url:'', key:'' }; else { const ov = JSON.parse(ham || 'null'); if(ov && ov.url && ov.key) SOSYAL_CFG = ov; } }catch(e){}
 function sosyalAcik(){ return !!(SOSYAL_CFG.url && SOSYAL_CFG.key); }
 
 var sosyal = { oturum: null, profil: null, profilYuklendi: false };
@@ -10956,7 +10957,31 @@ async function sosyalIstek(path, opt){
   return data;
 }
 const SOSYAL = {
-  kodGonder(email){ return sosyalIstek('/auth/v1/otp', { method:'POST', body:{ email, create_user:true } }); },
+  kodGonder(email){
+    /* e-postadaki bağlantı bu sayfaya döner (Supabase'de izinli Site URL) */
+    const donus = location.protocol==='https:' ? '?redirect_to=' + encodeURIComponent(location.origin + location.pathname) : '';
+    return sosyalIstek('/auth/v1/otp' + donus, { method:'POST', body:{ email, create_user:true } });
+  },
+  /* e-postadaki giriş bağlantısından dönüş: #access_token=…&refresh_token=… */
+  async baglantidanGiris(){
+    const h = location.hash || '';
+    if(!/access_token=|error_description=/.test(h)) return null;
+    const q = new URLSearchParams(h.slice(1));
+    try{ history.replaceState(null, '', location.pathname + location.search); }catch(e){}
+    if(q.get('error_description')){
+      const kod = q.get('error_code') || '';
+      return { hata: /expired/.test(kod + q.get('error_description')) ? 'Giriş bağlantısının süresi geçmiş. Yeni kod iste.' : 'Giriş bağlantısı geçersiz. Yeni kod iste.' };
+    }
+    const at = q.get('access_token'), rt = q.get('refresh_token');
+    if(!at || !rt) return { hata:'Giriş bağlantısı eksik. Yeni kod iste.' };
+    sosyalOturumYaz({ access_token:at, refresh_token:rt, expires_at: Number(q.get('expires_at')) || (Math.floor(Date.now()/1000) + Number(q.get('expires_in')||3600)), user:{ id:'', email:'' } });
+    try{
+      const u = await sosyalIstek('/auth/v1/user', { oturumlu:true });
+      sosyalOturumYaz(Object.assign({}, sosyal.oturum, { user:{ id:u.id, email:u.email||'' } }));
+      sosyal.profil = null; sosyal.profilYuklendi = false;
+      return { ok:true };
+    }catch(e){ sosyalOturumYaz(null); return { hata:e.message }; }
+  },
   async kodDogrula(email, token){
     const d = await sosyalIstek('/auth/v1/verify', { method:'POST', body:{ type:'email', email, token } });
     sosyalOturumKur(d); sosyal.profil = null; sosyal.profilYuklendi = false;
@@ -11023,7 +11048,7 @@ async function sosyalCiz(){
   }
   if(!sosyal.oturum){
     if(sosyalUI.adim==='kod'){
-      body.innerHTML = `<p class="sp-lead"><b>${escH(sosyalUI.email)}</b> adresine 6 haneli bir kod gönderdik.</p>
+      body.innerHTML = `<p class="sp-lead"><b>${escH(sosyalUI.email)}</b> adresine bir giriş e-postası gönderdik. İçindeki bağlantıya dokun ya da e-postada 6 haneli kod varsa buraya yaz.</p>
         <form id="spKodForm" class="sp-form" autocomplete="off">
           <input id="spKod" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="••••••" aria-label="Doğrulama kodu" class="sp-kod">
           <button type="submit" class="sp-btn">Giriş yap</button>
@@ -11129,8 +11154,20 @@ async function sosyalAc(){
 }
 sosyal.oturum = sosyalAcik() ? sosyalOturumOku() : null;
 sosyalMenuGuncelle();
-/* açılışta oturum varsa profili sessizce yükle (menüde takma ad görünsün) */
-if(sosyal.oturum) SOSYAL.profilGetir().then(sosyalMenuGuncelle).catch(()=>{});
+(async ()=>{
+  if(!sosyalAcik()) return;
+  const g = await SOSYAL.baglantidanGiris();
+  if(g){
+    /* bağlantıdan geldiyse profil panelini aç */
+    await sosyalAc();
+    if(g.ok) sosyalMesaj(sosyal.profil ? 'Tekrar hoş geldin!' : 'Giriş yapıldı. Şimdi takma adını seç.', 'ok');
+    else sosyalMesaj(g.hata, 'err');
+    sosyalMenuGuncelle();
+    return;
+  }
+  /* açılışta oturum varsa profili sessizce yükle (menüde takma ad görünsün) */
+  if(sosyal.oturum) SOSYAL.profilGetir().then(sosyalMenuGuncelle).catch(()=>{});
+})();
 spEl('profilBtn').addEventListener('click', sosyalAc);
 
 

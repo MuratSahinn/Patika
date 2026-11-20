@@ -1,7 +1,7 @@
 /* Patika service worker — çevrimdışı çalışma
    Strateji: uygulama kabuğu cache-first (tek HTML zaten her şeyi içeriyor),
    fontlar runtime cache, hava durumu network-only (başarısızsa uygulama zaten sessiz). */
-const CACHE = 'patika-v2-11';
+const CACHE = 'patika-v2-12';
 const CORE = ['./', './index.html'];
 
 self.addEventListener('install', e => {
