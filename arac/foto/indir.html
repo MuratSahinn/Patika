@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Patika · film fotoğrafları</title>
+<style>body{font:18px/1.5 system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 20px;color:#1a0509}
+button{font:600 20px system-ui;padding:16px 28px;border:0;border-radius:12px;background:#c8102e;color:#fff;cursor:pointer}
+button:disabled{opacity:.5}#d{margin-top:20px;white-space:pre-wrap;font-size:15px;color:#555}</style></head>
+<body><h1>Patika · film fotoğrafları</h1>
+<p>Bu sayfa, Yolculuk Filmi için seçilen 18 lisanslı fotoğrafı (Wikimedia Commons, CC0 / CC BY) indirip tek dosyada (<b>patika-foto.json</b>) cihazına kaydeder. Sonra dosyayı Claude sohbetine ek olarak gönder.</p>
+<button id="b">Fotoğrafları indir</button><div id="d"></div>
+<script>
+const SEC = {ayasofya:'Hagia Sophia in Istanbul 2023.jpg', topkapi:'Topkapı Palace 062.jpg', yerebatan:'Basilica Cistern after restoration.jpg', sultanahmet:'Sultan Ahmed Mosque Front Façade, 2024.jpg', suleymaniye:'Süleymaniye Mosque, Istanbul, 20260606 0805 1307.jpg', galata:'Galata Tower (67m.) (8396776708).jpg', goreme:'Göreme open air museum - 25972837594.jpg', uchisar:'Uchisar Castle (2025).jpg', kolezyum:'Rom (IT), Kolosseum -- 2024 -- 0610.jpg', pantheon:'The Pantheon in Rome, Italy.jpg', trevi:'Fontaine Trevi - Rome.jpg', parthenon:'Parthenon east side Acropolis Athens, Greece.jpg', ugur_yaprak:'P1170487 Coccinella septempunctata.jpg', ugur_basak:'Coccinella septempunctata - Biedronka siedmiokropka - Seven-spot ladybird (35985069425).jpg', ugur_papatya:'Marienkäfer (März 2026) 3.jpg', ugur_cicek:'Siebenpunkt-Marienkäfer (Coccinella septempunctata) auf Blüte im FFH-Gebiet "Viernheimer Waldheide und angrenzende Flächen".jpg', ucus:'Marienkäfer beim Abheben.jpg', ucus2:'Ready for take off (13036075534).jpg'};
+const d = document.getElementById('d'), b = document.getElementById('b');
+const b64 = blob => new Promise(r=>{ const fr = new FileReader(); fr.onload = ()=>r(fr.result.split(',')[1]); fr.readAsDataURL(blob); });
+b.onclick = async ()=>{ b.disabled = true; const out = {}, kunye = {};
+  try{
+    for(const [k,t] of Object.entries(SEC)){
+      d.textContent = 'İndiriliyor: ' + k + ' (' + (Object.keys(out).length+1) + '/18)';
+      const u = 'https://commons.wikimedia.org/w/api.php?origin=*&action=query&format=json&titles='+encodeURIComponent('File:'+t)+'&prop=imageinfo&iiprop=url|size|extmetadata&iiextmetadatafilter=LicenseShortName|Artist|LicenseUrl&iiurlwidth=3000';
+      const j = await (await fetch(u)).json(); const i = Object.values(j.query.pages)[0].imageinfo[0], m = i.extmetadata;
+      const f = await (await fetch(i.width <= 3000 ? i.url : i.thumburl)).blob();
+      const bmp = await createImageBitmap(f), ugur = /^(ugur|ucus)/.test(k);
+      let s = ugur ? 2400/Math.max(bmp.width,bmp.height) : (bmp.width>=bmp.height ? 2100/bmp.height : 2400/bmp.height); s = Math.min(1, s);
+      const c = document.createElement('canvas'); c.width = Math.round(bmp.width*s); c.height = Math.round(bmp.height*s);
+      const x = c.getContext('2d'); x.imageSmoothingQuality = 'high'; x.drawImage(bmp,0,0,c.width,c.height);
+      out[k] = await b64(await new Promise(r=>c.toBlob(r,'image/jpeg', ugur ? .9 : .85)));
+      kunye[k] = { dosya:t, sayfa:i.descriptionurl, lisans:m.LicenseShortName.value, lisansUrl:(m.LicenseUrl||{}).value||'', yazar:(m.Artist.value||'').replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim(), en:i.width, boy:i.height };
+    }
+    const bl = new Blob([JSON.stringify({kunye, foto:out})], {type:'application/json'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(bl); a.download = 'patika-foto.json'; document.body.appendChild(a); a.click();
+    d.textContent = 'Tamam: patika-foto.json İndirilenler klasörüne kaydedildi (' + Math.round(bl.size/1e6) + ' MB). Şimdi bu dosyayı Claude sohbetine ek olarak gönder.';
+  } catch(e){ d.textContent = 'Hata: ' + e + '\nİnternet bağlantısını kontrol edip tekrar dene.'; b.disabled = false; }
+};
+</script></body></html>
