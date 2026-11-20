@@ -2534,12 +2534,8 @@ body[data-theme="dark"] .cr-row.is-y .cr-p{ color:#7CC28A; }
 .sp-confirm{ margin-top:12px; padding:12px 14px; border-radius:14px; border:1px solid var(--tr-rose); background:var(--tr-tint-soft); }
 .sp-confirm p{ margin:0 0 6px; font-size:0.86rem; }
 
-/* ---- Gezgin Künyesi: cam künye + çelik matara ---- */
+/* ---- Gezgin Künyesi (cam) + Yolculuk Filmi ---- */
 .kn-wrap{ margin:0 0 16px; }
-.kn-skin{ display:flex; gap:4px; padding:4px; border-radius:999px; background:var(--tr-tint-soft); border:1px solid var(--line); width:max-content; margin:0 auto 12px; }
-.kn-skin button{ border:none; background:transparent; color:var(--text-soft); border-radius:999px; padding:6px 14px; cursor:pointer;
-  font-family:var(--label-font); font-size:0.66rem; font-weight:700; letter-spacing:.04em; }
-.kn-skin button[aria-pressed="true"]{ background:var(--surface); color:var(--tr-red); box-shadow:0 2px 8px rgba(10,3,6,.10); }
 
 /* sahne: künyenin arkasındaki manzara */
 .kn-scene{ position:relative; border-radius:22px; overflow:hidden; padding:26px 18px 24px; isolation:isolate;
@@ -2591,42 +2587,30 @@ body[data-theme="dark"] .cr-row.is-y .cr-p{ color:#7CC28A; }
 .kn-seal b{ font-family:'Playfair Display', Georgia, serif; font-size:1.15rem; line-height:1; }
 .kn-seal span{ font-family:var(--label-font); font-size:0.46rem; letter-spacing:.16em; text-transform:uppercase; margin-top:2px; }
 
-/* çelik matara */
-.kn-flask-scene{ display:flex; align-items:center; justify-content:center; gap:22px; padding:22px 16px 18px; border-radius:22px;
-  background: radial-gradient(120% 90% at 50% 0%, var(--tr-tint-soft), transparent 70%), var(--surface); border:1px solid var(--line); }
-.kn-flask{ position:relative; width:118px; flex:none; filter: drop-shadow(0 16px 18px rgba(0,0,0,.28)); }
-.kn-cap{ height:34px; margin:0 14px; border-radius:10px 10px 4px 4px;
-  background: linear-gradient(90deg, #1d1d1f 0%, #4a4a4f 30%, #2a2a2d 55%, #111 100%); }
-.kn-cap::after{ content:''; display:block; height:5px; margin:6px 6px 0; border-radius:3px; background:repeating-linear-gradient(90deg, rgba(255,255,255,.18) 0 2px, transparent 2px 5px); }
-.kn-neck{ height:10px; margin:0 8px; background: linear-gradient(90deg, #8b8f95, #e9ecef 35%, #a7abb1 60%, #6f7379); }
-.kn-body{ position:relative; height:276px; border-radius:16px 16px 22px 22px; overflow:hidden;
-  background:
-    repeating-linear-gradient(0deg, rgba(255,255,255,.07) 0 1px, rgba(0,0,0,.05) 1px 2px),
-    linear-gradient(90deg, #6d7279 0%, #c9cdd2 18%, #f4f6f8 32%, #b4b9bf 50%, #8e939a 70%, #d5d9dd 84%, #62676e 100%); }
-.kn-engrave{ position:absolute; left:0; right:0; top:18px; text-align:center; padding:0 10px; color:rgba(40,44,50,.55);
-  text-shadow: 0 1px 0 rgba(255,255,255,.65), 0 -1px 0 rgba(0,0,0,.18); }
-.kn-engrave .kn-name{ font-size:1.05rem; margin:4px 0 0; white-space:normal; overflow-wrap:anywhere; }
-.kn-engrave .kn-brand{ font-size:0.5rem; }
-.kn-engrave .kn-no{ font-size:0.5rem; display:block; margin-top:4px; }
-.kn-sticker{ position:absolute; width:46px; height:46px; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center;
-  color:#fff; font-family:var(--label-font); font-weight:800; text-align:center; line-height:1; border:3px solid #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,.25); transform:rotate(var(--r,0deg)); }
-.kn-sticker small{ font-size:0.42rem; letter-spacing:.08em; opacity:.9; }
-.kn-sticker em{ font-style:normal; font-size:0.5rem; margin-top:2px; max-width:38px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.kn-sticker.tr{ background:#c8102e; } .kn-sticker.it{ background:#2e7d4f; } .kn-sticker.gr{ background:#1f5fa8; }
-.kn-sticker.gold{ background:linear-gradient(135deg,#f6d77a,#c9952b); color:#3a2a05; }
-.kn-sticker.rank{ border-radius:10px; width:auto; height:auto; padding:5px 8px; white-space:nowrap; background:#1b1b1d; font-size:0.46rem; letter-spacing:.06em; }
-.kn-side{ display:flex; flex-direction:column; gap:12px; min-width:0; }
-.kn-side .kn-rank{ color:var(--tr-red); letter-spacing:.14em; }
-.kn-side .kn-big{ font-family:'Playfair Display', Georgia, serif; font-size:1.35rem; font-weight:700; color:var(--ink); line-height:1.1; overflow-wrap:anywhere; }
-.kn-side .kn-big.ph{ color:var(--text-soft); font-style:italic; font-weight:400; }
-.kn-side .kn-dur{ font-size:0.84rem; color:var(--text-soft); display:flex; gap:6px; align-items:center; }
-.kn-side .kn-dur i{ width:7px; height:7px; border-radius:50%; background:#2fb36b; flex:none; animation:knPulse 2.4s infinite; }
-.kn-side dl{ display:grid; grid-template-columns:auto auto; gap:4px 14px; margin:0; }
-.kn-side dt{ font-family:var(--label-font); font-size:0.56rem; letter-spacing:.12em; text-transform:uppercase; color:var(--text-soft); align-self:center; }
-.kn-side dd{ margin:0; font-family:'Playfair Display', Georgia, serif; font-weight:700; color:var(--ink); }
-.kn-hint{ text-align:center; font-size:0.74rem; color:var(--text-soft); margin-top:8px; }
-@media (prefers-reduced-motion: reduce){ .kn-tag, .kn-tag::after{ transition:none; } .kn-durum i, .kn-side .kn-dur i{ animation:none; } }
+@media (prefers-reduced-motion: reduce){ .kn-tag, .kn-tag::after{ transition:none; } .kn-durum i{ animation:none; } }
+.kn-film{ display:flex; align-items:center; gap:12px; width:100%; margin-top:12px; padding:13px 16px; border-radius:16px; cursor:pointer;
+  border:1px solid var(--line-strong); background:var(--surface); color:var(--ink); text-align:left; font-family:inherit; }
+.kn-film:hover{ border-color:var(--tr-rose); }
+.kn-film .ic{ width:34px; height:34px; padding:9px; border-radius:50%; background:var(--tr-red); color:#fff; flex:none; }
+.kn-film span{ display:flex; flex-direction:column; font-weight:700; font-size:0.92rem; }
+.kn-film small{ font-weight:400; font-size:0.76rem; color:var(--text-soft); margin-top:2px; }
+/* Yolculuk Filmi */
+.film-modal .m-sub{ margin:4px 0 12px; }
+.film-pets{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px; }
+.film-pets button{ border:1px solid var(--line-strong); background:var(--surface); color:var(--ink); border-radius:999px; padding:7px 13px;
+  cursor:pointer; font-size:0.8rem; font-family:inherit; }
+.film-pets button[aria-pressed="true"]{ background:var(--tr-red); border-color:var(--tr-red); color:#fff; }
+.film-stage{ position:relative; margin:0 auto; width:min(100%, calc(56vh * 9 / 16)); aspect-ratio:9/16; border-radius:18px; overflow:hidden;
+  box-shadow:0 14px 34px rgba(10,3,6,.22); background:#efe3cb; }
+.film-stage canvas{ width:100%; height:100%; display:block; }
+.film-bar{ position:absolute; left:0; bottom:0; height:3px; width:0; background:rgba(255,255,255,.85); mix-blend-mode:difference; }
+.film-btns{ display:flex; gap:8px; justify-content:center; margin-top:14px; flex-wrap:wrap; }
+.film-btns .sp-btn .ic, #filmOut .ic{ width:14px; height:14px; margin-right:6px; vertical-align:-2px; }
+.film-ghost{ background:var(--surface) !important; color:var(--ink) !important; border:1px solid var(--line-strong) !important; }
+#filmOut{ display:flex; gap:8px; justify-content:center; align-items:center; flex-wrap:wrap; margin-top:10px; }
+.film-dl{ text-decoration:none; display:inline-block; }
+.film-size{ font-size:0.76rem; color:var(--text-soft); }
+.film-modal .sp-msg{ text-align:center; }
 </style>
 </head>
 <body>
@@ -2795,6 +2779,26 @@ body[data-theme="dark"] .cr-row.is-y .cr-p{ color:#7CC28A; }
     <p class="m-sub">Yolda biriktirdiklerin künyene kazınır.</p>
     <div id="spKunye"></div>
     <div id="spBody"></div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="filmModal">
+  <div class="modal film-modal" role="dialog" aria-labelledby="filmTitle">
+    <button class="modal-close" data-close="filmModal" aria-label="Kapat"><svg class="ic " aria-hidden="true"><use href="#i-close"/></svg></button>
+    <h3 class="m-title" id="filmTitle">Yolculuk Filmi</h3>
+    <p class="m-sub">Patikan 13 saniyelik bir hikâyeye dönüşür. Yol arkadaşını seç.</p>
+    <div class="film-pets" id="filmPets" role="group" aria-label="Yol arkadaşı">
+      <button type="button" data-pet="karinca">Karınca</button>
+      <button type="button" data-pet="ugur">Uğur böceği</button>
+      <button type="button" data-pet="kaplumbaga">Kaplumbağa</button>
+    </div>
+    <div class="film-stage"><canvas id="filmCanvas" width="1080" height="1920" aria-label="Yolculuk filmi önizlemesi"></canvas><span class="film-bar" id="filmBar"></span></div>
+    <div class="film-btns">
+      <button type="button" class="sp-btn film-ghost" id="filmPlay"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg>Tekrar oynat</button>
+      <button type="button" class="sp-btn" id="filmRec">Videoyu oluştur</button>
+    </div>
+    <div id="filmOut"></div>
+    <div class="sp-msg" id="filmMsg" role="status"></div>
   </div>
 </div>
 
@@ -11130,9 +11134,7 @@ if(sosyal.oturum) SOSYAL.profilGetir().then(sosyalMenuGuncelle).catch(()=>{});
 spEl('profilBtn').addEventListener('click', sosyalAc);
 
 
-/* ---------- Gezgin Künyesi (cam künye / çelik matara) ---------- */
-var kunyeSkin = 'cam';
-try{ if(localStorage.getItem('patika:kunye')==='matara') kunyeSkin = 'matara'; }catch(e){}
+/* ---------- Gezgin Künyesi (cam künye) ---------- */
 function kunyeSeri(id){
   let h = 2166136261; const s = String(id||'misafir');
   for(let i=0;i<s.length;i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
@@ -11172,45 +11174,14 @@ function kunyeCamHTML(v){
     </div>
   </div>`;
 }
-function kunyeMataraHTML(v){
-  /* kazıma üstte (0–95 px), çıkartmalar altta; ünvan etiketi en altta */
-  const pos = [[6,104,-12],[62,100,9],[30,146,6],[2,192,14],[60,196,-6],[66,148,-9]];
-  const liste = v.sehirler.slice(0, v.ay>0 ? 5 : 6);
-  let stk = liste.map((c,i)=>{ const [x,y,r]=pos[i]; const ad=c.city.replace(/\s*\(.*\)\s*$/,'');
-    return `<span class="kn-sticker ${c.cc}" style="left:${x}px;top:${y}px;--r:${r}deg"><small>${c.cc.toUpperCase()}</small><em>${escH(ad)}</em></span>`; }).join('');
-  if(v.ay>0) stk += `<span class="kn-sticker gold" style="left:${pos[5][0]}px;top:${pos[5][1]}px;--r:12deg"><small>SIRADIŞI</small><em>${v.ay}</em></span>`;
-  stk += `<span class="kn-sticker rank" style="left:50%;top:244px;--r:-4deg;translate:-50% 0">${escH(v.unvan.toLocaleUpperCase('tr'))}</span>`;
-  return `<div class="kn-flask-scene">
-    <div class="kn-flask" aria-hidden="true">
-      <div class="kn-cap"></div><div class="kn-neck"></div>
-      <div class="kn-body">
-        <div class="kn-engrave"><span class="kn-brand">PATİKA</span><div class="kn-name">${escH(v.ad || 'Adın burada')}</div><span class="kn-no">${escH(v.seri)}</span></div>
-        ${stk}
-      </div>
-    </div>
-    <div class="kn-side">
-      <span class="kn-rank">${escH(v.unvan)}</span>
-      <span class="kn-big ${v.ad?'':'ph'}">${escH(v.ad || 'Adın burada')}</span>
-      ${v.durum ? `<span class="kn-dur"><i></i>${escH(v.durum)}</span>` : ''}
-      <dl><dt>Durak</dt><dd>${v.durak}</dd><dt>Yol</dt><dd>${kunyeKm(v.km)} km</dd><dt>Şehir</dt><dd>${v.sehir}</dd><dt>Tamamı</dt><dd>${v.tam}</dd></dl>
-    </div>
-  </div>`;
-}
 function kunyeCiz(over){
   const el = document.getElementById('spKunye'); if(!el) return;
   const v = kunyeVeri(over);
   el.innerHTML = `<div class="kn-wrap">
-    <div class="kn-skin" role="group" aria-label="Künye görünümü">
-      <button type="button" data-skin="cam" aria-pressed="${kunyeSkin==='cam'}">Cam künye</button>
-      <button type="button" data-skin="matara" aria-pressed="${kunyeSkin==='matara'}">Çelik matara</button>
-    </div>
-    ${kunyeSkin==='cam' ? kunyeCamHTML(v) : kunyeMataraHTML(v)}
-    ${kunyeSkin==='matara' && !v.sehirler.length ? '<p class="kn-hint">Gezdiğin her şehir mataraya bir çıkartma olarak yapışır.</p>' : ''}
+    ${kunyeCamHTML(v)}
+    <button type="button" class="kn-film" id="knFilm">${ic('play')}<span>Yolculuk filmini oluştur<small>Instagram hikâyesine hazır · 13 sn</small></span></button>
   </div>`;
-  el.querySelectorAll('.kn-skin button').forEach(b=>b.addEventListener('click', ()=>{
-    kunyeSkin = b.dataset.skin; try{ localStorage.setItem('patika:kunye', kunyeSkin); }catch(e){}
-    kunyeCiz(over);
-  }));
+  document.getElementById('knFilm').addEventListener('click', ()=>filmAc());
   const tag = document.getElementById('knTag');
   if(tag && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)){
     tag.addEventListener('pointermove', e=>{
@@ -11222,6 +11193,433 @@ function kunyeCiz(over){
     tag.addEventListener('pointerleave', ()=>{ ['--rx','--ry','--sx'].forEach(k=>tag.style.setProperty(k, k==='--sx'?'0%':'0deg')); });
   }
 }
+
+
+/* ============================================================
+   YOLCULUK FİLMİ — 9:16, 13 sn, Instagram hikâyesine hazır
+   Sahneler: harita açılışı → küçük gezgin patikada yürür (damgalar, CANLI sayaçlar)
+   → sayılar akar → cam künye + Patika kapanışı. Video: MediaRecorder (MP4 varsa MP4).
+   ============================================================ */
+if(typeof CanvasRenderingContext2D!=='undefined' && !CanvasRenderingContext2D.prototype.roundRect){
+  CanvasRenderingContext2D.prototype.roundRect = function(x,y,w,h,r){ r=Math.min(r,w/2,h/2); this.moveTo(x+r,y); this.arcTo(x+w,y,x+w,y+h,r); this.arcTo(x+w,y+h,x,y+h,r); this.arcTo(x,y+h,x,y,r); this.arcTo(x,y,x+w,y,r); this.closePath(); };
+}
+const FILM_W = 1080, FILM_H = 1920, FILM_T = 13;
+const FILM_SAHNE = { acilis:2.2, yuruyus:8.6, sayilar:11.4 };
+const FILM_HAYVAN = { karinca:'Karınca', ugur:'Uğur böceği', kaplumbaga:'Kaplumbağa' };
+var filmDurum = { hayvan:'karinca', raf:0, basla:0, veri:null, sahne:null, kayit:null, url:null };
+try{ const h = localStorage.getItem('patika:film-hayvan'); if(FILM_HAYVAN[h]) filmDurum.hayvan = h; }catch(e){}
+
+/* tohumlu rastgele: aynı kullanıcı → aynı harita */
+function filmRng(seed){ let s = seed>>>0 || 1; return ()=>{ s ^= s<<13; s ^= s>>>17; s ^= s<<5; return ((s>>>0)%100000)/100000; }; }
+const filmEase = t=>1-Math.pow(1-Math.min(1,Math.max(0,t)),3);
+const filmEaseBack = t=>{ t=Math.min(1,Math.max(0,t)); const c=1.70158; return 1+(c+1)*Math.pow(t-1,3)+c*Math.pow(t-1,2); };
+const filmAralik = (t,a,b)=>Math.min(1,Math.max(0,(t-a)/(b-a)));
+const FILM_RENK = { tr:'#b3122b', it:'#2e6b45', gr:'#1d5aa0' };
+const FILM_GUN = { tr:['#3a0a14','#a3162d','#f2a04a'], it:['#14281c','#3e6b45','#e6a764'], gr:['#0b1d3a','#1f5fa8','#f3d9a0'] };
+
+function filmVeriHazirla(){
+  const v = kunyeVeri();
+  let h = 0; for(const ch of v.seri) h = (h*31 + ch.charCodeAt(0))>>>0;
+  const rnd = filmRng(h || 7);
+  const duraklar = v.sehirler.length ? v.sehirler : [];
+  const n = Math.max(3, Math.min(6, duraklar.length || 3));
+  /* yılankavi patika: alttan üste, sağ-sol salınım */
+  const pts = [[540, 1760]];
+  for(let i=0;i<n;i++){
+    const y = 1540 - i*(1080/(n-1 || 1));
+    const x = (i%2===0 ? 300 : 780) + (rnd()-.5)*120;
+    pts.push([x, y]);
+  }
+  pts.push([540, 300]);
+  /* Catmull-Rom → eşit adımlı örnekler */
+  const ornek = [];
+  for(let i=0;i<pts.length-1;i++){
+    const p0=pts[Math.max(0,i-1)], p1=pts[i], p2=pts[i+1], p3=pts[Math.min(pts.length-1,i+2)];
+    for(let k=0;k<40;k++){
+      const t=k/40, t2=t*t, t3=t2*t;
+      ornek.push([
+        .5*((2*p1[0])+(-p0[0]+p2[0])*t+(2*p0[0]-5*p1[0]+4*p2[0]-p3[0])*t2+(-p0[0]+3*p1[0]-3*p2[0]+p3[0])*t3),
+        .5*((2*p1[1])+(-p0[1]+p2[1])*t+(2*p0[1]-5*p1[1]+4*p2[1]-p3[1])*t2+(-p0[1]+3*p1[1]-3*p2[1]+p3[1])*t3) ]);
+    }
+  }
+  ornek.push(pts[pts.length-1]);
+  const uz = [0]; for(let i=1;i<ornek.length;i++) uz.push(uz[i-1] + Math.hypot(ornek[i][0]-ornek[i-1][0], ornek[i][1]-ornek[i-1][1]));
+  const toplam = uz[uz.length-1];
+  /* her durak noktasının patika üzerindeki oranı */
+  const duraklar2 = [];
+  for(let i=1;i<=n;i++){
+    let best=0, bd=1e9; for(let k=0;k<ornek.length;k++){ const d=Math.hypot(ornek[k][0]-pts[i][0], ornek[k][1]-pts[i][1]); if(d<bd){ bd=d; best=k; } }
+    const c = duraklar[i-1];
+    duraklar2.push({ oran: uz[best]/toplam, x:pts[i][0], y:pts[i][1], ad: c ? c.city.replace(/\s*\(.*\)\s*$/,'') : '', cc: c ? c.cc : v.cc, rot:(rnd()-.5)*0.5, sag: pts[i][0] < 540 });
+  }
+  /* eş yükselti çizgileri */
+  const kont = [];
+  for(let m=0;m<3;m++){
+    const cx = 160 + rnd()*760, cy = 380 + rnd()*1200, R = 120 + rnd()*120, faz = rnd()*6;
+    for(let r=0;r<5;r++) kont.push({ cx, cy, r: R + r*52, faz: faz + r*.3, dalga: 4 + Math.floor(rnd()*3) });
+  }
+  /* kâğıt dokusu */
+  let doku = null;
+  try{
+    doku = document.createElement('canvas'); doku.width = doku.height = 160;
+    const dc = doku.getContext('2d'); const id = dc.createImageData(160,160);
+    for(let i=0;i<id.data.length;i+=4){ const g = 200 + rnd()*55; id.data[i]=g; id.data[i+1]=g*.94; id.data[i+2]=g*.82; id.data[i+3]=rnd()*26; }
+    dc.putImageData(id,0,0);
+  }catch(e){ doku = null; }
+  return Object.assign(v, { ornek, uz, toplam, duraklar:duraklar2, kont, doku, bos: v.durak===0 });
+}
+function filmNokta(V, oran){
+  const hedef = oran*V.toplam; let i = 1;
+  while(i<V.uz.length-1 && V.uz[i] < hedef) i++;
+  const a = V.ornek[i-1], b = V.ornek[i], seg = (V.uz[i]-V.uz[i-1]) || 1, t = (hedef - V.uz[i-1])/seg;
+  return { x:a[0]+(b[0]-a[0])*t, y:a[1]+(b[1]-a[1])*t, aci:Math.atan2(b[1]-a[1], b[0]-a[0]), i };
+}
+
+/* ---------- küçük gezginler (başlangıçta +x yönüne bakar) ---------- */
+function filmBacak(ctx, x, y, uz, aci, kal){ ctx.beginPath(); ctx.moveTo(x,y); const mx = x+Math.cos(aci)*uz*.55, my = y+Math.sin(aci)*uz*.55;
+  ctx.lineTo(mx,my); ctx.lineTo(mx+Math.cos(aci+kal)*uz*.5, my+Math.sin(aci+kal)*uz*.5); ctx.stroke(); }
+function filmKarinca(ctx, faz){
+  const s = Math.sin(faz*2);
+  ctx.strokeStyle = '#2a1810'; ctx.lineWidth = 3.2; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  [[-1,-1],[0,1],[1,-1]].forEach(([k,yon],j)=>{ /* üçlü yürüyüş */
+    const a = s*(j%2?1:-1)*0.45;
+    filmBacak(ctx, k*8, -4, 30, -Math.PI/2 + k*0.5 + a, -0.6*k);
+    filmBacak(ctx, k*8, 4, 30, Math.PI/2 - k*0.5 - a, 0.6*k);
+  });
+  const govde = (x,rx,ry)=>{ const g = ctx.createRadialGradient(x-rx*.3,-ry*.4,1,x,0,rx); g.addColorStop(0,'#7a4a2c'); g.addColorStop(.5,'#3a2216'); g.addColorStop(1,'#1c0f0a');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(x,0,rx,ry,0,0,Math.PI*2); ctx.fill(); };
+  govde(-24,17,12); govde(0,10,7.5); govde(19,9,8);
+  ctx.lineWidth = 2.2; const an = Math.sin(faz*1.3)*0.25;
+  [-1,1].forEach(k=>{ ctx.beginPath(); ctx.moveTo(25,k*4); ctx.quadraticCurveTo(36,k*(10+an*20),46,k*(6+an*14)); ctx.stroke(); });
+  ctx.fillStyle = 'rgba(255,255,255,.55)'; ctx.beginPath(); ctx.ellipse(-28,-4,5,2.5,-.4,0,Math.PI*2); ctx.fill();
+}
+function filmUgur(ctx, faz){
+  const s = Math.sin(faz*2);
+  ctx.strokeStyle = '#141414'; ctx.lineWidth = 3; ctx.lineCap = 'round';
+  [-10,0,10].forEach((x,j)=>{ const a = s*(j%2?1:-1)*0.4;
+    filmBacak(ctx, x, -10, 24, -Math.PI/2 + a, 0.3); filmBacak(ctx, x, 10, 24, Math.PI/2 - a, -0.3); });
+  ctx.fillStyle = '#141414'; ctx.beginPath(); ctx.ellipse(20,0,10,12,0,0,Math.PI*2); ctx.fill();
+  const g = ctx.createRadialGradient(-6,-8,2,0,0,26); g.addColorStop(0,'#ff6b5a'); g.addColorStop(.6,'#d7261e'); g.addColorStop(1,'#8f120e');
+  ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(-2,0,24,21,0,0,Math.PI*2); ctx.fill();
+  ctx.strokeStyle = '#141414'; ctx.lineWidth = 2.4; ctx.beginPath(); ctx.moveTo(22,0); ctx.lineTo(-26,0); ctx.stroke();
+  ctx.fillStyle = '#141414'; [[-12,-9,5],[-12,9,5],[4,-11,4],[4,11,4],[-20,0,0]].forEach(([x,y,r])=>{ if(r){ ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill(); } });
+  ctx.fillStyle = '#fff'; [[24,-5],[24,5]].forEach(([x,y])=>{ ctx.beginPath(); ctx.arc(x,y,2.4,0,Math.PI*2); ctx.fill(); });
+  ctx.fillStyle = 'rgba(255,255,255,.5)'; ctx.beginPath(); ctx.ellipse(-8,-11,7,3,-.3,0,Math.PI*2); ctx.fill();
+}
+function filmKaplumbaga(ctx, faz){
+  const s = Math.sin(faz*1.4);
+  ctx.fillStyle = '#5f7f3a';
+  [[14,-18,1],[14,18,-1],[-16,-18,-1],[-16,18,1]].forEach(([x,y,k])=>{ ctx.save(); ctx.translate(x,y); ctx.rotate(s*0.35*k); ctx.beginPath(); ctx.ellipse(0,0,10,6,y<0?-0.6:0.6,0,Math.PI*2); ctx.fill(); ctx.restore(); });
+  ctx.beginPath(); ctx.ellipse(31 + s*1.5, 0, 10, 8, 0, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle = '#1a1a1a'; ctx.beginPath(); ctx.arc(36+s*1.5,-3,1.8,0,Math.PI*2); ctx.fill();
+  const g = ctx.createRadialGradient(-6,-8,2,0,0,28); g.addColorStop(0,'#c49a55'); g.addColorStop(.6,'#8a6430'); g.addColorStop(1,'#4c3417');
+  ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(0,0,27,22,0,0,Math.PI*2); ctx.fill();
+  ctx.strokeStyle = 'rgba(50,30,10,.55)'; ctx.lineWidth = 2;
+  ctx.beginPath(); for(let k=0;k<6;k++){ const a=k/6*Math.PI*2; const x=Math.cos(a)*9, y=Math.sin(a)*8; k?ctx.lineTo(x,y):ctx.moveTo(x,y); } ctx.closePath(); ctx.stroke();
+  for(let k=0;k<6;k++){ const a=k/6*Math.PI*2; ctx.beginPath(); ctx.moveTo(Math.cos(a)*9,Math.sin(a)*8); ctx.lineTo(Math.cos(a)*25,Math.sin(a)*20); ctx.stroke(); }
+}
+function filmGezgin(ctx, tur, x, y, aci, faz, olcek){
+  ctx.save(); ctx.translate(x, y);
+  ctx.fillStyle = 'rgba(60,40,20,.18)'; ctx.beginPath(); ctx.ellipse(4, 10, 36*olcek, 14*olcek, aci, 0, Math.PI*2); ctx.fill();
+  ctx.rotate(aci); ctx.scale(olcek, olcek);
+  (tur==='ugur' ? filmUgur : tur==='kaplumbaga' ? filmKaplumbaga : filmKarinca)(ctx, faz);
+  ctx.restore();
+}
+
+/* ---------- yardımcı çizimler ---------- */
+function filmYazi(ctx, txt, x, y, font, renk, hiza, aralik){
+  ctx.font = font; ctx.fillStyle = renk; ctx.textAlign = hiza || 'left'; ctx.textBaseline = 'alphabetic';
+  if(aralik){ try{ ctx.letterSpacing = aralik+'px'; }catch(e){} }
+  ctx.fillText(txt, x, y);
+  if(aralik){ try{ ctx.letterSpacing = '0px'; }catch(e){} }
+}
+function filmKm(km){ return km>=100 ? Math.round(km).toLocaleString('tr-TR') : km.toFixed(1).replace('.', ','); }
+function filmKagit(ctx, V, t){
+  ctx.fillStyle = '#efe3cb'; ctx.fillRect(0,0,FILM_W,FILM_H);
+  if(V.doku){ const p = ctx.createPattern(V.doku,'repeat'); if(p){ ctx.fillStyle = p; ctx.fillRect(0,0,FILM_W,FILM_H); } }
+  const v = ctx.createRadialGradient(540,960,400,540,960,1250); v.addColorStop(0,'rgba(120,80,30,0)'); v.addColorStop(1,'rgba(110,70,25,.38)');
+  ctx.fillStyle = v; ctx.fillRect(0,0,FILM_W,FILM_H);
+  /* eş yükselti çizgileri kendini çizer */
+  const p = filmEase(filmAralik(t, .1, 1.9));
+  ctx.strokeStyle = 'rgba(150,110,60,.24)'; ctx.lineWidth = 2.5;
+  V.kont.forEach(k=>{
+    ctx.beginPath();
+    const adim = 90, son = Math.floor(adim*p);
+    for(let i=0;i<=son;i++){ const a = i/adim*Math.PI*2; const r = k.r + Math.sin(a*k.dalga/2 + k.faz)*k.r*.10 + Math.cos(a*2+k.faz)*6;
+      const x = k.cx + Math.cos(a)*r, y = k.cy + Math.sin(a)*r*.82; i?ctx.lineTo(x,y):ctx.moveTo(x,y); }
+    ctx.stroke();
+  });
+  /* pusula */
+  ctx.save(); ctx.globalAlpha = .55*p; ctx.translate(930, 1770); ctx.strokeStyle = '#7a5a30'; ctx.fillStyle = '#7a5a30'; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.arc(0,0,46,0,Math.PI*2); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(0,-40); ctx.lineTo(8,0); ctx.lineTo(0,40); ctx.lineTo(-8,0); ctx.closePath(); ctx.fill();
+  filmYazi(ctx, 'K', 0, -54, '700 26px "Playfair Display", Georgia, serif', '#7a5a30', 'center');
+  ctx.restore();
+}
+function filmDamgaGorsel(d){
+  if(d._img) return d._img;
+  const c = document.createElement('canvas'); c.width = c.height = 240;
+  const x = c.getContext('2d'); if(!x) return null;
+  const renk = FILM_RENK[d.cc] || '#b3122b';
+  x.translate(120,120); x.strokeStyle = renk; x.fillStyle = renk;
+  x.lineWidth = 6; x.beginPath(); x.arc(0,0,104,0,Math.PI*2); x.stroke();
+  x.lineWidth = 2.5; x.beginPath(); x.arc(0,0,90,0,Math.PI*2); x.stroke();
+  filmYazi(x, ({tr:'TÜRKİYE',it:'İTALYA',gr:'YUNANİSTAN'})[d.cc] || '', 0, -40, '800 17px system-ui, sans-serif', renk, 'center', 3);
+  let ad = d.ad.toLocaleUpperCase('tr'), fs = 38; x.font = `700 ${fs}px "Playfair Display", Georgia, serif`;
+  while(x.measureText(ad).width > 160 && fs > 20){ fs -= 2; x.font = `700 ${fs}px "Playfair Display", Georgia, serif`; }
+  filmYazi(x, ad, 0, 13, x.font, renk, 'center');
+  filmYazi(x, '★ PATİKA ★', 0, 54, '800 16px system-ui, sans-serif', renk, 'center', 3);
+  /* mürekkep aşınması: sadece damga katmanında */
+  x.globalCompositeOperation = 'destination-out'; const r = filmRng((d.x*7+d.y)|0);
+  for(let i=0;i<90;i++){ x.globalAlpha = .55*r(); x.beginPath(); x.arc((r()-.5)*220,(r()-.5)*220, 1+r()*3.5, 0, Math.PI*2); x.fill(); }
+  d._img = c; return c;
+}
+function filmDamga(ctx, d, k){
+  if(k<=0) return;
+  const img = filmDamgaGorsel(d); if(!img) return;
+  const s = filmEaseBack(k);
+  ctx.save(); ctx.translate(d.x + (d.sag ? 150 : -150), d.y - 10); ctx.rotate(d.rot); ctx.scale(s, s);
+  ctx.globalAlpha = Math.min(1, k*1.6) * .88; ctx.globalCompositeOperation = 'multiply';
+  ctx.drawImage(img, -120, -120);
+  ctx.restore();
+}
+function filmCanli(ctx, V, ilerleme, t){
+  ctx.save();
+  ctx.fillStyle = 'rgba(26,14,10,.82)'; ctx.beginPath(); ctx.roundRect(48, 120, 392, 214, 28); ctx.fill();
+  const yan = .5+.5*Math.sin(t*6);
+  ctx.fillStyle = `rgba(255,70,70,${.5+.5*yan})`; ctx.beginPath(); ctx.arc(86, 164, 9, 0, Math.PI*2); ctx.fill();
+  filmYazi(ctx, 'CANLI', 106, 173, '800 24px system-ui, sans-serif', '#fff', 'left', 4);
+  const satir = (et, val, y)=>{ filmYazi(ctx, et, 76, y, '700 20px system-ui, sans-serif', 'rgba(255,255,255,.6)', 'left', 3);
+    filmYazi(ctx, val, 410, y, '700 40px "Playfair Display", Georgia, serif', '#fff', 'right'); };
+  satir('MESAFE', filmKm(V.km*ilerleme)+' km', 230);
+  satir('DURAK', String(Math.round(V.durak*ilerleme)), 282);
+  ctx.restore();
+}
+function filmKunye(ctx, V, x, y, w, h, a){
+  ctx.save(); ctx.globalAlpha = a;
+  const g = ctx.createLinearGradient(x, y, x+w, y+h); g.addColorStop(0,'rgba(255,255,255,.34)'); g.addColorStop(.55,'rgba(255,255,255,.10)'); g.addColorStop(1,'rgba(255,255,255,.2)');
+  ctx.fillStyle = g; ctx.beginPath(); ctx.roundRect(x, y, w, h, 56); ctx.fill();
+  ctx.strokeStyle = 'rgba(255,255,255,.65)'; ctx.lineWidth = 3; ctx.stroke();
+  ctx.fillStyle = 'rgba(0,0,0,.28)'; ctx.beginPath(); ctx.arc(x+60, y+h/2, 20, 0, Math.PI*2); ctx.fill();
+  const tx = x+120;
+  filmYazi(ctx, 'PATİKA · GEZGİN', tx, y+82, '800 24px system-ui, sans-serif', 'rgba(255,255,255,.9)', 'left', 7);
+  filmYazi(ctx, V.seri, x+w-46, y+82, '600 24px ui-monospace, Menlo, Consolas, monospace', 'rgba(255,255,255,.85)', 'right', 3);
+  let ad = V.ad || 'Gezgin', fs = 84; ctx.font = `700 ${fs}px "Playfair Display", Georgia, serif`;
+  while(ctx.measureText(ad).width > w-170 && fs > 44){ fs -= 4; ctx.font = `700 ${fs}px "Playfair Display", Georgia, serif`; }
+  ctx.shadowColor = 'rgba(0,0,0,.25)'; ctx.shadowOffsetY = 2;
+  filmYazi(ctx, ad, tx, y+190, ctx.font, '#fff');
+  ctx.shadowColor = 'transparent';
+  filmYazi(ctx, V.unvan.toLocaleUpperCase('tr'), tx, y+240, '800 26px system-ui, sans-serif', 'rgba(255,255,255,.92)', 'left', 6);
+  filmYazi(ctx, `${V.durak} durak · ${filmKm(V.km)} km · ${V.sehir} şehir`, tx, y+h-56, '500 30px system-ui, sans-serif', 'rgba(255,255,255,.9)');
+  ctx.restore();
+}
+
+/* ---------- tek kare ---------- */
+function filmKare(ctx, V, t, tur){
+  ctx.save(); ctx.clearRect(0,0,FILM_W,FILM_H);
+  filmKagit(ctx, V, t);
+  const S = FILM_SAHNE;
+  /* başlık (sadece açılış) */
+  const ba = filmEase(filmAralik(t, .3, 1.3)) * (1 - filmAralik(t, S.acilis-.4, S.acilis));
+  if(ba>0){
+    ctx.save(); ctx.globalAlpha = ba; ctx.translate(0, (1-ba)*20);
+    filmYazi(ctx, 'BİR PATİKA HİKÂYESİ', 540, 900, '800 26px system-ui, sans-serif', '#7a5a30', 'center', 8);
+    let ad = V.ad || 'Gezgin', fs = 120; ctx.font = `italic 700 ${fs}px "Playfair Display", Georgia, serif`;
+    while(ctx.measureText(ad).width > 900 && fs > 60){ fs -= 6; ctx.font = `italic 700 ${fs}px "Playfair Display", Georgia, serif`; }
+    filmYazi(ctx, ad, 540, 1030, ctx.font, '#3a2412', 'center');
+    filmYazi(ctx, V.unvan, 540, 1100, '600 34px system-ui, sans-serif', '#8a6a40', 'center');
+    ctx.restore();
+  }
+  /* yürüyüş */
+  const yp = filmAralik(t, S.acilis, S.yuruyus - .4);
+  const ilerleme = filmEase(yp*.98 + 0.02*yp);
+  if(t >= S.acilis - .4){
+    const ga = filmAralik(t, S.acilis-.4, S.acilis+.2);
+    ctx.save(); ctx.globalAlpha = ga;
+    /* çizilen patika: kesikli mürekkep */
+    const son = filmNokta(V, Math.max(.0001, ilerleme));
+    ctx.strokeStyle = 'rgba(160,40,30,.85)'; ctx.lineWidth = 7; ctx.lineCap = 'round'; ctx.setLineDash([2, 18]);
+    ctx.beginPath(); for(let i=0;i<son.i;i++){ const p = V.ornek[i]; i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]); } ctx.lineTo(son.x, son.y); ctx.stroke();
+    ctx.setLineDash([]);
+    /* gelecek patika: soluk */
+    ctx.strokeStyle = 'rgba(120,90,50,.18)'; ctx.lineWidth = 4; ctx.setLineDash([10, 16]);
+    ctx.beginPath(); ctx.moveTo(son.x, son.y); for(let i=son.i;i<V.ornek.length;i++) ctx.lineTo(V.ornek[i][0], V.ornek[i][1]); ctx.stroke(); ctx.setLineDash([]);
+    /* başlangıç bayrağı */
+    ctx.fillStyle = '#3a2412'; ctx.beginPath(); ctx.arc(V.ornek[0][0], V.ornek[0][1], 10, 0, Math.PI*2); ctx.fill();
+    /* durak noktaları + damgalar */
+    V.duraklar.forEach(d=>{
+      const k = filmAralik(ilerleme, d.oran - .005, d.oran + .07);
+      ctx.fillStyle = k>0 ? (FILM_RENK[d.cc]||'#b3122b') : 'rgba(120,90,50,.35)';
+      ctx.beginPath(); ctx.arc(d.x, d.y, k>0 ? 14 : 9, 0, Math.PI*2); ctx.fill();
+      if(d.ad) filmDamga(ctx, d, k);
+    });
+    /* bitiş bayrağı */
+    const bit = V.ornek[V.ornek.length-1];
+    ctx.strokeStyle = '#3a2412'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(bit[0], bit[1]); ctx.lineTo(bit[0], bit[1]-80); ctx.stroke();
+    ctx.fillStyle = FILM_RENK[V.cc] || '#b3122b'; ctx.beginPath(); ctx.moveTo(bit[0], bit[1]-80); ctx.lineTo(bit[0]+56, bit[1]-62); ctx.lineTo(bit[0], bit[1]-44); ctx.closePath(); ctx.fill();
+    /* gezgin */
+    const yuruyor = t < S.yuruyus - .4 ? 1 : 0;
+    filmGezgin(ctx, tur, son.x, son.y, son.aci, t*14*yuruyor + (yuruyor?0:1), 1.8);
+    ctx.restore();
+    if(t < S.yuruyus + .2) { ctx.save(); ctx.globalAlpha = ga * (1 - filmAralik(t, S.yuruyus-.2, S.yuruyus+.2)); filmCanli(ctx, V, ilerleme, t); ctx.restore(); }
+  }
+  /* sayılar */
+  if(t >= S.yuruyus){
+    const a = filmEase(filmAralik(t, S.yuruyus, S.yuruyus+.5)) * (1 - filmAralik(t, S.sayilar-.1, S.sayilar+.4));
+    if(a>0){
+      ctx.save(); ctx.globalAlpha = a;
+      const g = ctx.createLinearGradient(0,0,0,FILM_H); g.addColorStop(0,'#1d100c'); g.addColorStop(1,'#2e1610');
+      ctx.fillStyle = g; ctx.fillRect(0,0,FILM_W,FILM_H);
+      const satirlar = [
+        { val:V.durak, et:'DURAK', bicim:x=>String(Math.round(x)) },
+        { val:V.km, et:'KİLOMETRE', bicim:x=>filmKm(x) },
+        { val:V.sehir, et:'ŞEHİR', bicim:x=>String(Math.round(x)) }
+      ];
+      satirlar.forEach((s,i)=>{
+        const k = filmEase(filmAralik(t, S.yuruyus+.3+i*.35, S.yuruyus+1.5+i*.35));
+        const y = 640 + i*360;
+        ctx.save(); ctx.globalAlpha = Math.min(1, k*2); ctx.translate((1-k)*-60, 0);
+        filmYazi(ctx, s.bicim(s.val*k), 110, y, '700 230px "Playfair Display", Georgia, serif', '#f6ead6');
+        filmYazi(ctx, s.et, 116, y+66, '800 34px system-ui, sans-serif', '#e0a35a', 'left', 10);
+        ctx.restore();
+      });
+      const u = filmEaseBack(filmAralik(t, S.yuruyus+1.7, S.yuruyus+2.3));
+      if(u>0){
+        ctx.save(); ctx.translate(110, 1640); ctx.scale(u,u);
+        ctx.font = '800 34px system-ui, sans-serif'; const w = ctx.measureText(V.unvan.toLocaleUpperCase('tr')).width + 60 + 34*0.2*V.unvan.length;
+        ctx.fillStyle = '#e0a35a'; ctx.beginPath(); ctx.roundRect(0, -54, w, 80, 40); ctx.fill();
+        filmYazi(ctx, V.unvan.toLocaleUpperCase('tr'), 30, 0, '800 34px system-ui, sans-serif', '#1d100c', 'left', 6);
+        ctx.restore();
+      }
+      /* sağda yürünen patikanın küçük izi */
+      const mk = filmEase(filmAralik(t, S.yuruyus+.2, S.yuruyus+1.8));
+      ctx.save(); ctx.translate(650, 470); ctx.scale(.36, .36); ctx.translate(-180, -250);
+      ctx.strokeStyle = 'rgba(246,234,214,.75)'; ctx.lineWidth = 9; ctx.lineCap = 'round'; ctx.setLineDash([3, 22]);
+      const sonI = Math.max(1, Math.floor(V.ornek.length*mk));
+      ctx.beginPath(); for(let i=0;i<sonI;i++){ const q=V.ornek[i]; i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1]); } ctx.stroke(); ctx.setLineDash([]);
+      V.duraklar.forEach(d=>{ if(d.oran <= mk){ ctx.fillStyle = FILM_RENK[d.cc] || '#e0a35a'; ctx.beginPath(); ctx.arc(d.x, d.y, 26, 0, Math.PI*2); ctx.fill();
+        ctx.strokeStyle = '#f6ead6'; ctx.lineWidth = 6; ctx.stroke(); } });
+      if(mk>=1){ const q = V.ornek[V.ornek.length-1]; filmGezgin(ctx, tur, q[0], q[1]+10, -Math.PI/2, 0, 2.6); }
+      ctx.restore();
+      filmYazi(ctx, 'YOLCULUĞUN', 110, 300, '800 30px system-ui, sans-serif', 'rgba(246,234,214,.6)', 'left', 10);
+      ctx.restore();
+    }
+  }
+  /* kapanış */
+  if(t >= S.sayilar - .1){
+    const a = filmEase(filmAralik(t, S.sayilar-.1, S.sayilar+.5));
+    const r = FILM_GUN[V.cc] || FILM_GUN.tr;
+    ctx.save(); ctx.globalAlpha = a;
+    const g = ctx.createLinearGradient(0,0,0,FILM_H); g.addColorStop(0,r[0]); g.addColorStop(.55,r[1]); g.addColorStop(1,r[2]);
+    ctx.fillStyle = g; ctx.fillRect(0,0,FILM_W,FILM_H);
+    const gun = ctx.createRadialGradient(760,1260,10,760,1260,320); gun.addColorStop(0,'rgba(255,236,190,.95)'); gun.addColorStop(.45,'rgba(255,200,120,.5)'); gun.addColorStop(1,'rgba(255,200,120,0)');
+    ctx.fillStyle = gun; ctx.fillRect(0,0,FILM_W,FILM_H);
+    ctx.fillStyle = 'rgba(0,0,0,.22)'; ctx.beginPath(); ctx.moveTo(0,1500); [[160,1400],[300,1470],[460,1330],[640,1460],[800,1380],[1080,1450]].forEach(p=>ctx.lineTo(p[0],p[1])); ctx.lineTo(1080,1920); ctx.lineTo(0,1920); ctx.fill();
+    ctx.fillStyle = 'rgba(0,0,0,.32)'; ctx.beginPath(); ctx.moveTo(0,1620); [[220,1540],[420,1600],[600,1520],[820,1590],[1080,1540]].forEach(p=>ctx.lineTo(p[0],p[1])); ctx.lineTo(1080,1920); ctx.lineTo(0,1920); ctx.fill();
+    const k = filmEaseBack(filmAralik(t, S.sayilar+.1, S.sayilar+.8));
+    filmKunye(ctx, V, 90, 620 + (1-k)*120, 900, 520, Math.min(1,k));
+    const s = filmAralik(t, S.sayilar+.6, S.sayilar+1.1);
+    ctx.globalAlpha = a*s;
+    filmYazi(ctx, 'patika', 540, 330, 'italic 700 120px "Playfair Display", Georgia, serif', '#fff', 'center');
+    filmYazi(ctx, 'YÜRÜDÜKÇE BİRİKİR', 540, 400, '800 26px system-ui, sans-serif', 'rgba(255,255,255,.8)', 'center', 9);
+    filmYazi(ctx, 'muratsahinn.github.io/Patika', 540, 1800, '600 32px system-ui, sans-serif', 'rgba(255,255,255,.92)', 'center', 1);
+    ctx.restore();
+  }
+  ctx.restore();
+}
+
+/* ---------- oynatıcı ---------- */
+function filmCanvas(){ return document.getElementById('filmCanvas'); }
+function filmDurdur(){ cancelAnimationFrame(filmDurum.raf); filmDurum.raf = 0; }
+function filmOynat(bitince){
+  filmDurdur();
+  const cv = filmCanvas(), ctx = cv.getContext('2d');
+  if(!ctx) return;
+  filmDurum.basla = performance.now();
+  const kare = now=>{
+    if(!filmDurum.kayit && !document.getElementById('filmModal').classList.contains('open')){ filmDurum.raf = 0; return; }
+    const t = Math.min(FILM_T, (now - filmDurum.basla)/1000);
+    filmKare(ctx, filmDurum.veri, t, filmDurum.hayvan);
+    const pb = document.getElementById('filmBar'); if(pb) pb.style.width = (t/FILM_T*100)+'%';
+    if(t < FILM_T) filmDurum.raf = requestAnimationFrame(kare);
+    else { filmDurum.raf = 0; if(bitince) bitince(); }
+  };
+  filmDurum.raf = requestAnimationFrame(kare);
+}
+function filmMime(){
+  if(typeof MediaRecorder==='undefined' || !MediaRecorder.isTypeSupported) return '';
+  for(const m of ['video/mp4;codecs=avc1.42E01E','video/mp4;codecs=avc1','video/mp4','video/webm;codecs=vp9','video/webm;codecs=vp8','video/webm']){
+    try{ if(MediaRecorder.isTypeSupported(m)) return m; }catch(e){}
+  }
+  return '';
+}
+function filmMesaj(t){ const m = document.getElementById('filmMsg'); if(m) m.textContent = t || ''; }
+async function filmKaydet(){
+  const cv = filmCanvas(), mime = filmMime();
+  const btn = document.getElementById('filmRec');
+  if(!mime || !cv.captureStream){ filmMesaj('Bu tarayıcı video kaydını desteklemiyor. Son kareyi görsel olarak kaydedebilirsin.'); filmGorselHazirla(); return; }
+  btn.disabled = true; document.getElementById('filmPlay').disabled = true;
+  filmTemizleCikti();
+  filmMesaj('Film kaydediliyor… 13 saniye sürer, ekranı kapatma.');
+  const akis = cv.captureStream(30), parca = [];
+  let rec;
+  try{ rec = new MediaRecorder(akis, { mimeType:mime, videoBitsPerSecond:8000000 }); }
+  catch(e){ filmMesaj('Video kaydı başlatılamadı.'); btn.disabled = false; document.getElementById('filmPlay').disabled = false; return; }
+  filmDurum.kayit = rec;
+  rec.ondataavailable = e=>{ if(e.data && e.data.size) parca.push(e.data); };
+  rec.onstop = ()=>{
+    akis.getTracks().forEach(tr=>tr.stop());
+    const tip = mime.split(';')[0], uzanti = tip==='video/mp4' ? 'mp4' : 'webm';
+    const blob = new Blob(parca, { type:tip });
+    filmCiktiGoster(blob, `patika-yolculuk.${uzanti}`, uzanti);
+    btn.disabled = false; document.getElementById('filmPlay').disabled = false; filmDurum.kayit = null;
+  };
+  rec.start(250);
+  filmOynat(()=>setTimeout(()=>{ try{ rec.stop(); }catch(e){} }, 300));
+}
+function filmTemizleCikti(){ if(filmDurum.url){ try{ URL.revokeObjectURL(filmDurum.url); }catch(e){} filmDurum.url = null; } const o = document.getElementById('filmOut'); if(o) o.innerHTML = ''; }
+function filmCiktiGoster(blob, ad, uzanti){
+  filmTemizleCikti();
+  const url = URL.createObjectURL(blob); filmDurum.url = url;
+  const dosya = (typeof File==='function') ? new File([blob], ad, { type:blob.type }) : null;
+  const paylasir = !!(dosya && navigator.canShare && (()=>{ try{ return navigator.canShare({ files:[dosya] }); }catch(e){ return false; } })());
+  const o = document.getElementById('filmOut');
+  o.innerHTML = `${paylasir ? `<button type="button" class="sp-btn" id="filmShare">${ic('share')}Paylaş</button>` : ''}
+    <a class="sp-btn film-dl" href="${url}" download="${escH(ad)}">İndir</a>
+    <span class="film-size">${(blob.size/1048576).toFixed(1).replace('.', ',')} MB · ${uzanti.toUpperCase()}</span>`;
+  if(paylasir) document.getElementById('filmShare').addEventListener('click', async ()=>{
+    try{ await navigator.share({ files:[dosya], title:'Patika yolculuğum' }); }catch(e){}
+  });
+  filmMesaj(uzanti==='png' ? 'Görsel hazır.' :
+    uzanti!=='mp4' ? 'Hazır. Bu tarayıcı videoyu WebM olarak kaydetti; Instagram için telefonda Safari ya da Chrome ile oluşturmak en iyisi.' :
+    paylasir ? 'Hazır! Paylaş ile doğrudan Instagram hikâyene gönderebilirsin.' : 'Hazır! İndir, sonra Instagram\'da hikâye olarak paylaş.');
+}
+function filmGorselHazirla(){
+  const cv = filmCanvas(); filmKare(cv.getContext('2d'), filmDurum.veri, FILM_T, filmDurum.hayvan);
+  cv.toBlob(b=>{ if(b) filmCiktiGoster(b, 'patika-yolculuk.png', 'png'); }, 'image/png');
+}
+function filmHayvanCiz(){
+  document.querySelectorAll('#filmPets button').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.pet===filmDurum.hayvan)));
+}
+function filmAc(){
+  filmDurum.veri = filmVeriHazirla();
+  const m = document.getElementById('filmModal');
+  m.classList.add('open');
+  filmHayvanCiz(); filmTemizleCikti();
+  const bos = filmDurum.veri.bos;
+  document.getElementById('filmRec').disabled = bos;
+  filmMesaj(bos ? 'Bir durağı tamamladığında filmin gerçek yolculuğunla dolacak. Şimdilik nasıl görüneceğine bak.' : '');
+  const go = ()=>filmOynat();
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(go, go); else go();
+}
+document.getElementById('filmPets').addEventListener('click', e=>{
+  const b = e.target.closest('button[data-pet]'); if(!b || filmDurum.kayit) return;
+  filmDurum.hayvan = b.dataset.pet; try{ localStorage.setItem('patika:film-hayvan', filmDurum.hayvan); }catch(err){}
+  filmHayvanCiz(); filmTemizleCikti(); filmOynat();
+});
+document.getElementById('filmPlay').addEventListener('click', ()=>{ if(!filmDurum.kayit) filmOynat(); });
+document.getElementById('filmRec').addEventListener('click', filmKaydet);
+document.querySelectorAll('[data-close="filmModal"]').forEach(b=>b.addEventListener('click', ()=>{ if(!filmDurum.kayit) filmDurdur(); }));
 
 
 /* modal kapatma */
